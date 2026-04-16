@@ -1,0 +1,25 @@
+/build*/
+/results/raw/
+/results/aggregate/
+/results/plots/
+/results/traces/
+/results/*.json
+!/results/hero.json
+/results/*.csv
+!/results/hero-tiles.csv
+!/results/trace-smoke.csv
+/results/evidence/**/*.run.json
+/results/calibration/**/*.ppm
+/results/protocol-v2/**/*.ppm
+/results/pilot/**/*.ppm
+/results/diagnostic/**/*.ppm
+/results/*-check.ppm
+/assets/*.ppm
+/assets/*-preview.png
+*.exe
+*.o
+__pycache__/
+/results/screenshot/*.ppm
+
+# Development evidence of the cursor lab (captures, logs, measurements) stays local
+/labs/liquid-cursor/evidence/
