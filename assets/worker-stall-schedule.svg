@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="310" viewBox="0 0 1000 310">
+<rect width="100%" height="100%" fill="#111b2a"/>
+<text x="30" y="36" fill="#f3f6fb" font-family="sans-serif" font-size="20">Helios MPI assignment timeline</text>
+<text x="30" y="57" fill="#b6c4d6" font-family="sans-serif" font-size="12">20260928T004233Z-c22bcfc1 · bars show assignment-to-completion time</text>
+<line x1="120.0" y1="80" x2="120.0" y2="252" stroke="#40516a" stroke-width="1"/>
+<text x="120.0" y="275" text-anchor="middle" fill="#b6c4d6" font-family="sans-serif" font-size="11">0.000 s</text>
+<line x1="325.0" y1="80" x2="325.0" y2="252" stroke="#40516a" stroke-width="1"/>
+<text x="325.0" y="275" text-anchor="middle" fill="#b6c4d6" font-family="sans-serif" font-size="11">0.076 s</text>
+<line x1="530.0" y1="80" x2="530.0" y2="252" stroke="#40516a" stroke-width="1"/>
+<text x="530.0" y="275" text-anchor="middle" fill="#b6c4d6" font-family="sans-serif" font-size="11">0.152 s</text>
+<line x1="735.0" y1="80" x2="735.0" y2="252" stroke="#40516a" stroke-width="1"/>
+<text x="735.0" y="275" text-anchor="middle" fill="#b6c4d6" font-family="sans-serif" font-size="11">0.228 s</text>
+<line x1="940.0" y1="80" x2="940.0" y2="252" stroke="#40516a" stroke-width="1"/>
+<text x="940.0" y="275" text-anchor="middle" fill="#b6c4d6" font-family="sans-serif" font-size="11">0.304 s</text>
+<text x="25" y="116" fill="#f3f6fb" font-family="sans-serif" font-size="13">rank 1</text>
+<rect x="120.0" y="95" width="99.3" height="34" fill="#67d5cc" stroke="#111b2a" stroke-width="1"><title>Rank 1: tiles 0–1; 2 tiles; render 0.0014 s; stall 0.0353 s</title></rect>
+<text x="169.6" y="117" text-anchor="middle" fill="#111b2a" font-family="sans-serif" font-size="10">2</text>
+<rect x="219.3" y="95" width="129.7" height="34" fill="#67d5cc" stroke="#111b2a" stroke-width="1"><title>Rank 1: tiles 60–61; 2 tiles; render 0.0026 s; stall 0.0454 s</title></rect>
+<text x="284.1" y="117" text-anchor="middle" fill="#111b2a" font-family="sans-serif" font-size="10">2</text>
+<rect x="349.0" y="95" width="166.1" height="34" fill="#67d5cc" stroke="#111b2a" stroke-width="1"><title>Rank 1: tiles 78–79; 2 tiles; render 0.0069 s; stall 0.0546 s</title></rect>
+<text x="432.0" y="117" text-anchor="middle" fill="#111b2a" font-family="sans-serif" font-size="10">2</text>
+<rect x="515.1" y="95" width="167.0" height="34" fill="#67d5cc" stroke="#111b2a" stroke-width="1"><title>Rank 1: tiles 96–97; 2 tiles; render 0.0058 s; stall 0.0560 s</title></rect>
+<text x="598.6" y="117" text-anchor="middle" fill="#111b2a" font-family="sans-serif" font-size="10">2</text>
+<rect x="682.1" y="95" width="85.1" height="34" fill="#67d5cc" stroke="#111b2a" stroke-width="1"><title>Rank 1: tiles 114–114; 1 tiles; render 0.0043 s; stall 0.0271 s</title></rect>
+<text x="724.6" y="117" text-anchor="middle" fill="#111b2a" font-family="sans-serif" font-size="10">1</text>
+<rect x="767.2" y="95" width="86.2" height="34" fill="#67d5cc" stroke="#111b2a" stroke-width="1"><title>Rank 1: tiles 127–127; 1 tiles; render 0.0034 s; stall 0.0286 s</title></rect>
+<text x="810.3" y="117" text-anchor="middle" fill="#111b2a" font-family="sans-serif" font-size="10">1</text>
+<rect x="853.4" y="95" width="43.1" height="34" fill="#67d5cc" stroke="#111b2a" stroke-width="1"><title>Rank 1: tiles 135–135; 1 tiles; render 0.0029 s; stall 0.0131 s</title></rect>
+<text x="874.9" y="117" text-anchor="middle" fill="#111b2a" font-family="sans-serif" font-size="10">1</text>
+<rect x="896.5" y="95" width="43.5" height="34" fill="#67d5cc" stroke="#111b2a" stroke-width="1"><title>Rank 1: tiles 140–140; 1 tiles; render 0.0035 s; stall 0.0126 s</title></rect>
+<text x="918.2" y="117" text-anchor="middle" fill="#111b2a" font-family="sans-serif" font-size="10">1</text>
+<text x="25" y="196" fill="#f3f6fb" font-family="sans-serif" font-size="13">rank 2</text>
+<rect x="120.0" y="175" width="3.4" height="34" fill="#f4bf75" stroke="#111b2a" stroke-width="1"><title>Rank 2: tiles 2–3; 2 tiles; render 0.0012 s; stall 0.0000 s</title></rect>
+<rect x="123.4" y="175" width="7.4" height="34" fill="#f4bf75" stroke="#111b2a" stroke-width="1"><title>Rank 2: tiles 4–11; 8 tiles; render 0.0027 s; stall 0.0000 s</title></rect>
+<rect x="130.8" y="175" width="7.4" height="34" fill="#f4bf75" stroke="#111b2a" stroke-width="1"><title>Rank 2: tiles 12–19; 8 tiles; render 0.0027 s; stall 0.0000 s</title></rect>
+<rect x="138.2" y="175" width="11.9" height="34" fill="#f4bf75" stroke="#111b2a" stroke-width="1"><title>Rank 2: tiles 20–27; 8 tiles; render 0.0043 s; stall 0.0000 s</title></rect>
+<rect x="150.1" y="175" width="13.0" height="34" fill="#f4bf75" stroke="#111b2a" stroke-width="1"><title>Rank 2: tiles 28–35; 8 tiles; render 0.0048 s; stall 0.0000 s</title></rect>
+<rect x="163.1" y="175" width="18.4" height="34" fill="#f4bf75" stroke="#111b2a" stroke-width="1"><title>Rank 2: tiles 36–43; 8 tiles; render 0.0068 s; stall 0.0000 s</title></rect>
+<text x="172.3" y="197" text-anchor="middle" fill="#111b2a" font-family="sans-serif" font-size="10">8</text>
+<rect x="181.5" y="175" width="18.0" height="34" fill="#f4bf75" stroke="#111b2a" stroke-width="1"><title>Rank 2: tiles 44–51; 8 tiles; render 0.0066 s; stall 0.0000 s</title></rect>
+<rect x="199.4" y="175" width="34.5" height="34" fill="#f4bf75" stroke="#111b2a" stroke-width="1"><title>Rank 2: tiles 52–59; 8 tiles; render 0.0128 s; stall 0.0000 s</title></rect>
+<text x="216.7" y="197" text-anchor="middle" fill="#111b2a" font-family="sans-serif" font-size="10">8</text>
+<rect x="233.9" y="175" width="42.1" height="34" fill="#f4bf75" stroke="#111b2a" stroke-width="1"><title>Rank 2: tiles 62–69; 8 tiles; render 0.0156 s; stall 0.0000 s</title></rect>
+<text x="255.0" y="197" text-anchor="middle" fill="#111b2a" font-family="sans-serif" font-size="10">8</text>
+<rect x="276.1" y="175" width="86.1" height="34" fill="#f4bf75" stroke="#111b2a" stroke-width="1"><title>Rank 2: tiles 70–77; 8 tiles; render 0.0319 s; stall 0.0000 s</title></rect>
+<text x="319.1" y="197" text-anchor="middle" fill="#111b2a" font-family="sans-serif" font-size="10">8</text>
+<rect x="362.1" y="175" width="74.6" height="34" fill="#f4bf75" stroke="#111b2a" stroke-width="1"><title>Rank 2: tiles 80–87; 8 tiles; render 0.0276 s; stall 0.0000 s</title></rect>
+<text x="399.4" y="197" text-anchor="middle" fill="#111b2a" font-family="sans-serif" font-size="10">8</text>
+<rect x="436.7" y="175" width="91.3" height="34" fill="#f4bf75" stroke="#111b2a" stroke-width="1"><title>Rank 2: tiles 88–95; 8 tiles; render 0.0337 s; stall 0.0000 s</title></rect>
+<text x="482.4" y="197" text-anchor="middle" fill="#111b2a" font-family="sans-serif" font-size="10">8</text>
+<rect x="528.0" y="175" width="90.8" height="34" fill="#f4bf75" stroke="#111b2a" stroke-width="1"><title>Rank 2: tiles 98–105; 8 tiles; render 0.0336 s; stall 0.0000 s</title></rect>
+<text x="573.4" y="197" text-anchor="middle" fill="#111b2a" font-family="sans-serif" font-size="10">8</text>
+<rect x="618.9" y="175" width="77.1" height="34" fill="#f4bf75" stroke="#111b2a" stroke-width="1"><title>Rank 2: tiles 106–113; 8 tiles; render 0.0285 s; stall 0.0000 s</title></rect>
+<text x="657.4" y="197" text-anchor="middle" fill="#111b2a" font-family="sans-serif" font-size="10">8</text>
+<rect x="695.9" y="175" width="65.0" height="34" fill="#f4bf75" stroke="#111b2a" stroke-width="1"><title>Rank 2: tiles 115–121; 7 tiles; render 0.0240 s; stall 0.0000 s</title></rect>
+<text x="728.5" y="197" text-anchor="middle" fill="#111b2a" font-family="sans-serif" font-size="10">7</text>
+<rect x="761.0" y="175" width="49.9" height="34" fill="#f4bf75" stroke="#111b2a" stroke-width="1"><title>Rank 2: tiles 122–126; 5 tiles; render 0.0185 s; stall 0.0000 s</title></rect>
+<text x="786.0" y="197" text-anchor="middle" fill="#111b2a" font-family="sans-serif" font-size="10">5</text>
+<rect x="810.9" y="175" width="29.1" height="34" fill="#f4bf75" stroke="#111b2a" stroke-width="1"><title>Rank 2: tiles 128–131; 4 tiles; render 0.0108 s; stall 0.0000 s</title></rect>
+<text x="825.5" y="197" text-anchor="middle" fill="#111b2a" font-family="sans-serif" font-size="10">4</text>
+<rect x="840.1" y="175" width="27.6" height="34" fill="#f4bf75" stroke="#111b2a" stroke-width="1"><title>Rank 2: tiles 132–134; 3 tiles; render 0.0102 s; stall 0.0000 s</title></rect>
+<text x="853.8" y="197" text-anchor="middle" fill="#111b2a" font-family="sans-serif" font-size="10">3</text>
+<rect x="867.6" y="175" width="13.0" height="34" fill="#f4bf75" stroke="#111b2a" stroke-width="1"><title>Rank 2: tiles 136–137; 2 tiles; render 0.0048 s; stall 0.0000 s</title></rect>
+<rect x="880.6" y="175" width="10.2" height="34" fill="#f4bf75" stroke="#111b2a" stroke-width="1"><title>Rank 2: tiles 138–138; 1 tiles; render 0.0038 s; stall 0.0000 s</title></rect>
+<rect x="890.8" y="175" width="13.5" height="34" fill="#f4bf75" stroke="#111b2a" stroke-width="1"><title>Rank 2: tiles 139–139; 1 tiles; render 0.0050 s; stall 0.0000 s</title></rect>
+<rect x="904.3" y="175" width="6.5" height="34" fill="#f4bf75" stroke="#111b2a" stroke-width="1"><title>Rank 2: tiles 141–141; 1 tiles; render 0.0024 s; stall 0.0000 s</title></rect>
+<rect x="910.8" y="175" width="7.1" height="34" fill="#f4bf75" stroke="#111b2a" stroke-width="1"><title>Rank 2: tiles 142–142; 1 tiles; render 0.0026 s; stall 0.0000 s</title></rect>
+<rect x="917.9" y="175" width="10.0" height="34" fill="#f4bf75" stroke="#111b2a" stroke-width="1"><title>Rank 2: tiles 143–143; 1 tiles; render 0.0037 s; stall 0.0000 s</title></rect>
+<text x="30" y="300" fill="#b6c4d6" font-family="sans-serif" font-size="11">Labels are tile counts; hover for measured render and stall durations.</text>
+</svg>
