@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "project": "Helios",
+  "backend": "sequential",
+  "scene": "imbalanced",
+  "width": 96, "height": 54, "spp": 8, "max_depth": 8, "seed": 42, "tile": 16, "bvh": true, "bvh_nodes": 127, "ranks": 1, "threads_per_rank": 1, "omp_schedule": "static",
+  "render_wall_seconds": 0.0385566, "rays": 99070, "shadow_rays": 19243, "node_visits": 2065460, "primitive_tests": 685219, "pixels": 5184, "tiles": 24,
+  "image_hash_fnv1a64": "b15cbc40914708db",
+  "workers": [
+    {"id": 0, "assignments": 24, "compute_seconds": 0.0385474, "tiles": 24, "pixels": 5184, "rays": 99070}
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "run_id": "20260928T002713Z-3998bc65",
+  "suite": "weak",
+  "scene": "imbalanced",
+  "repeats": 3,
+  "timeout_seconds": 20.0,
+  "records": 45,
+  "failures": 0
+}
