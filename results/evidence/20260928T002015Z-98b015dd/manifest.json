@@ -1,0 +1,9 @@
+{
+  "run_id": "20260928T002015Z-98b015dd",
+  "suite": "scaling",
+  "scene": "imbalanced",
+  "repeats": 3,
+  "timeout_seconds": 20.0,
+  "records": 72,
+  "failures": 0
+}
