@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "project": "Helios",
+  "backend": "openmp",
+  "scene": "scheduler_stress",
+  "width": 256, "height": 144, "spp": 12, "max_depth": 8, "seed": 42, "tile": 16, "bvh": true, "bvh_nodes": 511, "ranks": 1, "threads_per_rank": 4, "omp_schedule": "static",
+  "render_wall_seconds": 0.2427679, "rays": 1055217, "shadow_rays": 205228, "node_visits": 29363551, "primitive_tests": 5285428, "pixels": 36864, "tiles": 144,
+  "image_hash_fnv1a64": "da850750a440d1ed",
+  "workers": [
+    {"id": 0, "assignments": 36, "compute_seconds": 0.0396627, "tiles": 36, "pixels": 9216, "rays": 110592, "assignment_wait_seconds": 0, "result_wait_seconds": 0, "mpi_send_seconds": 0, "mpi_receive_seconds": 0},
+    {"id": 1, "assignments": 36, "compute_seconds": 0.0896411, "tiles": 36, "pixels": 9216, "rays": 155069, "assignment_wait_seconds": 0, "result_wait_seconds": 0, "mpi_send_seconds": 0, "mpi_receive_seconds": 0},
+    {"id": 2, "assignments": 36, "compute_seconds": 0.2423878, "tiles": 36, "pixels": 9216, "rays": 399171, "assignment_wait_seconds": 0, "result_wait_seconds": 0, "mpi_send_seconds": 0, "mpi_receive_seconds": 0},
+    {"id": 3, "assignments": 36, "compute_seconds": 0.2164406, "tiles": 36, "pixels": 9216, "rays": 390385, "assignment_wait_seconds": 0, "result_wait_seconds": 0, "mpi_send_seconds": 0, "mpi_receive_seconds": 0}
+  ]
+}

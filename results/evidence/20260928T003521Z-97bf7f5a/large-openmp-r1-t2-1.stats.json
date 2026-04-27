@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "project": "Helios",
+  "backend": "openmp",
+  "scene": "scheduler_stress",
+  "width": 256, "height": 144, "spp": 12, "max_depth": 8, "seed": 42, "tile": 16, "bvh": true, "bvh_nodes": 511, "ranks": 1, "threads_per_rank": 2, "omp_schedule": "static",
+  "render_wall_seconds": 0.3913161, "rays": 1055217, "shadow_rays": 205228, "node_visits": 29363551, "primitive_tests": 5285428, "pixels": 36864, "tiles": 144,
+  "image_hash_fnv1a64": "da850750a440d1ed",
+  "workers": [
+    {"id": 0, "assignments": 72, "compute_seconds": 0.1329966, "tiles": 72, "pixels": 18432, "rays": 265661, "assignment_wait_seconds": 0, "result_wait_seconds": 0, "mpi_send_seconds": 0, "mpi_receive_seconds": 0},
+    {"id": 1, "assignments": 72, "compute_seconds": 0.3909781, "tiles": 72, "pixels": 18432, "rays": 789556, "assignment_wait_seconds": 0, "result_wait_seconds": 0, "mpi_send_seconds": 0, "mpi_receive_seconds": 0}
+  ]
+}

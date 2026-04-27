@@ -1,0 +1,6 @@
+workload,backend,ranks,threads,logical_workers,spp,median_seconds,weak_efficiency_vs_1_worker
+per-worker-1,sequential,1,1,1,4,0.0186879,1.0
+per-worker-2,openmp,1,2,2,8,0.0260806,0.7165440979118579
+per-worker-4,openmp,1,4,4,16,0.0532584,0.3508911270334821
+per-worker-2,mpi-static,2,1,2,8,0.0285775,0.653937538273117
+per-worker-4,hybrid-static,2,2,4,16,0.0334841,0.5581126564548546
