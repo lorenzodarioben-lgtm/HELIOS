@@ -1,0 +1,15 @@
+{
+  "run_id": "20260928T005023Z-61b48527",
+  "suite": "smoke",
+  "scene": "imbalanced",
+  "repeats": 5,
+  "warmups": 1,
+  "shuffle_seed": 42,
+  "timeout_seconds": 20.0,
+  "records": 36,
+  "measured_records": 30,
+  "warmup_records": 6,
+  "failures": 0,
+  "executable_sha256": "d530eb9f9a4d5ae2eb528e348fed738d214635ccccdeecbf55db316064d05a9a",
+  "mpi_executable_sha256": "a2fe9875403000954a5bf9e1145c111c0f32111de5bf30bc410ec6fb570f5f18"
+}
