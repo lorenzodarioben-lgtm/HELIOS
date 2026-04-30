@@ -1,0 +1,88 @@
+{
+  "protocol_version": 2,
+  "classification": "pilot",
+  "experiment_id": "20260928T064844Z-13227a7b",
+  "created_utc": "2026-09-28T06:48:45.059849+00:00",
+  "status": "complete",
+  "experiment": "scheduler",
+  "scenes": [
+    "uniform"
+  ],
+  "preset": "small",
+  "calibrated_presets": {
+    "small": [
+      256,
+      144,
+      64
+    ],
+    "medium": [
+      256,
+      144,
+      192
+    ],
+    "large": [
+      256,
+      144,
+      512
+    ]
+  },
+  "repeats": 1,
+  "warmups": 0,
+  "order_seed": 20260928,
+  "timeout_seconds": 30.0,
+  "max_total_seconds": 60.0,
+  "slow_factor_milli": 1000,
+  "build_type": "Release (scripts/build.ps1 -Configuration release)",
+  "compiler": "g++ (Rev3, Built by MSYS2 project) 14.1.0",
+  "git_sha": "8d92429f8d0c0bafd81f7eb0690f58ee77e83470",
+  "git_status_porcelain": "M README.md\n M STATUS.md\n M docs/BENCHMARKING.md\n M docs/BENCHMARKS.md\n M docs/STRESS_TEST_PLAN.md\n M scripts/analyse_results.py\n M scripts/benchmark_v2.py\n M tests/test_benchmark_analysis.py\n?? results/calibration/20260928T064407Z-eef5a771/\n?? results/protocol-v2/\n?? scripts/plot_aggregate.py\n?? scripts/verify_experiment.py",
+  "hardware": {
+    "os": "Windows-10-10.0.26200-SP0",
+    "logical_processors": 8,
+    "cpu": "11th Gen Intel(R) Core(TM) i7-11370H @ 3.30GHz",
+    "physical_cores": "not directly measured",
+    "physical_ram_bytes": 16843112448
+  },
+  "executable_sha256": "40e4b64f0e86a761178a5b7ace5fb2ee951a4c26575133ddda041903adfa67d2",
+  "mpi_executable_sha256": "cc62f9eb3f74e750e29cb9e45676070187eb21c7eebb4fc87ea552387baa25ce",
+  "source_sha256": {
+    "src\\main.cpp": "0b3b2f97bdba98fabc57da008ffed7b86dbc8978399d7d4af6b834de2e81f690",
+    "src\\core.cpp": "0ec54b4f3d92591737290f38f54d1dca28e1b762b8b73bb6623c09a4b1d4cb72",
+    "include\\helios\\core.hpp": "efd6a4d0c08a4fc61ab38ea58d3c11a1b8551528c9a18ea8537f22c9681717a3"
+  },
+  "conditions": [
+    {
+      "backend": "sequential",
+      "ranks": 1,
+      "threads_per_rank": 1,
+      "coordinator_only": false,
+      "compute_slots": 1
+    },
+    {
+      "backend": "mpi-static",
+      "ranks": 3,
+      "threads_per_rank": 1,
+      "coordinator_only": true,
+      "compute_slots": 2
+    },
+    {
+      "backend": "mpi-dynamic",
+      "ranks": 3,
+      "threads_per_rank": 1,
+      "coordinator_only": false,
+      "compute_slots": 2
+    },
+    {
+      "backend": "hybrid-adaptive",
+      "ranks": 3,
+      "threads_per_rank": 1,
+      "coordinator_only": false,
+      "compute_slots": 2
+    }
+  ],
+  "timing_boundary": "render_wall_seconds excludes setup and file output; includes tile processing and MPI scheduling/gather",
+  "trace_policy": "dynamic assignment trace and per-tile metrics on every run",
+  "records": 4,
+  "failures": 0,
+  "hash_validation": "within scene and SPP; weak scaled SPP checked against excluded sequential reference renders"
+}
