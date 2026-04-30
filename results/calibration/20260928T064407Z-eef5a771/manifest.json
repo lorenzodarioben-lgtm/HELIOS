@@ -1,0 +1,39 @@
+{
+  "kind": "calibration-only",
+  "run_id": "20260928T064407Z-eef5a771",
+  "created_utc": "2026-09-28T06:44:36.699093+00:00",
+  "timeout_seconds": 40.0,
+  "max_total_seconds": 75.0,
+  "presets": [
+    {
+      "name": "small",
+      "scene": "scheduler_stress",
+      "width": 256,
+      "height": 144,
+      "spp": 64,
+      "max_depth": 16,
+      "observed_render_seconds": 2.5220347,
+      "return_code": 0
+    },
+    {
+      "name": "medium",
+      "scene": "scheduler_stress",
+      "width": 256,
+      "height": 144,
+      "spp": 192,
+      "max_depth": 16,
+      "observed_render_seconds": 7.2086099,
+      "return_code": 0
+    },
+    {
+      "name": "large",
+      "scene": "scheduler_stress",
+      "width": 256,
+      "height": 144,
+      "spp": 512,
+      "max_depth": 16,
+      "observed_render_seconds": 19.8797567,
+      "return_code": 0
+    }
+  ]
+}
