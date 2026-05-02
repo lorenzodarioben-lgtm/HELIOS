@@ -1,0 +1,39 @@
+{
+  "classification": "diagnostic-not-formal",
+  "id": "20260928T081730Z-e41d9f1c",
+  "status": "complete",
+  "scene": "imbalanced",
+  "preset": "medium",
+  "repeats": 3,
+  "warmups": 1,
+  "conditions": [
+    "openmp-4",
+    "mpi-static-4",
+    "hybrid-static-2x2",
+    "hybrid-dynamic-3x2",
+    "hybrid-static-2x2-noaffinity",
+    "hybrid-static-2x2-physicalcore"
+  ],
+  "affinity_help": "Microsoft MPI 10.1.12498.52 mpiexec -help2: -affinity_layout 0 disables affinity; spr:p spreads ranks to distinct physical cores",
+  "git_sha": "83e33e8e82044a3c095bc813b929b3dd2dd7ed32",
+  "source_sha256": "dc5dda0e074c231abe96f3223d472ce78fa009cbe9d0b8bfa2e92b0c4e0eb2cf",
+  "executable_sha256": "9c627b5931c45d9ce782768de4d0e962ac574b2a5ec95edd7b66978eb10fb42a",
+  "mpi_executable_sha256": "30946ef41725b578cb949a570c9d9bbb7b004b54123a2854d1a1e9553d7cb4e0",
+  "hardware": {
+    "os": "Windows-10-10.0.26200-SP0",
+    "logical_processors": 8,
+    "cpu": "11th Gen Intel(R) Core(TM) i7-11370H @ 3.30GHz",
+    "physical_cores": "not directly measured",
+    "physical_ram_bytes": 16843112448
+  },
+  "openmp_environment": {
+    "OMP_NUM_THREADS": null,
+    "OMP_PROC_BIND": null,
+    "OMP_PLACES": null,
+    "OMP_DYNAMIC": null,
+    "GOMP_CPU_AFFINITY": null
+  },
+  "created_utc": "2026-09-28T08:17:30.351970+00:00",
+  "records": 25,
+  "failures": 0
+}

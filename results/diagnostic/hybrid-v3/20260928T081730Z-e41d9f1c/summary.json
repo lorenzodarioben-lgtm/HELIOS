@@ -1,0 +1,87 @@
+{
+  "classification": "diagnostic-not-formal",
+  "groups": {
+    "openmp-4": {
+      "n": 3,
+      "median_seconds": 3.3812828,
+      "median_rank_compute_seconds": [
+        0.4387065,
+        1.3533065,
+        3.3809374,
+        3.3439745
+      ],
+      "median_rank_send_seconds": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "mpi-static-4": {
+      "n": 3,
+      "median_seconds": 3.1512287,
+      "median_rank_compute_seconds": [
+        0.4553237,
+        1.2883491,
+        3.1505493,
+        3.0312862
+      ],
+      "median_rank_send_seconds": [
+        0,
+        0.0004975,
+        0.0005001,
+        0.0004949
+      ]
+    },
+    "hybrid-static-2x2": {
+      "n": 3,
+      "median_seconds": 3.8520118,
+      "median_rank_compute_seconds": [
+        0.9244239,
+        3.8505447
+      ],
+      "median_rank_send_seconds": [
+        0,
+        0.0009754
+      ]
+    },
+    "hybrid-dynamic-3x2": {
+      "n": 3,
+      "median_seconds": 2.6062125,
+      "median_rank_compute_seconds": [
+        0,
+        2.5827477,
+        2.6034647
+      ],
+      "median_rank_send_seconds": [
+        0.0004161,
+        0.0009083,
+        0.000693
+      ]
+    },
+    "hybrid-static-2x2-noaffinity": {
+      "n": 3,
+      "median_seconds": 3.8302566,
+      "median_rank_compute_seconds": [
+        0.9317963,
+        3.8291025
+      ],
+      "median_rank_send_seconds": [
+        0,
+        0.0008135
+      ]
+    },
+    "hybrid-static-2x2-physicalcore": {
+      "n": 3,
+      "median_seconds": 5.1583117,
+      "median_rank_compute_seconds": [
+        1.3251724,
+        5.1570258
+      ],
+      "median_rank_send_seconds": [
+        0,
+        0.0008783
+      ]
+    }
+  }
+}
