@@ -1,0 +1,22 @@
+{
+  "helios.exe": {
+    "same_length": true,
+    "different_byte_offsets": [
+      136,
+      216
+    ],
+    "pe_header_offset": 128,
+    "timestamp_field_offset": 136,
+    "checksum_field_offset": 216
+  },
+  "helios_mpi.exe": {
+    "same_length": true,
+    "different_byte_offsets": [
+      136,
+      216
+    ],
+    "pe_header_offset": 128,
+    "timestamp_field_offset": 136,
+    "checksum_field_offset": 216
+  }
+}

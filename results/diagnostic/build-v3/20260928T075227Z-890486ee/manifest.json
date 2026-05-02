@@ -1,0 +1,22 @@
+{
+  "classification": "diagnostic-not-formal",
+  "id": "20260928T075227Z-890486ee",
+  "source_sha256": {
+    "src\\main.cpp": "dc5dda0e074c231abe96f3223d472ce78fa009cbe9d0b8bfa2e92b0c4e0eb2cf",
+    "src\\core.cpp": "0ec54b4f3d92591737290f38f54d1dca28e1b762b8b73bb6623c09a4b1d4cb72",
+    "include\\helios\\core.hpp": "efd6a4d0c08a4fc61ab38ea58d3c11a1b8551528c9a18ea8537f22c9681717a3"
+  },
+  "git_sha": "a4d8df8efd6e1a99ed58e331f54ddcd16741c729",
+  "builds": [
+    {
+      "build": 1,
+      "return_code": 1,
+      "stdout": "",
+      "stderr": "File C:\\Users\\lorenzodario\\Documents\\PersonalProjects\\Helios\\scripts\\build.ps1 cannot be loaded because running \nscripts is disabled on this system. For more information, see about_Execution_Policies at \nhttps:/go.microsoft.com/fwlink/?LinkID=135170.\n    + CategoryInfo          : SecurityError: (:) [], ParentContainsErrorRecordException\n    + FullyQualifiedErrorId : UnauthorizedAccess\n",
+      "started_utc": "2026-09-28T07:52:27.426320+00:00",
+      "ended_utc": "2026-09-28T07:52:27.768718+00:00",
+      "files": {}
+    }
+  ],
+  "comparison": {}
+}
