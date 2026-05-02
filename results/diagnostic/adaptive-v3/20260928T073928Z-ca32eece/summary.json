@@ -1,0 +1,71 @@
+{
+  "classification": "diagnostic-not-formal",
+  "groups": {
+    "imbalanced/static": {
+      "n": 3,
+      "median_seconds": 5.6108457,
+      "median_assignments": 0,
+      "median_tail90_seconds": 0,
+      "median_last_worker_spread_seconds": 0,
+      "median_worker_wait_seconds": 0,
+      "median_mpi_call_seconds": 5.6118871,
+      "median_coordinator_handling_seconds": 0,
+      "median_batch_size": 0
+    },
+    "imbalanced/fixed-1": {
+      "n": 3,
+      "median_seconds": 3.6819427,
+      "median_assignments": 144,
+      "median_tail90_seconds": 0.4750752,
+      "median_last_worker_spread_seconds": 0.0248607,
+      "median_worker_wait_seconds": 0.0105061,
+      "median_mpi_call_seconds": 0.0023793,
+      "median_coordinator_handling_seconds": 0.00129,
+      "median_batch_size": 1
+    },
+    "imbalanced/adaptive-50": {
+      "n": 3,
+      "median_seconds": 3.4139585,
+      "median_assignments": 96,
+      "median_tail90_seconds": 0.4614331,
+      "median_last_worker_spread_seconds": 0.0271529,
+      "median_worker_wait_seconds": 0.007568500000000001,
+      "median_mpi_call_seconds": 0.0016777,
+      "median_coordinator_handling_seconds": 0.0008707,
+      "median_batch_size": 1
+    },
+    "scheduler_stress/static": {
+      "n": 3,
+      "median_seconds": 6.0360252,
+      "median_assignments": 0,
+      "median_tail90_seconds": 0,
+      "median_last_worker_spread_seconds": 0,
+      "median_worker_wait_seconds": 0,
+      "median_mpi_call_seconds": 6.0368189,
+      "median_coordinator_handling_seconds": 0,
+      "median_batch_size": 0
+    },
+    "scheduler_stress/fixed-1": {
+      "n": 3,
+      "median_seconds": 4.0443043,
+      "median_assignments": 144,
+      "median_tail90_seconds": 0.5419388,
+      "median_last_worker_spread_seconds": 0.0041378,
+      "median_worker_wait_seconds": 0.0111965,
+      "median_mpi_call_seconds": 0.0019786,
+      "median_coordinator_handling_seconds": 0.0010852,
+      "median_batch_size": 1
+    },
+    "scheduler_stress/adaptive-50": {
+      "n": 3,
+      "median_seconds": 3.9616508,
+      "median_assignments": 102,
+      "median_tail90_seconds": 0.5271101,
+      "median_last_worker_spread_seconds": 0.0244692,
+      "median_worker_wait_seconds": 0.0082281,
+      "median_mpi_call_seconds": 0.0017522000000000002,
+      "median_coordinator_handling_seconds": 0.0009551,
+      "median_batch_size": 1
+    }
+  }
+}

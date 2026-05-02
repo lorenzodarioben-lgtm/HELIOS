@@ -1,0 +1,47 @@
+{
+  "classification": "diagnostic-not-formal",
+  "id": "20260928T073928Z-ca32eece",
+  "status": "complete",
+  "group": "core",
+  "scenes": [
+    "imbalanced",
+    "scheduler_stress"
+  ],
+  "repeats": 3,
+  "warmups": 1,
+  "order_seed": 20260928,
+  "timeout_seconds": 45.0,
+  "max_total_seconds": 240.0,
+  "created_utc": "2026-09-28T07:39:28.769698+00:00",
+  "git_sha": "a4d8df8efd6e1a99ed58e331f54ddcd16741c729",
+  "git_status_porcelain": "M scripts/benchmark_v2.py\n M src/main.cpp\n?? scripts/diagnose_scheduler.py",
+  "source_sha256": {
+    "src\\main.cpp": "dc5dda0e074c231abe96f3223d472ce78fa009cbe9d0b8bfa2e92b0c4e0eb2cf",
+    "src\\core.cpp": "0ec54b4f3d92591737290f38f54d1dca28e1b762b8b73bb6623c09a4b1d4cb72",
+    "include\\helios\\core.hpp": "efd6a4d0c08a4fc61ab38ea58d3c11a1b8551528c9a18ea8537f22c9681717a3"
+  },
+  "executable_sha256": "85a5ecba94f83e6bc2128d8902ceb2df96523e4a1c0295239757fb282d02aa30",
+  "mpi_executable_sha256": "fad9086a7b8b481d1fb3a422b23da60f2301b4af56745c83613b01a5eecb63b2",
+  "hardware": {
+    "os": "Windows-10-10.0.26200-SP0",
+    "logical_processors": 8,
+    "cpu": "11th Gen Intel(R) Core(TM) i7-11370H @ 3.30GHz",
+    "physical_cores": "not directly measured",
+    "physical_ram_bytes": 16843112448
+  },
+  "conditions": [
+    "static",
+    "fixed-1",
+    "adaptive-50"
+  ],
+  "render": {
+    "width": 256,
+    "height": 144,
+    "spp": 192,
+    "max_depth": 8,
+    "seed": 42,
+    "tile": 16
+  },
+  "records": 26,
+  "failures": 0
+}

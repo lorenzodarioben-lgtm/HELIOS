@@ -1,0 +1,137 @@
+{
+  "classification": "diagnostic-not-formal",
+  "groups": {
+    "imbalanced/fixed-1": {
+      "n": 3,
+      "median_seconds": 3.1769822,
+      "median_assignments": 144,
+      "median_tail90_seconds": 0.4302771,
+      "median_last_worker_spread_seconds": 0.0133647,
+      "median_worker_wait_seconds": 0.0120381,
+      "median_mpi_call_seconds": 0.0018474,
+      "median_coordinator_handling_seconds": 0.0009798,
+      "median_batch_size": 1
+    },
+    "imbalanced/fixed-2": {
+      "n": 3,
+      "median_seconds": 3.2939637,
+      "median_assignments": 72,
+      "median_tail90_seconds": 0.4876784,
+      "median_last_worker_spread_seconds": 0.0752158,
+      "median_worker_wait_seconds": 0.006345,
+      "median_mpi_call_seconds": 0.0010907999999999998,
+      "median_coordinator_handling_seconds": 0.0005651,
+      "median_batch_size": 2
+    },
+    "imbalanced/fixed-4": {
+      "n": 3,
+      "median_seconds": 3.3518768,
+      "median_assignments": 36,
+      "median_tail90_seconds": 0.4632946,
+      "median_last_worker_spread_seconds": 0.189882,
+      "median_worker_wait_seconds": 0.0028545000000000003,
+      "median_mpi_call_seconds": 0.0008203,
+      "median_coordinator_handling_seconds": 0.0004231,
+      "median_batch_size": 4
+    },
+    "imbalanced/fixed-8": {
+      "n": 3,
+      "median_seconds": 3.5009968,
+      "median_assignments": 18,
+      "median_tail90_seconds": 0.4614807,
+      "median_last_worker_spread_seconds": 0.4613774,
+      "median_worker_wait_seconds": 0.0017422,
+      "median_mpi_call_seconds": 0.0005074999999999999,
+      "median_coordinator_handling_seconds": 0.0002927,
+      "median_batch_size": 8
+    },
+    "imbalanced/fixed-16": {
+      "n": 3,
+      "median_seconds": 3.6188991,
+      "median_assignments": 9,
+      "median_tail90_seconds": 0.0001045,
+      "median_last_worker_spread_seconds": 0.6586905,
+      "median_worker_wait_seconds": 0.0009007,
+      "median_mpi_call_seconds": 0.0003299,
+      "median_coordinator_handling_seconds": 0.0001796,
+      "median_batch_size": 16
+    },
+    "imbalanced/fixed-32": {
+      "n": 3,
+      "median_seconds": 3.4851703,
+      "median_assignments": 5,
+      "median_tail90_seconds": 9.39e-05,
+      "median_last_worker_spread_seconds": 0.4320204,
+      "median_worker_wait_seconds": 0.000444,
+      "median_mpi_call_seconds": 0.000272,
+      "median_coordinator_handling_seconds": 0.0001372,
+      "median_batch_size": 32
+    },
+    "scheduler_stress/fixed-1": {
+      "n": 3,
+      "median_seconds": 3.774872,
+      "median_assignments": 144,
+      "median_tail90_seconds": 0.5100337,
+      "median_last_worker_spread_seconds": 0.0177694,
+      "median_worker_wait_seconds": 0.011499800000000001,
+      "median_mpi_call_seconds": 0.0019506999999999999,
+      "median_coordinator_handling_seconds": 0.0009913,
+      "median_batch_size": 1
+    },
+    "scheduler_stress/fixed-2": {
+      "n": 3,
+      "median_seconds": 4.1093508,
+      "median_assignments": 72,
+      "median_tail90_seconds": 0.5552461,
+      "median_last_worker_spread_seconds": 0.0958783,
+      "median_worker_wait_seconds": 0.0060487,
+      "median_mpi_call_seconds": 0.0012286999999999999,
+      "median_coordinator_handling_seconds": 0.0006429,
+      "median_batch_size": 2
+    },
+    "scheduler_stress/fixed-4": {
+      "n": 3,
+      "median_seconds": 3.8830114,
+      "median_assignments": 36,
+      "median_tail90_seconds": 0.5526081,
+      "median_last_worker_spread_seconds": 0.2452615,
+      "median_worker_wait_seconds": 0.002944,
+      "median_mpi_call_seconds": 0.0007626,
+      "median_coordinator_handling_seconds": 0.0003862,
+      "median_batch_size": 4
+    },
+    "scheduler_stress/fixed-8": {
+      "n": 3,
+      "median_seconds": 4.235821,
+      "median_assignments": 18,
+      "median_tail90_seconds": 0.5480512,
+      "median_last_worker_spread_seconds": 0.5479611,
+      "median_worker_wait_seconds": 0.0016566,
+      "median_mpi_call_seconds": 0.0005047,
+      "median_coordinator_handling_seconds": 0.0002677,
+      "median_batch_size": 8
+    },
+    "scheduler_stress/fixed-16": {
+      "n": 3,
+      "median_seconds": 4.1912724,
+      "median_assignments": 9,
+      "median_tail90_seconds": 0.0001122,
+      "median_last_worker_spread_seconds": 0.80839,
+      "median_worker_wait_seconds": 0.0007378,
+      "median_mpi_call_seconds": 0.00034290000000000004,
+      "median_coordinator_handling_seconds": 0.0001893,
+      "median_batch_size": 16
+    },
+    "scheduler_stress/fixed-32": {
+      "n": 3,
+      "median_seconds": 4.0299114,
+      "median_assignments": 5,
+      "median_tail90_seconds": 8.24e-05,
+      "median_last_worker_spread_seconds": 0.4636456,
+      "median_worker_wait_seconds": 0.0004818,
+      "median_mpi_call_seconds": 0.0002598,
+      "median_coordinator_handling_seconds": 0.0001537,
+      "median_batch_size": 32
+    }
+  }
+}

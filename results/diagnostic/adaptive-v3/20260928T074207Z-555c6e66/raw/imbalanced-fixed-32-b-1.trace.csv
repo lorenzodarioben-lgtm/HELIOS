@@ -1,0 +1,6 @@
+worker,first_tile,tile_count,assigned_seconds,completed_seconds,worker_render_seconds,worker_stall_seconds,remaining_on_completion,estimated_pixels_per_second_at_dispatch
+1,0,32,1.3e-06,0.355888,0.3557202,0,112,0
+2,32,32,6.1e-06,0.8757784,0.8756312,0,80,0
+1,64,32,0.3558882,3.160188,2.8041668,0,48,23029.336
+2,96,32,0.8757788,3.7204622,2.8444994,0,16,9355.5369
+1,128,16,3.1601883,4.1141115,0.95379,0,0,12975.3514

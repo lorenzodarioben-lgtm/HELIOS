@@ -1,0 +1,115 @@
+{
+  "classification": "diagnostic-not-formal",
+  "groups": {
+    "imbalanced/adaptive-25": {
+      "n": 3,
+      "median_seconds": 3.3172251,
+      "median_assignments": 122,
+      "median_tail90_seconds": 0.4277051,
+      "median_last_worker_spread_seconds": 0.0084984,
+      "median_worker_wait_seconds": 0.009835400000000001,
+      "median_mpi_call_seconds": 0.0018526000000000003,
+      "median_coordinator_handling_seconds": 0.0009789,
+      "median_batch_size": 1
+    },
+    "imbalanced/adaptive-50": {
+      "n": 3,
+      "median_seconds": 3.6456594,
+      "median_assignments": 92,
+      "median_tail90_seconds": 0.4743732,
+      "median_last_worker_spread_seconds": 0.0283998,
+      "median_worker_wait_seconds": 0.0078365,
+      "median_mpi_call_seconds": 0.0016187,
+      "median_coordinator_handling_seconds": 0.0008477,
+      "median_batch_size": 1
+    },
+    "imbalanced/adaptive-100": {
+      "n": 3,
+      "median_seconds": 3.2575968,
+      "median_assignments": 69,
+      "median_tail90_seconds": 0.4554426,
+      "median_last_worker_spread_seconds": 0.0256782,
+      "median_worker_wait_seconds": 0.0061174,
+      "median_mpi_call_seconds": 0.0011133,
+      "median_coordinator_handling_seconds": 0.0005788,
+      "median_batch_size": 1
+    },
+    "imbalanced/adaptive-initial-1": {
+      "n": 3,
+      "median_seconds": 3.3606877,
+      "median_assignments": 92,
+      "median_tail90_seconds": 0.4394965,
+      "median_last_worker_spread_seconds": 0.0154142,
+      "median_worker_wait_seconds": 0.0075288,
+      "median_mpi_call_seconds": 0.0013092,
+      "median_coordinator_handling_seconds": 0.0007021,
+      "median_batch_size": 1
+    },
+    "imbalanced/adaptive-initial-4": {
+      "n": 3,
+      "median_seconds": 3.3707391,
+      "median_assignments": 92,
+      "median_tail90_seconds": 0.5353891,
+      "median_last_worker_spread_seconds": 0.0173817,
+      "median_worker_wait_seconds": 0.0073554,
+      "median_mpi_call_seconds": 0.0014288,
+      "median_coordinator_handling_seconds": 0.0007443,
+      "median_batch_size": 1
+    },
+    "scheduler_stress/adaptive-25": {
+      "n": 3,
+      "median_seconds": 3.797382,
+      "median_assignments": 122,
+      "median_tail90_seconds": 0.522846,
+      "median_last_worker_spread_seconds": 0.0316289,
+      "median_worker_wait_seconds": 0.0102308,
+      "median_mpi_call_seconds": 0.0016870000000000001,
+      "median_coordinator_handling_seconds": 0.0009191,
+      "median_batch_size": 1
+    },
+    "scheduler_stress/adaptive-50": {
+      "n": 3,
+      "median_seconds": 3.8478061,
+      "median_assignments": 97,
+      "median_tail90_seconds": 0.4950382,
+      "median_last_worker_spread_seconds": 0.0513887,
+      "median_worker_wait_seconds": 0.008338700000000001,
+      "median_mpi_call_seconds": 0.0014612,
+      "median_coordinator_handling_seconds": 0.0007662,
+      "median_batch_size": 1
+    },
+    "scheduler_stress/adaptive-100": {
+      "n": 3,
+      "median_seconds": 3.787152,
+      "median_assignments": 73,
+      "median_tail90_seconds": 0.5149375,
+      "median_last_worker_spread_seconds": 0.0325373,
+      "median_worker_wait_seconds": 0.0061519,
+      "median_mpi_call_seconds": 0.0011135,
+      "median_coordinator_handling_seconds": 0.0005897,
+      "median_batch_size": 1
+    },
+    "scheduler_stress/adaptive-initial-1": {
+      "n": 3,
+      "median_seconds": 3.7856811,
+      "median_assignments": 99,
+      "median_tail90_seconds": 0.5021431,
+      "median_last_worker_spread_seconds": 0.0290042,
+      "median_worker_wait_seconds": 0.0085596,
+      "median_mpi_call_seconds": 0.0014526,
+      "median_coordinator_handling_seconds": 0.0007733,
+      "median_batch_size": 1
+    },
+    "scheduler_stress/adaptive-initial-4": {
+      "n": 3,
+      "median_seconds": 3.8257314,
+      "median_assignments": 98,
+      "median_tail90_seconds": 0.5298901,
+      "median_last_worker_spread_seconds": 0.0309261,
+      "median_worker_wait_seconds": 0.008166099999999999,
+      "median_mpi_call_seconds": 0.00152,
+      "median_coordinator_handling_seconds": 0.0007926,
+      "median_batch_size": 1
+    }
+  }
+}
