@@ -1,0 +1,105 @@
+{
+  "classification": "diagnostic-not-formal",
+  "id": "20260928T081705Z-17f1e4b3",
+  "created_utc": "2026-09-28T08:17:07.215659+00:00",
+  "mpi_help_source": "mpiexec -help2 and -help3, Microsoft MPI 10.1.12498.52",
+  "runs": [
+    {
+      "mode": "default",
+      "command": [
+        "mpiexec",
+        "-n",
+        "2",
+        "powershell",
+        "-NoProfile",
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "C:\\Users\\lorenzodario\\Documents\\PersonalProjects\\Helios\\scripts\\probe_affinity.ps1"
+      ],
+      "return_code": 0,
+      "stdout": "{\"pmi_rank\":\"0\",\"process_id\":26184,\"affinity_mask_decimal\":255,\"logical_processors_visible\":8}\n{\"pmi_rank\":\"1\",\"process_id\":26032,\"affinity_mask_decimal\":255,\"logical_processors_visible\":8}\n\n\n",
+      "stderr": "",
+      "ranks": [
+        {
+          "pmi_rank": "0",
+          "process_id": 26184,
+          "affinity_mask_decimal": 255,
+          "logical_processors_visible": 8
+        },
+        {
+          "pmi_rank": "1",
+          "process_id": 26032,
+          "affinity_mask_decimal": 255,
+          "logical_processors_visible": 8
+        }
+      ]
+    },
+    {
+      "mode": "no-affinity",
+      "command": [
+        "mpiexec",
+        "-affinity_layout",
+        "0",
+        "-n",
+        "2",
+        "powershell",
+        "-NoProfile",
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "C:\\Users\\lorenzodario\\Documents\\PersonalProjects\\Helios\\scripts\\probe_affinity.ps1"
+      ],
+      "return_code": 0,
+      "stdout": "{\"pmi_rank\":\"1\",\"process_id\":10008,\"affinity_mask_decimal\":255,\"logical_processors_visible\":8}\n{\"pmi_rank\":\"0\",\"process_id\":7892,\"affinity_mask_decimal\":255,\"logical_processors_visible\":8}\n\n\n",
+      "stderr": "",
+      "ranks": [
+        {
+          "pmi_rank": "1",
+          "process_id": 10008,
+          "affinity_mask_decimal": 255,
+          "logical_processors_visible": 8
+        },
+        {
+          "pmi_rank": "0",
+          "process_id": 7892,
+          "affinity_mask_decimal": 255,
+          "logical_processors_visible": 8
+        }
+      ]
+    },
+    {
+      "mode": "physical-core",
+      "command": [
+        "mpiexec",
+        "-affinity_layout",
+        "spr:p",
+        "-n",
+        "2",
+        "powershell",
+        "-NoProfile",
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "C:\\Users\\lorenzodario\\Documents\\PersonalProjects\\Helios\\scripts\\probe_affinity.ps1"
+      ],
+      "return_code": 0,
+      "stdout": "{\"pmi_rank\":\"0\",\"process_id\":38540,\"affinity_mask_decimal\":255,\"logical_processors_visible\":8}\n{\"pmi_rank\":\"1\",\"process_id\":4328,\"affinity_mask_decimal\":255,\"logical_processors_visible\":8}\n",
+      "stderr": "",
+      "ranks": [
+        {
+          "pmi_rank": "0",
+          "process_id": 38540,
+          "affinity_mask_decimal": 255,
+          "logical_processors_visible": 8
+        },
+        {
+          "pmi_rank": "1",
+          "process_id": 4328,
+          "affinity_mask_decimal": 255,
+          "logical_processors_visible": 8
+        }
+      ]
+    }
+  ]
+}
