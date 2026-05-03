@@ -1,0 +1,1057 @@
+{
+  "command": [
+    "C:\\Users\\lorenzodario\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+    "-c",
+    "import ctypes,time\nk=ctypes.WinDLL('kernel32')\nk.GetCurrentProcess.restype=k.GetCurrentThread.restype=ctypes.c_void_p\nk.SetProcessAffinityMask.argtypes=k.SetThreadAffinityMask.argtypes=[ctypes.c_void_p,ctypes.c_size_t]\nassert k.SetProcessAffinityMask(k.GetCurrentProcess(),60)\nassert k.SetThreadAffinityMask(k.GetCurrentThread(),32)\nend=time.perf_counter()+2.0\nwhile time.perf_counter()<end: pass\n"
+  ],
+  "return_code": 0,
+  "wall_seconds": 2.0939999999827705,
+  "stdout": "",
+  "stderr": "",
+  "per_logical_cpu_busy_fraction": [
+    0.3209,
+    0.3209,
+    0.291,
+    0.3582,
+    0.3806,
+    0.9776,
+    0.4328,
+    0.4254
+  ],
+  "samples": [
+    {
+      "t": 0.0,
+      "processes": [
+        {
+          "pid": 28580,
+          "mask": 60,
+          "system_mask": 255,
+          "default_cpu_sets": 0,
+          "exe": "python.exe",
+          "parent": 31352,
+          "threads": [
+            {
+              "tid": 29448,
+              "mask": 32,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 5,
+              "cpu_seconds": 0.046875
+            },
+            {
+              "tid": 16740,
+              "mask": 60,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 4,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 14984,
+              "mask": 60,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 3,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 39864,
+              "mask": 60,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 3,
+              "cpu_seconds": 0.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "t": 0.09399999998277053,
+      "processes": [
+        {
+          "pid": 28580,
+          "mask": 60,
+          "system_mask": 255,
+          "default_cpu_sets": 0,
+          "exe": "python.exe",
+          "parent": 31352,
+          "threads": [
+            {
+              "tid": 29448,
+              "mask": 32,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 5,
+              "cpu_seconds": 0.140625
+            },
+            {
+              "tid": 16740,
+              "mask": 60,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 4,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 14984,
+              "mask": 60,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 3,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 39864,
+              "mask": 60,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 3,
+              "cpu_seconds": 0.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "t": 0.18799999996554106,
+      "processes": [
+        {
+          "pid": 28580,
+          "mask": 60,
+          "system_mask": 255,
+          "default_cpu_sets": 0,
+          "exe": "python.exe",
+          "parent": 31352,
+          "threads": [
+            {
+              "tid": 29448,
+              "mask": 32,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 5,
+              "cpu_seconds": 0.234375
+            },
+            {
+              "tid": 16740,
+              "mask": 60,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 4,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 14984,
+              "mask": 60,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 3,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 39864,
+              "mask": 60,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 3,
+              "cpu_seconds": 0.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "t": 0.2809999999590218,
+      "processes": [
+        {
+          "pid": 28580,
+          "mask": 60,
+          "system_mask": 255,
+          "default_cpu_sets": 0,
+          "exe": "python.exe",
+          "parent": 31352,
+          "threads": [
+            {
+              "tid": 29448,
+              "mask": 32,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 5,
+              "cpu_seconds": 0.3125
+            },
+            {
+              "tid": 16740,
+              "mask": 60,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 4,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 14984,
+              "mask": 60,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 3,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 39864,
+              "mask": 60,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 3,
+              "cpu_seconds": 0.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "t": 0.39100000000325963,
+      "processes": [
+        {
+          "pid": 28580,
+          "mask": 60,
+          "system_mask": 255,
+          "default_cpu_sets": 0,
+          "exe": "python.exe",
+          "parent": 31352,
+          "threads": [
+            {
+              "tid": 29448,
+              "mask": 32,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 5,
+              "cpu_seconds": 0.421875
+            },
+            {
+              "tid": 16740,
+              "mask": 60,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 4,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 14984,
+              "mask": 60,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 3,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 39864,
+              "mask": 60,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 3,
+              "cpu_seconds": 0.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "t": 0.48499999998603016,
+      "processes": [
+        {
+          "pid": 28580,
+          "mask": 60,
+          "system_mask": 255,
+          "default_cpu_sets": 0,
+          "exe": "python.exe",
+          "parent": 31352,
+          "threads": [
+            {
+              "tid": 29448,
+              "mask": 32,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 5,
+              "cpu_seconds": 0.515625
+            },
+            {
+              "tid": 16740,
+              "mask": 60,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 4,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 14984,
+              "mask": 60,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 3,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 39864,
+              "mask": 60,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 3,
+              "cpu_seconds": 0.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "t": 0.5779999999795109,
+      "processes": [
+        {
+          "pid": 28580,
+          "mask": 60,
+          "system_mask": 255,
+          "default_cpu_sets": 0,
+          "exe": "python.exe",
+          "parent": 31352,
+          "threads": [
+            {
+              "tid": 29448,
+              "mask": 32,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 5,
+              "cpu_seconds": 0.59375
+            },
+            {
+              "tid": 16740,
+              "mask": 60,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 4,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 14984,
+              "mask": 60,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 3,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 39864,
+              "mask": 60,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 3,
+              "cpu_seconds": 0.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "t": 0.6719999999622814,
+      "processes": [
+        {
+          "pid": 28580,
+          "mask": 60,
+          "system_mask": 255,
+          "default_cpu_sets": 0,
+          "exe": "python.exe",
+          "parent": 31352,
+          "threads": [
+            {
+              "tid": 29448,
+              "mask": 32,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 5,
+              "cpu_seconds": 0.6875
+            },
+            {
+              "tid": 16740,
+              "mask": 60,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 4,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 14984,
+              "mask": 60,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 3,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 39864,
+              "mask": 60,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 3,
+              "cpu_seconds": 0.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "t": 0.7809999999590218,
+      "processes": [
+        {
+          "pid": 28580,
+          "mask": 60,
+          "system_mask": 255,
+          "default_cpu_sets": 0,
+          "exe": "python.exe",
+          "parent": 31352,
+          "threads": [
+            {
+              "tid": 29448,
+              "mask": 32,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 5,
+              "cpu_seconds": 0.78125
+            },
+            {
+              "tid": 16740,
+              "mask": 60,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 4,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 14984,
+              "mask": 60,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 3,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 39864,
+              "mask": 60,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 3,
+              "cpu_seconds": 0.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "t": 0.8599999999860302,
+      "processes": [
+        {
+          "pid": 28580,
+          "mask": 60,
+          "system_mask": 255,
+          "default_cpu_sets": 0,
+          "exe": "python.exe",
+          "parent": 31352,
+          "threads": [
+            {
+              "tid": 29448,
+              "mask": 32,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 5,
+              "cpu_seconds": 0.875
+            },
+            {
+              "tid": 16740,
+              "mask": 60,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 4,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 14984,
+              "mask": 60,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 3,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 39864,
+              "mask": 60,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 3,
+              "cpu_seconds": 0.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "t": 0.9529999999795109,
+      "processes": [
+        {
+          "pid": 28580,
+          "mask": 60,
+          "system_mask": 255,
+          "default_cpu_sets": 0,
+          "exe": "python.exe",
+          "parent": 31352,
+          "threads": [
+            {
+              "tid": 29448,
+              "mask": 32,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 5,
+              "cpu_seconds": 0.96875
+            },
+            {
+              "tid": 16740,
+              "mask": 60,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 4,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 14984,
+              "mask": 60,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 3,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 39864,
+              "mask": 60,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 3,
+              "cpu_seconds": 0.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "t": 1.062999999965541,
+      "processes": [
+        {
+          "pid": 28580,
+          "mask": 60,
+          "system_mask": 255,
+          "default_cpu_sets": 0,
+          "exe": "python.exe",
+          "parent": 31352,
+          "threads": [
+            {
+              "tid": 29448,
+              "mask": 32,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 5,
+              "cpu_seconds": 1.0625
+            },
+            {
+              "tid": 16740,
+              "mask": 60,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 4,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 14984,
+              "mask": 60,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 3,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 39864,
+              "mask": 60,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 3,
+              "cpu_seconds": 0.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "t": 1.1559999999590218,
+      "processes": [
+        {
+          "pid": 28580,
+          "mask": 60,
+          "system_mask": 255,
+          "default_cpu_sets": 0,
+          "exe": "python.exe",
+          "parent": 31352,
+          "threads": [
+            {
+              "tid": 29448,
+              "mask": 32,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 5,
+              "cpu_seconds": 1.15625
+            },
+            {
+              "tid": 16740,
+              "mask": 60,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 4,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 14984,
+              "mask": 60,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 3,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 39864,
+              "mask": 60,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 3,
+              "cpu_seconds": 0.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "t": 1.25,
+      "processes": [
+        {
+          "pid": 28580,
+          "mask": 60,
+          "system_mask": 255,
+          "default_cpu_sets": 0,
+          "exe": "python.exe",
+          "parent": 31352,
+          "threads": [
+            {
+              "tid": 29448,
+              "mask": 32,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 5,
+              "cpu_seconds": 1.25
+            },
+            {
+              "tid": 16740,
+              "mask": 60,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 4,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 14984,
+              "mask": 60,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 3,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 39864,
+              "mask": 60,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 3,
+              "cpu_seconds": 0.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "t": 1.3439999999827705,
+      "processes": [
+        {
+          "pid": 28580,
+          "mask": 60,
+          "system_mask": 255,
+          "default_cpu_sets": 0,
+          "exe": "python.exe",
+          "parent": 31352,
+          "threads": [
+            {
+              "tid": 29448,
+              "mask": 32,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 5,
+              "cpu_seconds": 1.34375
+            },
+            {
+              "tid": 16740,
+              "mask": 60,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 4,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 14984,
+              "mask": 60,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 3,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 39864,
+              "mask": 60,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 3,
+              "cpu_seconds": 0.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "t": 1.437999999965541,
+      "processes": [
+        {
+          "pid": 28580,
+          "mask": 60,
+          "system_mask": 255,
+          "default_cpu_sets": 0,
+          "exe": "python.exe",
+          "parent": 31352,
+          "threads": [
+            {
+              "tid": 29448,
+              "mask": 32,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 5,
+              "cpu_seconds": 1.40625
+            },
+            {
+              "tid": 16740,
+              "mask": 60,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 4,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 14984,
+              "mask": 60,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 3,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 39864,
+              "mask": 60,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 3,
+              "cpu_seconds": 0.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "t": 1.5309999999590218,
+      "processes": [
+        {
+          "pid": 28580,
+          "mask": 60,
+          "system_mask": 255,
+          "default_cpu_sets": 0,
+          "exe": "python.exe",
+          "parent": 31352,
+          "threads": [
+            {
+              "tid": 29448,
+              "mask": 32,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 5,
+              "cpu_seconds": 1.453125
+            },
+            {
+              "tid": 16740,
+              "mask": 60,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 4,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 14984,
+              "mask": 60,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 3,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 39864,
+              "mask": 60,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 3,
+              "cpu_seconds": 0.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "t": 1.625,
+      "processes": [
+        {
+          "pid": 28580,
+          "mask": 60,
+          "system_mask": 255,
+          "default_cpu_sets": 0,
+          "exe": "python.exe",
+          "parent": 31352,
+          "threads": [
+            {
+              "tid": 29448,
+              "mask": 32,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 5,
+              "cpu_seconds": 1.515625
+            },
+            {
+              "tid": 16740,
+              "mask": 60,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 4,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 14984,
+              "mask": 60,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 3,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 39864,
+              "mask": 60,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 3,
+              "cpu_seconds": 0.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "t": 1.7189999999827705,
+      "processes": [
+        {
+          "pid": 28580,
+          "mask": 60,
+          "system_mask": 255,
+          "default_cpu_sets": 0,
+          "exe": "python.exe",
+          "parent": 31352,
+          "threads": [
+            {
+              "tid": 29448,
+              "mask": 32,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 5,
+              "cpu_seconds": 1.609375
+            },
+            {
+              "tid": 16740,
+              "mask": 60,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 4,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 14984,
+              "mask": 60,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 3,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 39864,
+              "mask": 60,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 3,
+              "cpu_seconds": 0.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "t": 1.812999999965541,
+      "processes": [
+        {
+          "pid": 28580,
+          "mask": 60,
+          "system_mask": 255,
+          "default_cpu_sets": 0,
+          "exe": "python.exe",
+          "parent": 31352,
+          "threads": [
+            {
+              "tid": 29448,
+              "mask": 32,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 5,
+              "cpu_seconds": 1.703125
+            },
+            {
+              "tid": 16740,
+              "mask": 60,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 4,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 14984,
+              "mask": 60,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 3,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 39864,
+              "mask": 60,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 3,
+              "cpu_seconds": 0.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "t": 1.9059999999590218,
+      "processes": [
+        {
+          "pid": 28580,
+          "mask": 60,
+          "system_mask": 255,
+          "default_cpu_sets": 0,
+          "exe": "python.exe",
+          "parent": 31352,
+          "threads": [
+            {
+              "tid": 29448,
+              "mask": 32,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 5,
+              "cpu_seconds": 1.78125
+            },
+            {
+              "tid": 16740,
+              "mask": 60,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 4,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 14984,
+              "mask": 60,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 3,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 39864,
+              "mask": 60,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 3,
+              "cpu_seconds": 0.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "t": 2.0,
+      "processes": [
+        {
+          "pid": 28580,
+          "mask": 60,
+          "system_mask": 255,
+          "default_cpu_sets": 0,
+          "exe": "python.exe",
+          "parent": 31352,
+          "threads": [
+            {
+              "tid": 29448,
+              "mask": 32,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 5,
+              "cpu_seconds": 1.859375
+            },
+            {
+              "tid": 16740,
+              "mask": 60,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 4,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 14984,
+              "mask": 60,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 3,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 39864,
+              "mask": 60,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 3,
+              "cpu_seconds": 0.0
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

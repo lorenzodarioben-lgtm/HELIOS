@@ -1,0 +1,562 @@
+{
+  "classification": "diagnostic-not-formal",
+  "id": "20260928T090653Z-8a62ec27",
+  "tool": "scripts/observe_rank_placement.py",
+  "tool_sha256": "3190b4dfa4407c7c4f1843ac4a897581703453101a5629ed807c5b46d809b1ef",
+  "git_sha": "83e33e8e82044a3c095bc813b929b3dd2dd7ed32",
+  "git_status_porcelain": " M STATUS.md\n M docs/ADAPTIVE_POLICY_AUDIT.md\n M docs/BENCHMARKING.md\n M docs/BENCHMARKS.md\n M docs/DEFENCE_NOTES.md\n M docs/FROZEN_EVALUATION_CANDIDATE.md\n M docs/HYBRID_TOPOLOGY_AUDIT.md\n M report/REPORT_OUTLINE.md\n M scripts/diagnose_hybrid.py\n M scripts/probe_affinity.ps1\n M scripts/run_supervised_stress.ps1\n?? HANDOFF.md\n?? results/diagnostic/hybrid-v3/\n?? results/protocol-v2/20260928T075743Z-cf62886e/aggregate/observed_run_file_timestamps.csv\n?? results/protocol-v2/20260928T080938Z-fe56f15c/\n?? scripts/capture_run_timestamps.py\n?? scripts/observe_cpu_counters.ps1\n?? scripts/observe_rank_placement.py\n?? scripts/probe_mpi_affinity.py\n",
+  "mpi_executable_sha256": "30946ef41725b578cb949a570c9d9bbb7b004b54123a2854d1a1e9553d7cb4e0",
+  "hardware": {
+    "os": "Windows-10-10.0.26200-SP0",
+    "logical_processors": 8,
+    "cpu": "11th Gen Intel(R) Core(TM) i7-11370H @ 3.30GHz",
+    "physical_cores": "not directly measured",
+    "physical_ram_bytes": 16843112448
+  },
+  "interval_seconds": 0.05,
+  "created_utc": "2026-09-28T09:06:53.546866+00:00",
+  "caveat": "timings perturbed by sampling; masks are allowed CPUs, not observed run locations",
+  "positive_control": {
+    "processes": {
+      "28580": {
+        "exe": "python.exe",
+        "process_masks": [
+          60
+        ],
+        "thread_masks": [
+          32,
+          60
+        ],
+        "cpu_set_counts": [
+          0
+        ],
+        "ideal_processors": [
+          3,
+          4,
+          5
+        ],
+        "threads_seen": 4,
+        "threads_over_0p1_cpu_s": 1,
+        "top_thread_cpu_seconds": [
+          1.859,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "process_cpu_seconds": 1.859
+      }
+    },
+    "samples": 22,
+    "active_threads_max": 1,
+    "active_threads_median": 1,
+    "per_logical_cpu_busy_fraction": [
+      0.3209,
+      0.3209,
+      0.291,
+      0.3582,
+      0.3806,
+      0.9776,
+      0.4328,
+      0.4254
+    ],
+    "passed": true,
+    "expected": {
+      "process_mask": 60,
+      "thread_mask": 32,
+      "busiest_logical_cpu": 5
+    }
+  },
+  "runs": {
+    "hybrid-static-2x2": {
+      "processes": {
+        "37260": {
+          "exe": "helios_mpi.exe",
+          "process_masks": [
+            255
+          ],
+          "thread_masks": [
+            255
+          ],
+          "cpu_set_counts": [
+            0
+          ],
+          "ideal_processors": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "threads_seen": 6,
+          "threads_over_0p1_cpu_s": 2,
+          "top_thread_cpu_seconds": [
+            3.609,
+            3.312,
+            0.0,
+            0.0
+          ],
+          "process_cpu_seconds": 6.922
+        },
+        "10168": {
+          "exe": "helios_mpi.exe",
+          "process_masks": [
+            255
+          ],
+          "thread_masks": [
+            255
+          ],
+          "cpu_set_counts": [
+            0
+          ],
+          "ideal_processors": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "threads_seen": 6,
+          "threads_over_0p1_cpu_s": 2,
+          "top_thread_cpu_seconds": [
+            1.172,
+            1.031,
+            0.016,
+            0.016
+          ],
+          "process_cpu_seconds": 2.25
+        }
+      },
+      "samples": 41,
+      "active_threads_max": 4,
+      "active_threads_median": 2,
+      "per_logical_cpu_busy_fraction": [
+        0.517,
+        0.4377,
+        0.5472,
+        0.4906,
+        0.6642,
+        0.6189,
+        0.683,
+        0.6755
+      ],
+      "return_code": 0,
+      "render_wall_seconds_perturbed": 3.9067899,
+      "rank_compute_seconds": [
+        1.242,
+        3.906
+      ],
+      "hash_matches_reference": true
+    },
+    "hybrid-static-2x2-noaffinity": {
+      "processes": {
+        "10740": {
+          "exe": "helios_mpi.exe",
+          "process_masks": [
+            255
+          ],
+          "thread_masks": [
+            255
+          ],
+          "cpu_set_counts": [
+            0
+          ],
+          "ideal_processors": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "threads_seen": 6,
+          "threads_over_0p1_cpu_s": 2,
+          "top_thread_cpu_seconds": [
+            5.047,
+            5.0,
+            0.0,
+            0.0
+          ],
+          "process_cpu_seconds": 10.047
+        },
+        "13780": {
+          "exe": "helios_mpi.exe",
+          "process_masks": [
+            255
+          ],
+          "thread_masks": [
+            255
+          ],
+          "cpu_set_counts": [
+            0
+          ],
+          "ideal_processors": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "threads_seen": 6,
+          "threads_over_0p1_cpu_s": 2,
+          "top_thread_cpu_seconds": [
+            1.188,
+            0.844,
+            0.0,
+            0.0
+          ],
+          "process_cpu_seconds": 2.031
+        }
+      },
+      "samples": 58,
+      "active_threads_max": 4,
+      "active_threads_median": 2,
+      "per_logical_cpu_busy_fraction": [
+        0.4757,
+        0.4297,
+        0.5135,
+        0.4946,
+        0.6784,
+        0.6595,
+        0.727,
+        0.7243
+      ],
+      "return_code": 0,
+      "render_wall_seconds_perturbed": 5.6228871,
+      "rank_compute_seconds": [
+        1.246,
+        5.622
+      ],
+      "hash_matches_reference": true
+    },
+    "hybrid-static-2x2-physicalcore": {
+      "processes": {
+        "17356": {
+          "exe": "helios_mpi.exe",
+          "process_masks": [
+            255
+          ],
+          "thread_masks": [
+            255
+          ],
+          "cpu_set_counts": [
+            0,
+            2
+          ],
+          "ideal_processors": [
+            2,
+            3
+          ],
+          "threads_seen": 6,
+          "threads_over_0p1_cpu_s": 2,
+          "top_thread_cpu_seconds": [
+            4.609,
+            4.594,
+            0.0,
+            0.0
+          ],
+          "process_cpu_seconds": 9.203
+        },
+        "13924": {
+          "exe": "helios_mpi.exe",
+          "process_masks": [
+            255
+          ],
+          "thread_masks": [
+            255
+          ],
+          "cpu_set_counts": [
+            0,
+            2
+          ],
+          "ideal_processors": [
+            2,
+            6,
+            7
+          ],
+          "threads_seen": 6,
+          "threads_over_0p1_cpu_s": 2,
+          "top_thread_cpu_seconds": [
+            1.391,
+            1.219,
+            0.0,
+            0.0
+          ],
+          "process_cpu_seconds": 2.609
+        }
+      },
+      "samples": 54,
+      "active_threads_max": 4,
+      "active_threads_median": 2,
+      "per_logical_cpu_busy_fraction": [
+        0.9485,
+        0.9485,
+        0.4201,
+        0.4065,
+        0.5854,
+        0.4932,
+        0.4905,
+        0.4201
+      ],
+      "return_code": 0,
+      "render_wall_seconds_perturbed": 5.6085145,
+      "rank_compute_seconds": [
+        1.507,
+        5.607
+      ],
+      "hash_matches_reference": true
+    },
+    "mpi-static-4": {
+      "processes": {
+        "23144": {
+          "exe": "helios_mpi.exe",
+          "process_masks": [
+            255
+          ],
+          "thread_masks": [
+            255
+          ],
+          "cpu_set_counts": [
+            0
+          ],
+          "ideal_processors": [
+            1,
+            2,
+            3,
+            4,
+            6
+          ],
+          "threads_seen": 5,
+          "threads_over_0p1_cpu_s": 1,
+          "top_thread_cpu_seconds": [
+            3.469,
+            0.016,
+            0.0,
+            0.0
+          ],
+          "process_cpu_seconds": 3.484
+        },
+        "34516": {
+          "exe": "helios_mpi.exe",
+          "process_masks": [
+            255
+          ],
+          "thread_masks": [
+            255
+          ],
+          "cpu_set_counts": [
+            0
+          ],
+          "ideal_processors": [
+            1,
+            2,
+            3,
+            4,
+            6
+          ],
+          "threads_seen": 5,
+          "threads_over_0p1_cpu_s": 1,
+          "top_thread_cpu_seconds": [
+            3.734,
+            0.016,
+            0.016,
+            0.0
+          ],
+          "process_cpu_seconds": 3.766
+        },
+        "36584": {
+          "exe": "helios_mpi.exe",
+          "process_masks": [
+            255
+          ],
+          "thread_masks": [
+            255
+          ],
+          "cpu_set_counts": [
+            0
+          ],
+          "ideal_processors": [
+            1,
+            2,
+            3,
+            4,
+            6
+          ],
+          "threads_seen": 5,
+          "threads_over_0p1_cpu_s": 1,
+          "top_thread_cpu_seconds": [
+            1.453,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "process_cpu_seconds": 1.453
+        },
+        "8344": {
+          "exe": "helios_mpi.exe",
+          "process_masks": [
+            255
+          ],
+          "thread_masks": [
+            255
+          ],
+          "cpu_set_counts": [
+            0
+          ],
+          "ideal_processors": [
+            1,
+            2,
+            3,
+            4,
+            6
+          ],
+          "threads_seen": 5,
+          "threads_over_0p1_cpu_s": 1,
+          "top_thread_cpu_seconds": [
+            0.531,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "process_cpu_seconds": 0.531
+        }
+      },
+      "samples": 35,
+      "active_threads_max": 4,
+      "active_threads_median": 2,
+      "per_logical_cpu_busy_fraction": [
+        0.5778,
+        0.6148,
+        0.6889,
+        0.632,
+        0.7259,
+        0.663,
+        0.7807,
+        0.8259
+      ],
+      "return_code": 0,
+      "render_wall_seconds_perturbed": 4.0262407,
+      "rank_compute_seconds": [
+        0.534,
+        1.513,
+        4.026,
+        3.788
+      ],
+      "hash_matches_reference": true
+    },
+    "hybrid-dynamic-3x2": {
+      "processes": {
+        "39196": {
+          "exe": "helios_mpi.exe",
+          "process_masks": [
+            255
+          ],
+          "thread_masks": [
+            255
+          ],
+          "cpu_set_counts": [
+            0
+          ],
+          "ideal_processors": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "threads_seen": 6,
+          "threads_over_0p1_cpu_s": 2,
+          "top_thread_cpu_seconds": [
+            2.578,
+            2.281,
+            0.0,
+            0.0
+          ],
+          "process_cpu_seconds": 4.859
+        },
+        "7036": {
+          "exe": "helios_mpi.exe",
+          "process_masks": [
+            255
+          ],
+          "thread_masks": [
+            255
+          ],
+          "cpu_set_counts": [
+            0
+          ],
+          "ideal_processors": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "threads_seen": 6,
+          "threads_over_0p1_cpu_s": 2,
+          "top_thread_cpu_seconds": [
+            2.625,
+            2.297,
+            0.0,
+            0.0
+          ],
+          "process_cpu_seconds": 4.922
+        },
+        "28676": {
+          "exe": "helios_mpi.exe",
+          "process_masks": [
+            255
+          ],
+          "thread_masks": [
+            255
+          ],
+          "cpu_set_counts": [
+            0
+          ],
+          "ideal_processors": [
+            1,
+            2,
+            3,
+            4,
+            6
+          ],
+          "threads_seen": 5,
+          "threads_over_0p1_cpu_s": 0,
+          "top_thread_cpu_seconds": [
+            0.016,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "process_cpu_seconds": 0.016
+        }
+      },
+      "samples": 25,
+      "active_threads_max": 4,
+      "active_threads_median": 4,
+      "per_logical_cpu_busy_fraction": [
+        0.7231,
+        0.7333,
+        0.7795,
+        0.7641,
+        0.7949,
+        0.7949,
+        0.9077,
+        0.8872
+      ],
+      "return_code": 0,
+      "render_wall_seconds_perturbed": 2.9120519,
+      "rank_compute_seconds": [
+        0,
+        2.908,
+        2.887
+      ],
+      "hash_matches_reference": true
+    }
+  },
+  "status": "complete"
+}

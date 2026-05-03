@@ -1,0 +1,6900 @@
+{
+  "command": [
+    "mpiexec",
+    "-affinity_layout",
+    "0",
+    "-n",
+    "2",
+    "C:\\Users\\lorenzodario\\Documents\\PersonalProjects\\Helios\\build-release\\helios_mpi.exe",
+    "render",
+    "--backend",
+    "hybrid-static",
+    "--scene",
+    "imbalanced",
+    "--width",
+    "256",
+    "--height",
+    "144",
+    "--spp",
+    "192",
+    "--max-depth",
+    "8",
+    "--seed",
+    "42",
+    "--tile",
+    "16",
+    "--threads",
+    "2",
+    "--output",
+    "C:\\Users\\lorenzodario\\Documents\\PersonalProjects\\Helios\\results\\diagnostic\\hybrid-v3\\placement-observer-20260928T090653Z-8a62ec27\\raw\\hybrid-static-2x2-noaffinity.ppm",
+    "--stats-json",
+    "C:\\Users\\lorenzodario\\Documents\\PersonalProjects\\Helios\\results\\diagnostic\\hybrid-v3\\placement-observer-20260928T090653Z-8a62ec27\\raw\\hybrid-static-2x2-noaffinity.stats.json"
+  ],
+  "return_code": 0,
+  "wall_seconds": 5.7810000000172295,
+  "stdout": "Rendered 256x144 scene=imbalanced backend=hybrid-static ranks=2 threads=2 time=5.6229 s hash=da1762d641f51b4e output=C:\\Users\\lorenzodario\\Documents\\PersonalProjects\\Helios\\results\\diagnostic\\hybrid-v3\\placement-observer-20260928T090653Z-8a62ec27\\raw\\hybrid-static-2x2-noaffinity.ppm\n",
+  "stderr": "",
+  "per_logical_cpu_busy_fraction": [
+    0.4757,
+    0.4297,
+    0.5135,
+    0.4946,
+    0.6784,
+    0.6595,
+    0.727,
+    0.7243
+  ],
+  "samples": [
+    {
+      "t": 0.015000000013969839,
+      "processes": []
+    },
+    {
+      "t": 0.125,
+      "processes": [
+        {
+          "pid": 10740,
+          "mask": 255,
+          "system_mask": 255,
+          "default_cpu_sets": 0,
+          "exe": "helios_mpi.exe",
+          "parent": 8952,
+          "threads": [
+            {
+              "tid": 13564,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 2,
+              "cpu_seconds": 0.09375
+            },
+            {
+              "tid": 11972,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 4,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 29212,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 6,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 30060,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 1,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 36064,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 3,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 13772,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 5,
+              "cpu_seconds": 0.078125
+            }
+          ]
+        },
+        {
+          "pid": 13780,
+          "mask": 255,
+          "system_mask": 255,
+          "default_cpu_sets": 0,
+          "exe": "helios_mpi.exe",
+          "parent": 8952,
+          "threads": [
+            {
+              "tid": 12744,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 2,
+              "cpu_seconds": 0.046875
+            },
+            {
+              "tid": 30716,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 4,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 33776,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 6,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 34696,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 1,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 31124,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 3,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 29428,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 5,
+              "cpu_seconds": 0.0625
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "t": 0.23399999999674037,
+      "processes": [
+        {
+          "pid": 10740,
+          "mask": 255,
+          "system_mask": 255,
+          "default_cpu_sets": 0,
+          "exe": "helios_mpi.exe",
+          "parent": 8952,
+          "threads": [
+            {
+              "tid": 13564,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 2,
+              "cpu_seconds": 0.203125
+            },
+            {
+              "tid": 11972,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 4,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 29212,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 6,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 30060,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 1,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 36064,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 3,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 13772,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 5,
+              "cpu_seconds": 0.171875
+            }
+          ]
+        },
+        {
+          "pid": 13780,
+          "mask": 255,
+          "system_mask": 255,
+          "default_cpu_sets": 0,
+          "exe": "helios_mpi.exe",
+          "parent": 8952,
+          "threads": [
+            {
+              "tid": 12744,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 2,
+              "cpu_seconds": 0.125
+            },
+            {
+              "tid": 30716,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 4,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 33776,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 6,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 34696,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 1,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 31124,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 3,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 29428,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 5,
+              "cpu_seconds": 0.15625
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "t": 0.32800000003771856,
+      "processes": [
+        {
+          "pid": 10740,
+          "mask": 255,
+          "system_mask": 255,
+          "default_cpu_sets": 0,
+          "exe": "helios_mpi.exe",
+          "parent": 8952,
+          "threads": [
+            {
+              "tid": 13564,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 2,
+              "cpu_seconds": 0.3125
+            },
+            {
+              "tid": 11972,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 4,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 29212,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 6,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 30060,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 1,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 36064,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 3,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 13772,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 5,
+              "cpu_seconds": 0.265625
+            }
+          ]
+        },
+        {
+          "pid": 13780,
+          "mask": 255,
+          "system_mask": 255,
+          "default_cpu_sets": 0,
+          "exe": "helios_mpi.exe",
+          "parent": 8952,
+          "threads": [
+            {
+              "tid": 12744,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 2,
+              "cpu_seconds": 0.21875
+            },
+            {
+              "tid": 30716,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 4,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 33776,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 6,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 34696,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 1,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 31124,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 3,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 29428,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 5,
+              "cpu_seconds": 0.25
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "t": 0.43700000003445894,
+      "processes": [
+        {
+          "pid": 10740,
+          "mask": 255,
+          "system_mask": 255,
+          "default_cpu_sets": 0,
+          "exe": "helios_mpi.exe",
+          "parent": 8952,
+          "threads": [
+            {
+              "tid": 13564,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 2,
+              "cpu_seconds": 0.421875
+            },
+            {
+              "tid": 11972,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 4,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 29212,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 6,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 30060,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 1,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 36064,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 3,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 13772,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 5,
+              "cpu_seconds": 0.359375
+            }
+          ]
+        },
+        {
+          "pid": 13780,
+          "mask": 255,
+          "system_mask": 255,
+          "default_cpu_sets": 0,
+          "exe": "helios_mpi.exe",
+          "parent": 8952,
+          "threads": [
+            {
+              "tid": 12744,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 2,
+              "cpu_seconds": 0.3125
+            },
+            {
+              "tid": 30716,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 4,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 33776,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 6,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 34696,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 1,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 31124,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 3,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 29428,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 5,
+              "cpu_seconds": 0.359375
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "t": 0.5470000000204891,
+      "processes": [
+        {
+          "pid": 10740,
+          "mask": 255,
+          "system_mask": 255,
+          "default_cpu_sets": 0,
+          "exe": "helios_mpi.exe",
+          "parent": 8952,
+          "threads": [
+            {
+              "tid": 13564,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 2,
+              "cpu_seconds": 0.5
+            },
+            {
+              "tid": 11972,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 4,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 29212,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 6,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 30060,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 1,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 36064,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 3,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 13772,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 5,
+              "cpu_seconds": 0.453125
+            }
+          ]
+        },
+        {
+          "pid": 13780,
+          "mask": 255,
+          "system_mask": 255,
+          "default_cpu_sets": 0,
+          "exe": "helios_mpi.exe",
+          "parent": 8952,
+          "threads": [
+            {
+              "tid": 12744,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 2,
+              "cpu_seconds": 0.40625
+            },
+            {
+              "tid": 30716,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 4,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 33776,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 6,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 34696,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 1,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 31124,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 3,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 29428,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 5,
+              "cpu_seconds": 0.453125
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "t": 0.6560000000172295,
+      "processes": [
+        {
+          "pid": 10740,
+          "mask": 255,
+          "system_mask": 255,
+          "default_cpu_sets": 0,
+          "exe": "helios_mpi.exe",
+          "parent": 8952,
+          "threads": [
+            {
+              "tid": 13564,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 2,
+              "cpu_seconds": 0.5625
+            },
+            {
+              "tid": 11972,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 4,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 29212,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 6,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 30060,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 1,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 36064,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 3,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 13772,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 5,
+              "cpu_seconds": 0.546875
+            }
+          ]
+        },
+        {
+          "pid": 13780,
+          "mask": 255,
+          "system_mask": 255,
+          "default_cpu_sets": 0,
+          "exe": "helios_mpi.exe",
+          "parent": 8952,
+          "threads": [
+            {
+              "tid": 12744,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 2,
+              "cpu_seconds": 0.484375
+            },
+            {
+              "tid": 30716,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 4,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 33776,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 6,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 34696,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 1,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 31124,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 3,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 29428,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 5,
+              "cpu_seconds": 0.5625
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "t": 0.75,
+      "processes": [
+        {
+          "pid": 10740,
+          "mask": 255,
+          "system_mask": 255,
+          "default_cpu_sets": 0,
+          "exe": "helios_mpi.exe",
+          "parent": 8952,
+          "threads": [
+            {
+              "tid": 13564,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 2,
+              "cpu_seconds": 0.609375
+            },
+            {
+              "tid": 11972,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 4,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 29212,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 6,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 30060,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 1,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 36064,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 3,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 13772,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 5,
+              "cpu_seconds": 0.640625
+            }
+          ]
+        },
+        {
+          "pid": 13780,
+          "mask": 255,
+          "system_mask": 255,
+          "default_cpu_sets": 0,
+          "exe": "helios_mpi.exe",
+          "parent": 8952,
+          "threads": [
+            {
+              "tid": 12744,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 2,
+              "cpu_seconds": 0.53125
+            },
+            {
+              "tid": 30716,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 4,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 33776,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 6,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 34696,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 1,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 31124,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 3,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 29428,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 5,
+              "cpu_seconds": 0.65625
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "t": 0.8589999999967404,
+      "processes": [
+        {
+          "pid": 10740,
+          "mask": 255,
+          "system_mask": 255,
+          "default_cpu_sets": 0,
+          "exe": "helios_mpi.exe",
+          "parent": 8952,
+          "threads": [
+            {
+              "tid": 13564,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 2,
+              "cpu_seconds": 0.71875
+            },
+            {
+              "tid": 11972,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 4,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 29212,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 6,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 30060,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 1,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 36064,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 3,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 13772,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 5,
+              "cpu_seconds": 0.75
+            }
+          ]
+        },
+        {
+          "pid": 13780,
+          "mask": 255,
+          "system_mask": 255,
+          "default_cpu_sets": 0,
+          "exe": "helios_mpi.exe",
+          "parent": 8952,
+          "threads": [
+            {
+              "tid": 12744,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 2,
+              "cpu_seconds": 0.578125
+            },
+            {
+              "tid": 30716,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 4,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 33776,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 6,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 34696,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 1,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 31124,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 3,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 29428,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 5,
+              "cpu_seconds": 0.765625
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "t": 0.9530000000377186,
+      "processes": [
+        {
+          "pid": 10740,
+          "mask": 255,
+          "system_mask": 255,
+          "default_cpu_sets": 0,
+          "exe": "helios_mpi.exe",
+          "parent": 8952,
+          "threads": [
+            {
+              "tid": 13564,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 2,
+              "cpu_seconds": 0.796875
+            },
+            {
+              "tid": 11972,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 4,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 29212,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 6,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 30060,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 1,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 36064,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 3,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 13772,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 5,
+              "cpu_seconds": 0.828125
+            }
+          ]
+        },
+        {
+          "pid": 13780,
+          "mask": 255,
+          "system_mask": 255,
+          "default_cpu_sets": 0,
+          "exe": "helios_mpi.exe",
+          "parent": 8952,
+          "threads": [
+            {
+              "tid": 12744,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 2,
+              "cpu_seconds": 0.640625
+            },
+            {
+              "tid": 30716,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 4,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 33776,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 6,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 34696,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 1,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 31124,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 3,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 29428,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 5,
+              "cpu_seconds": 0.859375
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "t": 1.062000000034459,
+      "processes": [
+        {
+          "pid": 10740,
+          "mask": 255,
+          "system_mask": 255,
+          "default_cpu_sets": 0,
+          "exe": "helios_mpi.exe",
+          "parent": 8952,
+          "threads": [
+            {
+              "tid": 13564,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 2,
+              "cpu_seconds": 0.90625
+            },
+            {
+              "tid": 11972,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 4,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 29212,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 6,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 30060,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 1,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 36064,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 3,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 13772,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 5,
+              "cpu_seconds": 0.9375
+            }
+          ]
+        },
+        {
+          "pid": 13780,
+          "mask": 255,
+          "system_mask": 255,
+          "default_cpu_sets": 0,
+          "exe": "helios_mpi.exe",
+          "parent": 8952,
+          "threads": [
+            {
+              "tid": 12744,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 2,
+              "cpu_seconds": 0.6875
+            },
+            {
+              "tid": 30716,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 4,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 33776,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 6,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 34696,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 1,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 31124,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 3,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 29428,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 5,
+              "cpu_seconds": 0.96875
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "t": 1.1560000000172295,
+      "processes": [
+        {
+          "pid": 10740,
+          "mask": 255,
+          "system_mask": 255,
+          "default_cpu_sets": 0,
+          "exe": "helios_mpi.exe",
+          "parent": 8952,
+          "threads": [
+            {
+              "tid": 13564,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 2,
+              "cpu_seconds": 0.984375
+            },
+            {
+              "tid": 11972,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 4,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 29212,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 6,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 30060,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 1,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 36064,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 3,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 13772,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 5,
+              "cpu_seconds": 0.984375
+            }
+          ]
+        },
+        {
+          "pid": 13780,
+          "mask": 255,
+          "system_mask": 255,
+          "default_cpu_sets": 0,
+          "exe": "helios_mpi.exe",
+          "parent": 8952,
+          "threads": [
+            {
+              "tid": 12744,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 2,
+              "cpu_seconds": 0.734375
+            },
+            {
+              "tid": 30716,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 4,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 33776,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 6,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 34696,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 1,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 31124,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 3,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 29428,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 5,
+              "cpu_seconds": 1.0625
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "t": 1.2650000000139698,
+      "processes": [
+        {
+          "pid": 10740,
+          "mask": 255,
+          "system_mask": 255,
+          "default_cpu_sets": 0,
+          "exe": "helios_mpi.exe",
+          "parent": 8952,
+          "threads": [
+            {
+              "tid": 13564,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 2,
+              "cpu_seconds": 1.09375
+            },
+            {
+              "tid": 11972,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 4,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 29212,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 6,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 30060,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 1,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 36064,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 3,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 13772,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 5,
+              "cpu_seconds": 1.078125
+            }
+          ]
+        },
+        {
+          "pid": 13780,
+          "mask": 255,
+          "system_mask": 255,
+          "default_cpu_sets": 0,
+          "exe": "helios_mpi.exe",
+          "parent": 8952,
+          "threads": [
+            {
+              "tid": 12744,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 2,
+              "cpu_seconds": 0.828125
+            },
+            {
+              "tid": 30716,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 4,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 33776,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 6,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 34696,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 1,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 31124,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 3,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 29428,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 5,
+              "cpu_seconds": 1.171875
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "t": 1.3589999999967404,
+      "processes": [
+        {
+          "pid": 10740,
+          "mask": 255,
+          "system_mask": 255,
+          "default_cpu_sets": 0,
+          "exe": "helios_mpi.exe",
+          "parent": 8952,
+          "threads": [
+            {
+              "tid": 13564,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 2,
+              "cpu_seconds": 1.15625
+            },
+            {
+              "tid": 11972,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 4,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 29212,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 6,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 30060,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 1,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 36064,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 3,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 13772,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 5,
+              "cpu_seconds": 1.171875
+            }
+          ]
+        },
+        {
+          "pid": 13780,
+          "mask": 255,
+          "system_mask": 255,
+          "default_cpu_sets": 0,
+          "exe": "helios_mpi.exe",
+          "parent": 8952,
+          "threads": [
+            {
+              "tid": 12744,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 2,
+              "cpu_seconds": 0.84375
+            },
+            {
+              "tid": 30716,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 4,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 33776,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 6,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 34696,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 1,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 31124,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 3,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 29428,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 5,
+              "cpu_seconds": 1.1875
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "t": 1.4530000000377186,
+      "processes": [
+        {
+          "pid": 10740,
+          "mask": 255,
+          "system_mask": 255,
+          "default_cpu_sets": 0,
+          "exe": "helios_mpi.exe",
+          "parent": 8952,
+          "threads": [
+            {
+              "tid": 13564,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 2,
+              "cpu_seconds": 1.21875
+            },
+            {
+              "tid": 11972,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 4,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 29212,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 6,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 30060,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 1,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 36064,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 3,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 13772,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 5,
+              "cpu_seconds": 1.265625
+            }
+          ]
+        },
+        {
+          "pid": 13780,
+          "mask": 255,
+          "system_mask": 255,
+          "default_cpu_sets": 0,
+          "exe": "helios_mpi.exe",
+          "parent": 8952,
+          "threads": [
+            {
+              "tid": 12744,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 2,
+              "cpu_seconds": 0.84375
+            },
+            {
+              "tid": 30716,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 4,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 33776,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 6,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 34696,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 1,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 31124,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 3,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 29428,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 5,
+              "cpu_seconds": 1.1875
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "t": 1.547000000020489,
+      "processes": [
+        {
+          "pid": 10740,
+          "mask": 255,
+          "system_mask": 255,
+          "default_cpu_sets": 0,
+          "exe": "helios_mpi.exe",
+          "parent": 8952,
+          "threads": [
+            {
+              "tid": 13564,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 2,
+              "cpu_seconds": 1.296875
+            },
+            {
+              "tid": 11972,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 4,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 29212,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 6,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 30060,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 1,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 36064,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 3,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 13772,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 5,
+              "cpu_seconds": 1.359375
+            }
+          ]
+        },
+        {
+          "pid": 13780,
+          "mask": 255,
+          "system_mask": 255,
+          "default_cpu_sets": 0,
+          "exe": "helios_mpi.exe",
+          "parent": 8952,
+          "threads": [
+            {
+              "tid": 12744,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 2,
+              "cpu_seconds": 0.84375
+            },
+            {
+              "tid": 30716,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 4,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 33776,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 6,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 34696,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 1,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 31124,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 3,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 29428,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 5,
+              "cpu_seconds": 1.1875
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "t": 1.6560000000172295,
+      "processes": [
+        {
+          "pid": 10740,
+          "mask": 255,
+          "system_mask": 255,
+          "default_cpu_sets": 0,
+          "exe": "helios_mpi.exe",
+          "parent": 8952,
+          "threads": [
+            {
+              "tid": 13564,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 2,
+              "cpu_seconds": 1.375
+            },
+            {
+              "tid": 11972,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 4,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 29212,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 6,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 30060,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 1,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 36064,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 3,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 13772,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 5,
+              "cpu_seconds": 1.453125
+            }
+          ]
+        },
+        {
+          "pid": 13780,
+          "mask": 255,
+          "system_mask": 255,
+          "default_cpu_sets": 0,
+          "exe": "helios_mpi.exe",
+          "parent": 8952,
+          "threads": [
+            {
+              "tid": 12744,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 2,
+              "cpu_seconds": 0.84375
+            },
+            {
+              "tid": 30716,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 4,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 33776,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 6,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 34696,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 1,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 31124,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 3,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 29428,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 5,
+              "cpu_seconds": 1.1875
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "t": 1.75,
+      "processes": [
+        {
+          "pid": 10740,
+          "mask": 255,
+          "system_mask": 255,
+          "default_cpu_sets": 0,
+          "exe": "helios_mpi.exe",
+          "parent": 8952,
+          "threads": [
+            {
+              "tid": 13564,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 2,
+              "cpu_seconds": 1.484375
+            },
+            {
+              "tid": 11972,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 4,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 29212,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 6,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 30060,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 1,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 36064,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 3,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 13772,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 5,
+              "cpu_seconds": 1.53125
+            }
+          ]
+        },
+        {
+          "pid": 13780,
+          "mask": 255,
+          "system_mask": 255,
+          "default_cpu_sets": 0,
+          "exe": "helios_mpi.exe",
+          "parent": 8952,
+          "threads": [
+            {
+              "tid": 12744,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 2,
+              "cpu_seconds": 0.84375
+            },
+            {
+              "tid": 30716,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 4,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 33776,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 6,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 34696,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 1,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 31124,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 3,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 29428,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 5,
+              "cpu_seconds": 1.1875
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "t": 1.8429999999934807,
+      "processes": [
+        {
+          "pid": 10740,
+          "mask": 255,
+          "system_mask": 255,
+          "default_cpu_sets": 0,
+          "exe": "helios_mpi.exe",
+          "parent": 8952,
+          "threads": [
+            {
+              "tid": 13564,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 2,
+              "cpu_seconds": 1.5625
+            },
+            {
+              "tid": 11972,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 4,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 29212,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 6,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 30060,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 1,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 36064,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 3,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 13772,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 5,
+              "cpu_seconds": 1.625
+            }
+          ]
+        },
+        {
+          "pid": 13780,
+          "mask": 255,
+          "system_mask": 255,
+          "default_cpu_sets": 0,
+          "exe": "helios_mpi.exe",
+          "parent": 8952,
+          "threads": [
+            {
+              "tid": 12744,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 2,
+              "cpu_seconds": 0.84375
+            },
+            {
+              "tid": 30716,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 4,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 33776,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 6,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 34696,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 1,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 31124,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 3,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 29428,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 5,
+              "cpu_seconds": 1.1875
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "t": 1.937000000034459,
+      "processes": [
+        {
+          "pid": 10740,
+          "mask": 255,
+          "system_mask": 255,
+          "default_cpu_sets": 0,
+          "exe": "helios_mpi.exe",
+          "parent": 8952,
+          "threads": [
+            {
+              "tid": 13564,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 2,
+              "cpu_seconds": 1.640625
+            },
+            {
+              "tid": 11972,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 4,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 29212,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 6,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 30060,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 1,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 36064,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 3,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 13772,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 5,
+              "cpu_seconds": 1.71875
+            }
+          ]
+        },
+        {
+          "pid": 13780,
+          "mask": 255,
+          "system_mask": 255,
+          "default_cpu_sets": 0,
+          "exe": "helios_mpi.exe",
+          "parent": 8952,
+          "threads": [
+            {
+              "tid": 12744,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 2,
+              "cpu_seconds": 0.84375
+            },
+            {
+              "tid": 30716,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 4,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 33776,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 6,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 34696,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 1,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 31124,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 3,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 29428,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 5,
+              "cpu_seconds": 1.1875
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "t": 2.047000000020489,
+      "processes": [
+        {
+          "pid": 10740,
+          "mask": 255,
+          "system_mask": 255,
+          "default_cpu_sets": 0,
+          "exe": "helios_mpi.exe",
+          "parent": 8952,
+          "threads": [
+            {
+              "tid": 13564,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 2,
+              "cpu_seconds": 1.734375
+            },
+            {
+              "tid": 11972,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 4,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 29212,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 6,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 30060,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 1,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 36064,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 3,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 13772,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 5,
+              "cpu_seconds": 1.828125
+            }
+          ]
+        },
+        {
+          "pid": 13780,
+          "mask": 255,
+          "system_mask": 255,
+          "default_cpu_sets": 0,
+          "exe": "helios_mpi.exe",
+          "parent": 8952,
+          "threads": [
+            {
+              "tid": 12744,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 2,
+              "cpu_seconds": 0.84375
+            },
+            {
+              "tid": 30716,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 4,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 33776,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 6,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 34696,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 1,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 31124,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 3,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 29428,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 5,
+              "cpu_seconds": 1.1875
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "t": 2.14000000001397,
+      "processes": [
+        {
+          "pid": 10740,
+          "mask": 255,
+          "system_mask": 255,
+          "default_cpu_sets": 0,
+          "exe": "helios_mpi.exe",
+          "parent": 8952,
+          "threads": [
+            {
+              "tid": 13564,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 2,
+              "cpu_seconds": 1.828125
+            },
+            {
+              "tid": 11972,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 4,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 29212,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 6,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 30060,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 1,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 36064,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 3,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 13772,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 5,
+              "cpu_seconds": 1.90625
+            }
+          ]
+        },
+        {
+          "pid": 13780,
+          "mask": 255,
+          "system_mask": 255,
+          "default_cpu_sets": 0,
+          "exe": "helios_mpi.exe",
+          "parent": 8952,
+          "threads": [
+            {
+              "tid": 12744,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 2,
+              "cpu_seconds": 0.84375
+            },
+            {
+              "tid": 30716,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 4,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 33776,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 6,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 34696,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 1,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 31124,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 3,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 29428,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 5,
+              "cpu_seconds": 1.1875
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "t": 2.2339999999967404,
+      "processes": [
+        {
+          "pid": 10740,
+          "mask": 255,
+          "system_mask": 255,
+          "default_cpu_sets": 0,
+          "exe": "helios_mpi.exe",
+          "parent": 8952,
+          "threads": [
+            {
+              "tid": 13564,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 2,
+              "cpu_seconds": 1.921875
+            },
+            {
+              "tid": 11972,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 4,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 29212,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 6,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 30060,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 1,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 36064,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 3,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 13772,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 5,
+              "cpu_seconds": 1.984375
+            }
+          ]
+        },
+        {
+          "pid": 13780,
+          "mask": 255,
+          "system_mask": 255,
+          "default_cpu_sets": 0,
+          "exe": "helios_mpi.exe",
+          "parent": 8952,
+          "threads": [
+            {
+              "tid": 12744,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 2,
+              "cpu_seconds": 0.84375
+            },
+            {
+              "tid": 30716,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 4,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 33776,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 6,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 34696,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 1,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 31124,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 3,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 29428,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 5,
+              "cpu_seconds": 1.1875
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "t": 2.3429999999934807,
+      "processes": [
+        {
+          "pid": 10740,
+          "mask": 255,
+          "system_mask": 255,
+          "default_cpu_sets": 0,
+          "exe": "helios_mpi.exe",
+          "parent": 8952,
+          "threads": [
+            {
+              "tid": 13564,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 2,
+              "cpu_seconds": 2.03125
+            },
+            {
+              "tid": 11972,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 4,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 29212,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 6,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 30060,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 1,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 36064,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 3,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 13772,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 5,
+              "cpu_seconds": 2.078125
+            }
+          ]
+        },
+        {
+          "pid": 13780,
+          "mask": 255,
+          "system_mask": 255,
+          "default_cpu_sets": 0,
+          "exe": "helios_mpi.exe",
+          "parent": 8952,
+          "threads": [
+            {
+              "tid": 12744,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 2,
+              "cpu_seconds": 0.84375
+            },
+            {
+              "tid": 30716,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 4,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 33776,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 6,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 34696,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 1,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 31124,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 3,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 29428,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 5,
+              "cpu_seconds": 1.1875
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "t": 2.437000000034459,
+      "processes": [
+        {
+          "pid": 10740,
+          "mask": 255,
+          "system_mask": 255,
+          "default_cpu_sets": 0,
+          "exe": "helios_mpi.exe",
+          "parent": 8952,
+          "threads": [
+            {
+              "tid": 13564,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 2,
+              "cpu_seconds": 2.125
+            },
+            {
+              "tid": 11972,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 4,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 29212,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 6,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 30060,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 1,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 36064,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 3,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 13772,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 5,
+              "cpu_seconds": 2.171875
+            }
+          ]
+        },
+        {
+          "pid": 13780,
+          "mask": 255,
+          "system_mask": 255,
+          "default_cpu_sets": 0,
+          "exe": "helios_mpi.exe",
+          "parent": 8952,
+          "threads": [
+            {
+              "tid": 12744,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 2,
+              "cpu_seconds": 0.84375
+            },
+            {
+              "tid": 30716,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 4,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 33776,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 6,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 34696,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 1,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 31124,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 3,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 29428,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 5,
+              "cpu_seconds": 1.1875
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "t": 2.547000000020489,
+      "processes": [
+        {
+          "pid": 10740,
+          "mask": 255,
+          "system_mask": 255,
+          "default_cpu_sets": 0,
+          "exe": "helios_mpi.exe",
+          "parent": 8952,
+          "threads": [
+            {
+              "tid": 13564,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 2,
+              "cpu_seconds": 2.1875
+            },
+            {
+              "tid": 11972,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 4,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 29212,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 6,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 30060,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 1,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 36064,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 3,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 13772,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 5,
+              "cpu_seconds": 2.25
+            }
+          ]
+        },
+        {
+          "pid": 13780,
+          "mask": 255,
+          "system_mask": 255,
+          "default_cpu_sets": 0,
+          "exe": "helios_mpi.exe",
+          "parent": 8952,
+          "threads": [
+            {
+              "tid": 12744,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 2,
+              "cpu_seconds": 0.84375
+            },
+            {
+              "tid": 30716,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 4,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 33776,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 6,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 34696,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 1,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 31124,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 3,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 29428,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 5,
+              "cpu_seconds": 1.1875
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "t": 2.64000000001397,
+      "processes": [
+        {
+          "pid": 10740,
+          "mask": 255,
+          "system_mask": 255,
+          "default_cpu_sets": 0,
+          "exe": "helios_mpi.exe",
+          "parent": 8952,
+          "threads": [
+            {
+              "tid": 13564,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 2,
+              "cpu_seconds": 2.296875
+            },
+            {
+              "tid": 11972,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 4,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 29212,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 6,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 30060,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 1,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 36064,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 3,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 13772,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 5,
+              "cpu_seconds": 2.34375
+            }
+          ]
+        },
+        {
+          "pid": 13780,
+          "mask": 255,
+          "system_mask": 255,
+          "default_cpu_sets": 0,
+          "exe": "helios_mpi.exe",
+          "parent": 8952,
+          "threads": [
+            {
+              "tid": 12744,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 2,
+              "cpu_seconds": 0.84375
+            },
+            {
+              "tid": 30716,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 4,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 33776,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 6,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 34696,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 1,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 31124,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 3,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 29428,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 5,
+              "cpu_seconds": 1.1875
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "t": 2.7339999999967404,
+      "processes": [
+        {
+          "pid": 10740,
+          "mask": 255,
+          "system_mask": 255,
+          "default_cpu_sets": 0,
+          "exe": "helios_mpi.exe",
+          "parent": 8952,
+          "threads": [
+            {
+              "tid": 13564,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 2,
+              "cpu_seconds": 2.390625
+            },
+            {
+              "tid": 11972,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 4,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 29212,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 6,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 30060,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 1,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 36064,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 3,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 13772,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 5,
+              "cpu_seconds": 2.4375
+            }
+          ]
+        },
+        {
+          "pid": 13780,
+          "mask": 255,
+          "system_mask": 255,
+          "default_cpu_sets": 0,
+          "exe": "helios_mpi.exe",
+          "parent": 8952,
+          "threads": [
+            {
+              "tid": 12744,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 2,
+              "cpu_seconds": 0.84375
+            },
+            {
+              "tid": 30716,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 4,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 33776,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 6,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 34696,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 1,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 31124,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 3,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 29428,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 5,
+              "cpu_seconds": 1.1875
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "t": 2.8280000000377186,
+      "processes": [
+        {
+          "pid": 10740,
+          "mask": 255,
+          "system_mask": 255,
+          "default_cpu_sets": 0,
+          "exe": "helios_mpi.exe",
+          "parent": 8952,
+          "threads": [
+            {
+              "tid": 13564,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 2,
+              "cpu_seconds": 2.46875
+            },
+            {
+              "tid": 11972,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 4,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 29212,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 6,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 30060,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 1,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 36064,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 3,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 13772,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 5,
+              "cpu_seconds": 2.53125
+            }
+          ]
+        },
+        {
+          "pid": 13780,
+          "mask": 255,
+          "system_mask": 255,
+          "default_cpu_sets": 0,
+          "exe": "helios_mpi.exe",
+          "parent": 8952,
+          "threads": [
+            {
+              "tid": 12744,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 2,
+              "cpu_seconds": 0.84375
+            },
+            {
+              "tid": 30716,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 4,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 33776,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 6,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 34696,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 1,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 31124,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 3,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 29428,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 5,
+              "cpu_seconds": 1.1875
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "t": 2.937000000034459,
+      "processes": [
+        {
+          "pid": 10740,
+          "mask": 255,
+          "system_mask": 255,
+          "default_cpu_sets": 0,
+          "exe": "helios_mpi.exe",
+          "parent": 8952,
+          "threads": [
+            {
+              "tid": 13564,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 2,
+              "cpu_seconds": 2.578125
+            },
+            {
+              "tid": 11972,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 4,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 29212,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 6,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 30060,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 1,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 36064,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 3,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 13772,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 5,
+              "cpu_seconds": 2.625
+            }
+          ]
+        },
+        {
+          "pid": 13780,
+          "mask": 255,
+          "system_mask": 255,
+          "default_cpu_sets": 0,
+          "exe": "helios_mpi.exe",
+          "parent": 8952,
+          "threads": [
+            {
+              "tid": 12744,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 2,
+              "cpu_seconds": 0.84375
+            },
+            {
+              "tid": 30716,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 4,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 33776,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 6,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 34696,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 1,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 31124,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 3,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 29428,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 5,
+              "cpu_seconds": 1.1875
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "t": 3.0310000000172295,
+      "processes": [
+        {
+          "pid": 10740,
+          "mask": 255,
+          "system_mask": 255,
+          "default_cpu_sets": 0,
+          "exe": "helios_mpi.exe",
+          "parent": 8952,
+          "threads": [
+            {
+              "tid": 13564,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 2,
+              "cpu_seconds": 2.671875
+            },
+            {
+              "tid": 11972,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 4,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 29212,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 6,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 30060,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 1,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 36064,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 3,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 13772,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 5,
+              "cpu_seconds": 2.703125
+            }
+          ]
+        },
+        {
+          "pid": 13780,
+          "mask": 255,
+          "system_mask": 255,
+          "default_cpu_sets": 0,
+          "exe": "helios_mpi.exe",
+          "parent": 8952,
+          "threads": [
+            {
+              "tid": 12744,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 2,
+              "cpu_seconds": 0.84375
+            },
+            {
+              "tid": 30716,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 4,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 33776,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 6,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 34696,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 1,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 31124,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 3,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 29428,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 5,
+              "cpu_seconds": 1.1875
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "t": 3.125,
+      "processes": [
+        {
+          "pid": 10740,
+          "mask": 255,
+          "system_mask": 255,
+          "default_cpu_sets": 0,
+          "exe": "helios_mpi.exe",
+          "parent": 8952,
+          "threads": [
+            {
+              "tid": 13564,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 2,
+              "cpu_seconds": 2.75
+            },
+            {
+              "tid": 11972,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 4,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 29212,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 6,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 30060,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 1,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 36064,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 3,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 13772,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 5,
+              "cpu_seconds": 2.765625
+            }
+          ]
+        },
+        {
+          "pid": 13780,
+          "mask": 255,
+          "system_mask": 255,
+          "default_cpu_sets": 0,
+          "exe": "helios_mpi.exe",
+          "parent": 8952,
+          "threads": [
+            {
+              "tid": 12744,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 2,
+              "cpu_seconds": 0.84375
+            },
+            {
+              "tid": 30716,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 4,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 33776,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 6,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 34696,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 1,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 31124,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 3,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 29428,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 5,
+              "cpu_seconds": 1.1875
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "t": 3.2339999999967404,
+      "processes": [
+        {
+          "pid": 10740,
+          "mask": 255,
+          "system_mask": 255,
+          "default_cpu_sets": 0,
+          "exe": "helios_mpi.exe",
+          "parent": 8952,
+          "threads": [
+            {
+              "tid": 13564,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 2,
+              "cpu_seconds": 2.84375
+            },
+            {
+              "tid": 11972,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 4,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 29212,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 6,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 30060,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 1,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 36064,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 3,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 13772,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 5,
+              "cpu_seconds": 2.859375
+            }
+          ]
+        },
+        {
+          "pid": 13780,
+          "mask": 255,
+          "system_mask": 255,
+          "default_cpu_sets": 0,
+          "exe": "helios_mpi.exe",
+          "parent": 8952,
+          "threads": [
+            {
+              "tid": 12744,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 2,
+              "cpu_seconds": 0.84375
+            },
+            {
+              "tid": 30716,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 4,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 33776,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 6,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 34696,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 1,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 31124,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 3,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 29428,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 5,
+              "cpu_seconds": 1.1875
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "t": 3.3280000000377186,
+      "processes": [
+        {
+          "pid": 10740,
+          "mask": 255,
+          "system_mask": 255,
+          "default_cpu_sets": 0,
+          "exe": "helios_mpi.exe",
+          "parent": 8952,
+          "threads": [
+            {
+              "tid": 13564,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 2,
+              "cpu_seconds": 2.921875
+            },
+            {
+              "tid": 11972,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 4,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 29212,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 6,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 30060,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 1,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 36064,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 3,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 13772,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 5,
+              "cpu_seconds": 2.953125
+            }
+          ]
+        },
+        {
+          "pid": 13780,
+          "mask": 255,
+          "system_mask": 255,
+          "default_cpu_sets": 0,
+          "exe": "helios_mpi.exe",
+          "parent": 8952,
+          "threads": [
+            {
+              "tid": 12744,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 2,
+              "cpu_seconds": 0.84375
+            },
+            {
+              "tid": 30716,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 4,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 33776,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 6,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 34696,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 1,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 31124,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 3,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 29428,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 5,
+              "cpu_seconds": 1.1875
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "t": 3.422000000020489,
+      "processes": [
+        {
+          "pid": 10740,
+          "mask": 255,
+          "system_mask": 255,
+          "default_cpu_sets": 0,
+          "exe": "helios_mpi.exe",
+          "parent": 8952,
+          "threads": [
+            {
+              "tid": 13564,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 2,
+              "cpu_seconds": 3.03125
+            },
+            {
+              "tid": 11972,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 4,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 29212,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 6,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 30060,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 1,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 36064,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 3,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 13772,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 5,
+              "cpu_seconds": 3.0625
+            }
+          ]
+        },
+        {
+          "pid": 13780,
+          "mask": 255,
+          "system_mask": 255,
+          "default_cpu_sets": 0,
+          "exe": "helios_mpi.exe",
+          "parent": 8952,
+          "threads": [
+            {
+              "tid": 12744,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 2,
+              "cpu_seconds": 0.84375
+            },
+            {
+              "tid": 30716,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 4,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 33776,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 6,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 34696,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 1,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 31124,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 3,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 29428,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 5,
+              "cpu_seconds": 1.1875
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "t": 3.51500000001397,
+      "processes": [
+        {
+          "pid": 10740,
+          "mask": 255,
+          "system_mask": 255,
+          "default_cpu_sets": 0,
+          "exe": "helios_mpi.exe",
+          "parent": 8952,
+          "threads": [
+            {
+              "tid": 13564,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 2,
+              "cpu_seconds": 3.125
+            },
+            {
+              "tid": 11972,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 4,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 29212,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 6,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 30060,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 1,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 36064,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 3,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 13772,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 5,
+              "cpu_seconds": 3.140625
+            }
+          ]
+        },
+        {
+          "pid": 13780,
+          "mask": 255,
+          "system_mask": 255,
+          "default_cpu_sets": 0,
+          "exe": "helios_mpi.exe",
+          "parent": 8952,
+          "threads": [
+            {
+              "tid": 12744,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 2,
+              "cpu_seconds": 0.84375
+            },
+            {
+              "tid": 30716,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 4,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 33776,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 6,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 34696,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 1,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 31124,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 3,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 29428,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 5,
+              "cpu_seconds": 1.1875
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "t": 3.625,
+      "processes": [
+        {
+          "pid": 10740,
+          "mask": 255,
+          "system_mask": 255,
+          "default_cpu_sets": 0,
+          "exe": "helios_mpi.exe",
+          "parent": 8952,
+          "threads": [
+            {
+              "tid": 13564,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 2,
+              "cpu_seconds": 3.21875
+            },
+            {
+              "tid": 11972,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 4,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 29212,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 6,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 30060,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 1,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 36064,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 3,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 13772,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 5,
+              "cpu_seconds": 3.21875
+            }
+          ]
+        },
+        {
+          "pid": 13780,
+          "mask": 255,
+          "system_mask": 255,
+          "default_cpu_sets": 0,
+          "exe": "helios_mpi.exe",
+          "parent": 8952,
+          "threads": [
+            {
+              "tid": 12744,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 2,
+              "cpu_seconds": 0.84375
+            },
+            {
+              "tid": 30716,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 4,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 33776,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 6,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 34696,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 1,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 31124,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 3,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 29428,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 5,
+              "cpu_seconds": 1.1875
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "t": 3.7179999999934807,
+      "processes": [
+        {
+          "pid": 10740,
+          "mask": 255,
+          "system_mask": 255,
+          "default_cpu_sets": 0,
+          "exe": "helios_mpi.exe",
+          "parent": 8952,
+          "threads": [
+            {
+              "tid": 13564,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 2,
+              "cpu_seconds": 3.3125
+            },
+            {
+              "tid": 11972,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 4,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 29212,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 6,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 30060,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 1,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 36064,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 3,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 13772,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 5,
+              "cpu_seconds": 3.328125
+            }
+          ]
+        },
+        {
+          "pid": 13780,
+          "mask": 255,
+          "system_mask": 255,
+          "default_cpu_sets": 0,
+          "exe": "helios_mpi.exe",
+          "parent": 8952,
+          "threads": [
+            {
+              "tid": 12744,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 2,
+              "cpu_seconds": 0.84375
+            },
+            {
+              "tid": 30716,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 4,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 33776,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 6,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 34696,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 1,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 31124,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 3,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 29428,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 5,
+              "cpu_seconds": 1.1875
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "t": 3.812000000034459,
+      "processes": [
+        {
+          "pid": 10740,
+          "mask": 255,
+          "system_mask": 255,
+          "default_cpu_sets": 0,
+          "exe": "helios_mpi.exe",
+          "parent": 8952,
+          "threads": [
+            {
+              "tid": 13564,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 2,
+              "cpu_seconds": 3.40625
+            },
+            {
+              "tid": 11972,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 4,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 29212,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 6,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 30060,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 1,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 36064,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 3,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 13772,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 5,
+              "cpu_seconds": 3.421875
+            }
+          ]
+        },
+        {
+          "pid": 13780,
+          "mask": 255,
+          "system_mask": 255,
+          "default_cpu_sets": 0,
+          "exe": "helios_mpi.exe",
+          "parent": 8952,
+          "threads": [
+            {
+              "tid": 12744,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 2,
+              "cpu_seconds": 0.84375
+            },
+            {
+              "tid": 30716,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 4,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 33776,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 6,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 34696,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 1,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 31124,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 3,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 29428,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 5,
+              "cpu_seconds": 1.1875
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "t": 3.9060000000172295,
+      "processes": [
+        {
+          "pid": 10740,
+          "mask": 255,
+          "system_mask": 255,
+          "default_cpu_sets": 0,
+          "exe": "helios_mpi.exe",
+          "parent": 8952,
+          "threads": [
+            {
+              "tid": 13564,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 2,
+              "cpu_seconds": 3.484375
+            },
+            {
+              "tid": 11972,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 4,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 29212,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 6,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 30060,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 1,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 36064,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 3,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 13772,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 5,
+              "cpu_seconds": 3.515625
+            }
+          ]
+        },
+        {
+          "pid": 13780,
+          "mask": 255,
+          "system_mask": 255,
+          "default_cpu_sets": 0,
+          "exe": "helios_mpi.exe",
+          "parent": 8952,
+          "threads": [
+            {
+              "tid": 12744,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 2,
+              "cpu_seconds": 0.84375
+            },
+            {
+              "tid": 30716,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 4,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 33776,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 6,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 34696,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 1,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 31124,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 3,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 29428,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 5,
+              "cpu_seconds": 1.1875
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "t": 4.0,
+      "processes": [
+        {
+          "pid": 10740,
+          "mask": 255,
+          "system_mask": 255,
+          "default_cpu_sets": 0,
+          "exe": "helios_mpi.exe",
+          "parent": 8952,
+          "threads": [
+            {
+              "tid": 13564,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 2,
+              "cpu_seconds": 3.5625
+            },
+            {
+              "tid": 11972,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 4,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 29212,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 6,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 30060,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 1,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 36064,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 3,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 13772,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 5,
+              "cpu_seconds": 3.609375
+            }
+          ]
+        },
+        {
+          "pid": 13780,
+          "mask": 255,
+          "system_mask": 255,
+          "default_cpu_sets": 0,
+          "exe": "helios_mpi.exe",
+          "parent": 8952,
+          "threads": [
+            {
+              "tid": 12744,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 2,
+              "cpu_seconds": 0.84375
+            },
+            {
+              "tid": 30716,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 4,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 33776,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 6,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 34696,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 1,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 31124,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 3,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 29428,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 5,
+              "cpu_seconds": 1.1875
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "t": 4.10899999999674,
+      "processes": [
+        {
+          "pid": 10740,
+          "mask": 255,
+          "system_mask": 255,
+          "default_cpu_sets": 0,
+          "exe": "helios_mpi.exe",
+          "parent": 8952,
+          "threads": [
+            {
+              "tid": 13564,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 2,
+              "cpu_seconds": 3.65625
+            },
+            {
+              "tid": 11972,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 4,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 29212,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 6,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 30060,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 1,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 36064,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 3,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 13772,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 5,
+              "cpu_seconds": 3.671875
+            }
+          ]
+        },
+        {
+          "pid": 13780,
+          "mask": 255,
+          "system_mask": 255,
+          "default_cpu_sets": 0,
+          "exe": "helios_mpi.exe",
+          "parent": 8952,
+          "threads": [
+            {
+              "tid": 12744,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 2,
+              "cpu_seconds": 0.84375
+            },
+            {
+              "tid": 30716,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 4,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 33776,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 6,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 34696,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 1,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 31124,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 3,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 29428,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 5,
+              "cpu_seconds": 1.1875
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "t": 4.203000000037719,
+      "processes": [
+        {
+          "pid": 10740,
+          "mask": 255,
+          "system_mask": 255,
+          "default_cpu_sets": 0,
+          "exe": "helios_mpi.exe",
+          "parent": 8952,
+          "threads": [
+            {
+              "tid": 13564,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 2,
+              "cpu_seconds": 3.75
+            },
+            {
+              "tid": 11972,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 4,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 29212,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 6,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 30060,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 1,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 36064,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 3,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 13772,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 5,
+              "cpu_seconds": 3.78125
+            }
+          ]
+        },
+        {
+          "pid": 13780,
+          "mask": 255,
+          "system_mask": 255,
+          "default_cpu_sets": 0,
+          "exe": "helios_mpi.exe",
+          "parent": 8952,
+          "threads": [
+            {
+              "tid": 12744,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 2,
+              "cpu_seconds": 0.84375
+            },
+            {
+              "tid": 30716,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 4,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 33776,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 6,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 34696,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 1,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 31124,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 3,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 29428,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 5,
+              "cpu_seconds": 1.1875
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "t": 4.297000000020489,
+      "processes": [
+        {
+          "pid": 10740,
+          "mask": 255,
+          "system_mask": 255,
+          "default_cpu_sets": 0,
+          "exe": "helios_mpi.exe",
+          "parent": 8952,
+          "threads": [
+            {
+              "tid": 13564,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 2,
+              "cpu_seconds": 3.8125
+            },
+            {
+              "tid": 11972,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 4,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 29212,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 6,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 30060,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 1,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 36064,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 3,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 13772,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 5,
+              "cpu_seconds": 3.875
+            }
+          ]
+        },
+        {
+          "pid": 13780,
+          "mask": 255,
+          "system_mask": 255,
+          "default_cpu_sets": 0,
+          "exe": "helios_mpi.exe",
+          "parent": 8952,
+          "threads": [
+            {
+              "tid": 12744,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 2,
+              "cpu_seconds": 0.84375
+            },
+            {
+              "tid": 30716,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 4,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 33776,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 6,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 34696,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 1,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 31124,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 3,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 29428,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 5,
+              "cpu_seconds": 1.1875
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "t": 4.4060000000172295,
+      "processes": [
+        {
+          "pid": 10740,
+          "mask": 255,
+          "system_mask": 255,
+          "default_cpu_sets": 0,
+          "exe": "helios_mpi.exe",
+          "parent": 8952,
+          "threads": [
+            {
+              "tid": 13564,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 2,
+              "cpu_seconds": 3.90625
+            },
+            {
+              "tid": 11972,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 4,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 29212,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 6,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 30060,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 1,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 36064,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 3,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 13772,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 5,
+              "cpu_seconds": 3.984375
+            }
+          ]
+        },
+        {
+          "pid": 13780,
+          "mask": 255,
+          "system_mask": 255,
+          "default_cpu_sets": 0,
+          "exe": "helios_mpi.exe",
+          "parent": 8952,
+          "threads": [
+            {
+              "tid": 12744,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 2,
+              "cpu_seconds": 0.84375
+            },
+            {
+              "tid": 30716,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 4,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 33776,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 6,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 34696,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 1,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 31124,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 3,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 29428,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 5,
+              "cpu_seconds": 1.1875
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "t": 4.5,
+      "processes": [
+        {
+          "pid": 10740,
+          "mask": 255,
+          "system_mask": 255,
+          "default_cpu_sets": 0,
+          "exe": "helios_mpi.exe",
+          "parent": 8952,
+          "threads": [
+            {
+              "tid": 13564,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 2,
+              "cpu_seconds": 4.0
+            },
+            {
+              "tid": 11972,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 4,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 29212,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 6,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 30060,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 1,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 36064,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 3,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 13772,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 5,
+              "cpu_seconds": 4.0625
+            }
+          ]
+        },
+        {
+          "pid": 13780,
+          "mask": 255,
+          "system_mask": 255,
+          "default_cpu_sets": 0,
+          "exe": "helios_mpi.exe",
+          "parent": 8952,
+          "threads": [
+            {
+              "tid": 12744,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 2,
+              "cpu_seconds": 0.84375
+            },
+            {
+              "tid": 30716,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 4,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 33776,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 6,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 34696,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 1,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 31124,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 3,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 29428,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 5,
+              "cpu_seconds": 1.1875
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "t": 4.60899999999674,
+      "processes": [
+        {
+          "pid": 10740,
+          "mask": 255,
+          "system_mask": 255,
+          "default_cpu_sets": 0,
+          "exe": "helios_mpi.exe",
+          "parent": 8952,
+          "threads": [
+            {
+              "tid": 13564,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 2,
+              "cpu_seconds": 4.09375
+            },
+            {
+              "tid": 11972,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 4,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 29212,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 6,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 30060,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 1,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 36064,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 3,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 13772,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 5,
+              "cpu_seconds": 4.15625
+            }
+          ]
+        },
+        {
+          "pid": 13780,
+          "mask": 255,
+          "system_mask": 255,
+          "default_cpu_sets": 0,
+          "exe": "helios_mpi.exe",
+          "parent": 8952,
+          "threads": [
+            {
+              "tid": 12744,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 2,
+              "cpu_seconds": 0.84375
+            },
+            {
+              "tid": 30716,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 4,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 33776,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 6,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 34696,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 1,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 31124,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 3,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 29428,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 5,
+              "cpu_seconds": 1.1875
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "t": 4.703000000037719,
+      "processes": [
+        {
+          "pid": 10740,
+          "mask": 255,
+          "system_mask": 255,
+          "default_cpu_sets": 0,
+          "exe": "helios_mpi.exe",
+          "parent": 8952,
+          "threads": [
+            {
+              "tid": 13564,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 2,
+              "cpu_seconds": 4.171875
+            },
+            {
+              "tid": 11972,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 4,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 29212,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 6,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 30060,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 1,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 36064,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 3,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 13772,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 5,
+              "cpu_seconds": 4.234375
+            }
+          ]
+        },
+        {
+          "pid": 13780,
+          "mask": 255,
+          "system_mask": 255,
+          "default_cpu_sets": 0,
+          "exe": "helios_mpi.exe",
+          "parent": 8952,
+          "threads": [
+            {
+              "tid": 12744,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 2,
+              "cpu_seconds": 0.84375
+            },
+            {
+              "tid": 30716,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 4,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 33776,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 6,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 34696,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 1,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 31124,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 3,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 29428,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 5,
+              "cpu_seconds": 1.1875
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "t": 4.797000000020489,
+      "processes": [
+        {
+          "pid": 10740,
+          "mask": 255,
+          "system_mask": 255,
+          "default_cpu_sets": 0,
+          "exe": "helios_mpi.exe",
+          "parent": 8952,
+          "threads": [
+            {
+              "tid": 13564,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 2,
+              "cpu_seconds": 4.265625
+            },
+            {
+              "tid": 11972,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 4,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 29212,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 6,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 30060,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 1,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 36064,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 3,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 13772,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 5,
+              "cpu_seconds": 4.34375
+            }
+          ]
+        },
+        {
+          "pid": 13780,
+          "mask": 255,
+          "system_mask": 255,
+          "default_cpu_sets": 0,
+          "exe": "helios_mpi.exe",
+          "parent": 8952,
+          "threads": [
+            {
+              "tid": 12744,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 2,
+              "cpu_seconds": 0.84375
+            },
+            {
+              "tid": 30716,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 4,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 33776,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 6,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 34696,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 1,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 31124,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 3,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 29428,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 5,
+              "cpu_seconds": 1.1875
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "t": 4.89000000001397,
+      "processes": [
+        {
+          "pid": 10740,
+          "mask": 255,
+          "system_mask": 255,
+          "default_cpu_sets": 0,
+          "exe": "helios_mpi.exe",
+          "parent": 8952,
+          "threads": [
+            {
+              "tid": 13564,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 2,
+              "cpu_seconds": 4.375
+            },
+            {
+              "tid": 11972,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 4,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 29212,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 6,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 30060,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 1,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 36064,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 3,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 13772,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 5,
+              "cpu_seconds": 4.421875
+            }
+          ]
+        },
+        {
+          "pid": 13780,
+          "mask": 255,
+          "system_mask": 255,
+          "default_cpu_sets": 0,
+          "exe": "helios_mpi.exe",
+          "parent": 8952,
+          "threads": [
+            {
+              "tid": 12744,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 2,
+              "cpu_seconds": 0.84375
+            },
+            {
+              "tid": 30716,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 4,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 33776,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 6,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 34696,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 1,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 31124,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 3,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 29428,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 5,
+              "cpu_seconds": 1.1875
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "t": 5.0,
+      "processes": [
+        {
+          "pid": 10740,
+          "mask": 255,
+          "system_mask": 255,
+          "default_cpu_sets": 0,
+          "exe": "helios_mpi.exe",
+          "parent": 8952,
+          "threads": [
+            {
+              "tid": 13564,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 2,
+              "cpu_seconds": 4.453125
+            },
+            {
+              "tid": 11972,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 4,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 29212,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 6,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 30060,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 1,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 36064,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 3,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 13772,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 5,
+              "cpu_seconds": 4.515625
+            }
+          ]
+        },
+        {
+          "pid": 13780,
+          "mask": 255,
+          "system_mask": 255,
+          "default_cpu_sets": 0,
+          "exe": "helios_mpi.exe",
+          "parent": 8952,
+          "threads": [
+            {
+              "tid": 12744,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 2,
+              "cpu_seconds": 0.84375
+            },
+            {
+              "tid": 30716,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 4,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 33776,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 6,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 34696,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 1,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 31124,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 3,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 29428,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 5,
+              "cpu_seconds": 1.1875
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "t": 5.092999999993481,
+      "processes": [
+        {
+          "pid": 10740,
+          "mask": 255,
+          "system_mask": 255,
+          "default_cpu_sets": 0,
+          "exe": "helios_mpi.exe",
+          "parent": 8952,
+          "threads": [
+            {
+              "tid": 13564,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 2,
+              "cpu_seconds": 4.5625
+            },
+            {
+              "tid": 11972,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 4,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 29212,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 6,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 30060,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 1,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 36064,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 3,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 13772,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 5,
+              "cpu_seconds": 4.59375
+            }
+          ]
+        },
+        {
+          "pid": 13780,
+          "mask": 255,
+          "system_mask": 255,
+          "default_cpu_sets": 0,
+          "exe": "helios_mpi.exe",
+          "parent": 8952,
+          "threads": [
+            {
+              "tid": 12744,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 2,
+              "cpu_seconds": 0.84375
+            },
+            {
+              "tid": 30716,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 4,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 33776,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 6,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 34696,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 1,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 31124,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 3,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 29428,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 5,
+              "cpu_seconds": 1.1875
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "t": 5.187000000034459,
+      "processes": [
+        {
+          "pid": 10740,
+          "mask": 255,
+          "system_mask": 255,
+          "default_cpu_sets": 0,
+          "exe": "helios_mpi.exe",
+          "parent": 8952,
+          "threads": [
+            {
+              "tid": 13564,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 2,
+              "cpu_seconds": 4.65625
+            },
+            {
+              "tid": 11972,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 4,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 29212,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 6,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 30060,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 1,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 36064,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 3,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 13772,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 5,
+              "cpu_seconds": 4.6875
+            }
+          ]
+        },
+        {
+          "pid": 13780,
+          "mask": 255,
+          "system_mask": 255,
+          "default_cpu_sets": 0,
+          "exe": "helios_mpi.exe",
+          "parent": 8952,
+          "threads": [
+            {
+              "tid": 12744,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 2,
+              "cpu_seconds": 0.84375
+            },
+            {
+              "tid": 30716,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 4,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 33776,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 6,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 34696,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 1,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 31124,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 3,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 29428,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 5,
+              "cpu_seconds": 1.1875
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "t": 5.297000000020489,
+      "processes": [
+        {
+          "pid": 10740,
+          "mask": 255,
+          "system_mask": 255,
+          "default_cpu_sets": 0,
+          "exe": "helios_mpi.exe",
+          "parent": 8952,
+          "threads": [
+            {
+              "tid": 13564,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 2,
+              "cpu_seconds": 4.765625
+            },
+            {
+              "tid": 11972,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 4,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 29212,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 6,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 30060,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 1,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 36064,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 3,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 13772,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 5,
+              "cpu_seconds": 4.78125
+            }
+          ]
+        },
+        {
+          "pid": 13780,
+          "mask": 255,
+          "system_mask": 255,
+          "default_cpu_sets": 0,
+          "exe": "helios_mpi.exe",
+          "parent": 8952,
+          "threads": [
+            {
+              "tid": 12744,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 2,
+              "cpu_seconds": 0.84375
+            },
+            {
+              "tid": 30716,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 4,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 33776,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 6,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 34696,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 1,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 31124,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 3,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 29428,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 5,
+              "cpu_seconds": 1.1875
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "t": 5.39000000001397,
+      "processes": [
+        {
+          "pid": 10740,
+          "mask": 255,
+          "system_mask": 255,
+          "default_cpu_sets": 0,
+          "exe": "helios_mpi.exe",
+          "parent": 8952,
+          "threads": [
+            {
+              "tid": 13564,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 2,
+              "cpu_seconds": 4.859375
+            },
+            {
+              "tid": 11972,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 4,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 29212,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 6,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 30060,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 1,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 36064,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 3,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 13772,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 5,
+              "cpu_seconds": 4.84375
+            }
+          ]
+        },
+        {
+          "pid": 13780,
+          "mask": 255,
+          "system_mask": 255,
+          "default_cpu_sets": 0,
+          "exe": "helios_mpi.exe",
+          "parent": 8952,
+          "threads": [
+            {
+              "tid": 12744,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 2,
+              "cpu_seconds": 0.84375
+            },
+            {
+              "tid": 30716,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 4,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 33776,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 6,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 34696,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 1,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 31124,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 3,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 29428,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 5,
+              "cpu_seconds": 1.1875
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "t": 5.48399999999674,
+      "processes": [
+        {
+          "pid": 10740,
+          "mask": 255,
+          "system_mask": 255,
+          "default_cpu_sets": 0,
+          "exe": "helios_mpi.exe",
+          "parent": 8952,
+          "threads": [
+            {
+              "tid": 13564,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 2,
+              "cpu_seconds": 4.953125
+            },
+            {
+              "tid": 11972,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 4,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 29212,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 6,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 30060,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 1,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 36064,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 3,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 13772,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 5,
+              "cpu_seconds": 4.90625
+            }
+          ]
+        },
+        {
+          "pid": 13780,
+          "mask": 255,
+          "system_mask": 255,
+          "default_cpu_sets": 0,
+          "exe": "helios_mpi.exe",
+          "parent": 8952,
+          "threads": [
+            {
+              "tid": 12744,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 2,
+              "cpu_seconds": 0.84375
+            },
+            {
+              "tid": 30716,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 4,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 33776,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 6,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 34696,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 1,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 31124,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 3,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 29428,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 5,
+              "cpu_seconds": 1.1875
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "t": 5.578000000037719,
+      "processes": [
+        {
+          "pid": 10740,
+          "mask": 255,
+          "system_mask": 255,
+          "default_cpu_sets": 0,
+          "exe": "helios_mpi.exe",
+          "parent": 8952,
+          "threads": [
+            {
+              "tid": 13564,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 2,
+              "cpu_seconds": 5.046875
+            },
+            {
+              "tid": 11972,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 4,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 29212,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 6,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 30060,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 1,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 36064,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 3,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 13772,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 5,
+              "cpu_seconds": 5.0
+            }
+          ]
+        },
+        {
+          "pid": 13780,
+          "mask": 255,
+          "system_mask": 255,
+          "default_cpu_sets": 0,
+          "exe": "helios_mpi.exe",
+          "parent": 8952,
+          "threads": [
+            {
+              "tid": 12744,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 2,
+              "cpu_seconds": 0.84375
+            },
+            {
+              "tid": 30716,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 4,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 33776,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 6,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 34696,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 1,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 31124,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 3,
+              "cpu_seconds": 0.0
+            },
+            {
+              "tid": 29428,
+              "mask": 255,
+              "group": 0,
+              "cpu_sets": 0,
+              "ideal": 5,
+              "cpu_seconds": 1.1875
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "t": 5.687000000034459,
+      "processes": [
+        {
+          "pid": 10740,
+          "error": 87,
+          "exe": "helios_mpi.exe",
+          "parent": 8952,
+          "threads": [
+            {
+              "tid": 13564,
+              "error": 87
+            },
+            {
+              "tid": 11972,
+              "error": 87
+            },
+            {
+              "tid": 29212,
+              "error": 87
+            },
+            {
+              "tid": 30060,
+              "error": 87
+            },
+            {
+              "tid": 36064,
+              "error": 87
+            },
+            {
+              "tid": 13772,
+              "error": 87
+            }
+          ]
+        },
+        {
+          "pid": 13780,
+          "mask": 255,
+          "system_mask": 255,
+          "default_cpu_sets": 0,
+          "exe": "helios_mpi.exe",
+          "parent": 8952,
+          "threads": [
+            {
+              "tid": 12744,
+              "error": 87
+            },
+            {
+              "tid": 30716,
+              "error": 87
+            },
+            {
+              "tid": 33776,
+              "error": 87
+            },
+            {
+              "tid": 34696,
+              "error": 87
+            },
+            {
+              "tid": 31124,
+              "error": 87
+            },
+            {
+              "tid": 29428,
+              "error": 87
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
