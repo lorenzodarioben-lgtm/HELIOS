@@ -1,0 +1,63 @@
+{
+  "classification": "diagnostic-not-formal",
+  "id": "20260928T091533Z-068e9dce",
+  "status": "complete",
+  "tool": "scripts/diagnose_false_sharing.py",
+  "tool_sha256": "2377f3cc53e5eb0010e58861fae9ccb2d4f0c820a8820c1937bf7ef6ff1fc692",
+  "scene": "imbalanced",
+  "preset": "medium",
+  "repeats": 5,
+  "warmups": 1,
+  "conditions": [
+    "hybrid-static-2x2-original",
+    "hybrid-static-2x2-padded",
+    "hybrid-static-2x2-addrprobe"
+  ],
+  "source_rev": "8d92429f8d0c0bafd81f7eb0690f58ee77e83470",
+  "git_sha": "83e33e8e82044a3c095bc813b929b3dd2dd7ed32",
+  "src_matches_head": true,
+  "builds": {
+    "original": {
+      "core_cpp_sha256": "b912b3d89586deea9b0c311d75d63309b29b8a94aca680e84443ee74da651cb8",
+      "main_cpp_sha256": "598d23a4dd5b9404d17d75cf8c885c9bd1694fc62f304e1ad6330dcc35e44130",
+      "helios_sha256": "b02123998f8b3a335b39e5b3e87d635304ed7bb5edba46fbf461bb6ed4d8faf9",
+      "helios_mpi_sha256": "d127946b79247ec3b109712a2c6cca601a76fc323de39f8ebe7319405802cbee",
+      "dir": "C:\\Users\\lorenzodario\\Documents\\PersonalProjects\\Helios\\build-diag-falseshare\\8d92429f8d0c0bafd81f7eb0690f58ee77e83470\\original"
+    },
+    "padded": {
+      "core_cpp_sha256": "60828351c2a2075463c2f8b62f1ca95d7794b34fabef683b9dd081bd00ddbd3f",
+      "main_cpp_sha256": "598d23a4dd5b9404d17d75cf8c885c9bd1694fc62f304e1ad6330dcc35e44130",
+      "helios_sha256": "3652011a6aea8fea6ab69f77f5d0cf8263cd61827c6df5505b469176b89b4ca4",
+      "helios_mpi_sha256": "86e86da73e2fed95f38909b9559830d7573e084394abae2e2a946b6e98127368",
+      "dir": "C:\\Users\\lorenzodario\\Documents\\PersonalProjects\\Helios\\build-diag-falseshare\\8d92429f8d0c0bafd81f7eb0690f58ee77e83470\\padded"
+    },
+    "addrprobe": {
+      "core_cpp_sha256": "639cd2da7620401c4053c957176a9c4c1e45441c072bee3398e6686f00b1898f",
+      "main_cpp_sha256": "598d23a4dd5b9404d17d75cf8c885c9bd1694fc62f304e1ad6330dcc35e44130",
+      "helios_sha256": "923c378b1a51bbf9bbbe88b2772b60e8b389e51ce667b75f72b74a8dd8e06399",
+      "helios_mpi_sha256": "508e0f2ed76be264443064b65d19d7ded349b6547d45ebfd42396488ee847e62",
+      "dir": "C:\\Users\\lorenzodario\\Documents\\PersonalProjects\\Helios\\build-diag-falseshare\\8d92429f8d0c0bafd81f7eb0690f58ee77e83470\\addrprobe"
+    }
+  },
+  "compile_flags": [
+    "-std=c++20",
+    "-Wall",
+    "-Wextra",
+    "-Wpedantic",
+    "-Wconversion",
+    "-fopenmp",
+    "-DHELIOS_OPENMP=1",
+    "-O2",
+    "-DNDEBUG"
+  ],
+  "hardware": {
+    "os": "Windows-10-10.0.26200-SP0",
+    "logical_processors": 8,
+    "cpu": "11th Gen Intel(R) Core(TM) i7-11370H @ 3.30GHz",
+    "physical_cores": "not directly measured",
+    "physical_ram_bytes": 16843112448
+  },
+  "created_utc": "2026-09-28T09:16:05.020280+00:00",
+  "records": 18,
+  "failures": 0
+}

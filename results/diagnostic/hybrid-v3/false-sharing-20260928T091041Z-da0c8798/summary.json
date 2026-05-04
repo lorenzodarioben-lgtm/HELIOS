@@ -1,0 +1,107 @@
+{
+  "classification": "diagnostic-not-formal",
+  "groups": {
+    "openmp-4": {
+      "original": {
+        "n": 5,
+        "median_seconds": 3.81111,
+        "seconds": [
+          3.7044441,
+          3.8858554,
+          3.8246836,
+          3.81111,
+          3.5883753
+        ]
+      },
+      "padded": {
+        "n": 5,
+        "median_seconds": 3.7155392,
+        "seconds": [
+          3.8048291,
+          3.6940364,
+          3.6431357,
+          3.7898856,
+          3.7155392
+        ]
+      },
+      "paired_blocks": 5,
+      "padded_over_original_ratios": [
+        1.0270985328136009,
+        0.9506366088660941,
+        0.9525325702758786,
+        0.9944309138282547,
+        1.0354377369613483
+      ],
+      "median_padded_over_original": 0.9944309138282547,
+      "blocks_padded_faster": 3
+    },
+    "hybrid-static-1x4": {
+      "original": {
+        "n": 5,
+        "median_seconds": 3.716447,
+        "seconds": [
+          3.7644038,
+          3.7168279,
+          3.6984178,
+          3.6753557,
+          3.716447
+        ]
+      },
+      "padded": {
+        "n": 5,
+        "median_seconds": 3.0477173,
+        "seconds": [
+          3.0955869,
+          3.069412,
+          2.9295662,
+          2.8717871,
+          3.0477173
+        ]
+      },
+      "paired_blocks": 5,
+      "padded_over_original_ratios": [
+        0.822331254686333,
+        0.8258149375170154,
+        0.7921133734539132,
+        0.7813630392291011,
+        0.8200620915621829
+      ],
+      "median_padded_over_original": 0.8200620915621829,
+      "blocks_padded_faster": 5
+    },
+    "hybrid-static-2x2": {
+      "original": {
+        "n": 5,
+        "median_seconds": 3.7552579,
+        "seconds": [
+          3.7403306,
+          3.7645817,
+          3.7419128,
+          3.7552579,
+          3.8043667
+        ]
+      },
+      "padded": {
+        "n": 5,
+        "median_seconds": 3.6860312,
+        "seconds": [
+          3.7468168,
+          3.6567803,
+          3.846856,
+          3.6860312,
+          3.6260857
+        ]
+      },
+      "paired_blocks": 5,
+      "padded_over_original_ratios": [
+        1.001734124785654,
+        0.9713643085498715,
+        1.0280453355299994,
+        0.9815653939507057,
+        0.9531377982043634
+      ],
+      "median_padded_over_original": 0.9815653939507057,
+      "blocks_padded_faster": 3
+    }
+  }
+}

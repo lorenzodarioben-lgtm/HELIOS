@@ -1,0 +1,12 @@
+-   std::vector<Counters> local(static_cast<std::size_t>(std::max(1,threads)));
++   struct alignas(64) PaddedCounters { Counters c; };
+  std::vector<PaddedCounters> local(static_cast<std::size_t>(std::max(1,threads)));
+- Counters& stats=local[static_cast<std::size_t>(tid)];
++ Counters& stats=local[static_cast<std::size_t>(tid)].c;
+- for(const Counters& c:local) out.counters+=c;
++ for(const PaddedCounters& c:local) out.counters+=c.c;
+- for(const Counters& c:local) out.counters+=c;
++ for(const Counters& c:local) out.counters+=c;
+  std::fprintf(stderr,"HELIOS_LOCAL_MOD64 %d %u\n",tile.id,static_cast<unsigned>(reinterpret_cast<std::uintptr_t>(local.data())%64u));
+- #pragma omp parallel for schedule(static) num_threads(threads) if(threads>1)
++ #pragma omp parallel for schedule(dynamic,16) num_threads(threads) if(threads>1)

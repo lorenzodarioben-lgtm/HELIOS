@@ -1,0 +1,62 @@
+{
+  "classification": "diagnostic-not-formal",
+  "groups": {
+    "hybrid-static-2x2": {
+      "original": {
+        "n": 5,
+        "median_seconds": 3.7880242,
+        "seconds": [
+          3.7880242,
+          3.8310975,
+          3.7236219,
+          3.7569407,
+          4.0177619
+        ],
+        "median_worker_compute_seconds": [
+          1.2130385,
+          3.7867886
+        ]
+      },
+      "padded": {
+        "n": 5,
+        "median_seconds": 3.7477163,
+        "seconds": [
+          3.7319707,
+          3.711655,
+          3.914961,
+          3.7477163,
+          3.9347328
+        ],
+        "median_worker_compute_seconds": [
+          1.0960041,
+          3.7463588
+        ]
+      },
+      "addrprobe": {
+        "n": 5,
+        "median_seconds": 4.114058,
+        "seconds": [
+          4.0033582,
+          4.1882173,
+          4.114058,
+          4.221311,
+          4.1034146
+        ],
+        "median_worker_compute_seconds": [
+          1.4896615,
+          4.1129383
+        ]
+      },
+      "paired_blocks": 5,
+      "padded_over_original_ratios": [
+        0.9852024440604155,
+        0.9688229025755675,
+        1.0513852118014453,
+        0.9975447043920603,
+        0.9793344896819296
+      ],
+      "median_padded_over_original": 0.9852024440604155,
+      "blocks_padded_faster": 4
+    }
+  }
+}

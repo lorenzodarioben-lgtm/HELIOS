@@ -1,0 +1,69 @@
+{
+  "classification": "diagnostic-not-formal",
+  "id": "20260928T091902Z-2447b355",
+  "status": "complete",
+  "tool": "scripts/diagnose_false_sharing.py",
+  "tool_sha256": "ecba826d86238620a44c8013b2daa9b91e344b59c4f912c968ae7149d9951aab",
+  "scene": "imbalanced",
+  "preset": "medium",
+  "repeats": 5,
+  "warmups": 1,
+  "conditions": [
+    "mpi-static-4-original",
+    "mpi-static-4-padded",
+    "mpi-static-4-padded-dynamic",
+    "hybrid-static-1x4-original",
+    "hybrid-static-1x4-padded",
+    "hybrid-static-1x4-padded-dynamic",
+    "hybrid-static-2x2-original",
+    "hybrid-static-2x2-padded",
+    "hybrid-static-2x2-padded-dynamic"
+  ],
+  "source_rev": "working tree src/ and include/",
+  "git_sha": "83e33e8e82044a3c095bc813b929b3dd2dd7ed32",
+  "src_matches_head": true,
+  "builds": {
+    "original": {
+      "core_cpp_sha256": "b912b3d89586deea9b0c311d75d63309b29b8a94aca680e84443ee74da651cb8",
+      "main_cpp_sha256": "dc5dda0e074c231abe96f3223d472ce78fa009cbe9d0b8bfa2e92b0c4e0eb2cf",
+      "helios_sha256": "ddcd8d3ec9f8af135a2b69bb063e161a3cffbc6acfe30a0a8897424ea29c9223",
+      "helios_mpi_sha256": "aa0985d1a3a6643a7c2021bec177887316fb0ac5723e9f04f041b2f23542d245",
+      "dir": "C:\\Users\\lorenzodario\\Documents\\PersonalProjects\\Helios\\build-diag-falseshare\\worktree\\original"
+    },
+    "padded": {
+      "core_cpp_sha256": "60828351c2a2075463c2f8b62f1ca95d7794b34fabef683b9dd081bd00ddbd3f",
+      "main_cpp_sha256": "dc5dda0e074c231abe96f3223d472ce78fa009cbe9d0b8bfa2e92b0c4e0eb2cf",
+      "helios_sha256": "310a173e2c1a4346d63ad90ff1af86586a03db974f6ba3308fe15438a75638ac",
+      "helios_mpi_sha256": "a59ca24e23553a8d1bcf81e24d8b41b3b5e8869e8026afef5b491a140bc1eb17",
+      "dir": "C:\\Users\\lorenzodario\\Documents\\PersonalProjects\\Helios\\build-diag-falseshare\\worktree\\padded"
+    },
+    "padded-dynamic": {
+      "core_cpp_sha256": "227bfe9d564cea1fbf3d12b33bca3c3256690ec4d87b943d20bfda6b2a2cc4e9",
+      "main_cpp_sha256": "dc5dda0e074c231abe96f3223d472ce78fa009cbe9d0b8bfa2e92b0c4e0eb2cf",
+      "helios_sha256": "d739b10989cb9d818b8d90f8f2c193d9f8fc77d7fd61505fd739d44d73782151",
+      "helios_mpi_sha256": "78e4b0bab8e797d85baa5f703c3f6b935a7db4fa19f7a4f9b8df2ca663f7b489",
+      "dir": "C:\\Users\\lorenzodario\\Documents\\PersonalProjects\\Helios\\build-diag-falseshare\\worktree\\padded-dynamic"
+    }
+  },
+  "compile_flags": [
+    "-std=c++20",
+    "-Wall",
+    "-Wextra",
+    "-Wpedantic",
+    "-Wconversion",
+    "-fopenmp",
+    "-DHELIOS_OPENMP=1",
+    "-O2",
+    "-DNDEBUG"
+  ],
+  "hardware": {
+    "os": "Windows-10-10.0.26200-SP0",
+    "logical_processors": 8,
+    "cpu": "11th Gen Intel(R) Core(TM) i7-11370H @ 3.30GHz",
+    "physical_cores": "not directly measured",
+    "physical_ram_bytes": 16843112448
+  },
+  "created_utc": "2026-09-28T09:19:34.806067+00:00",
+  "records": 54,
+  "failures": 0
+}

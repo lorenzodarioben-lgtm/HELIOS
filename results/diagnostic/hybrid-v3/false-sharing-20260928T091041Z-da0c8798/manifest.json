@@ -1,0 +1,56 @@
+{
+  "classification": "diagnostic-not-formal",
+  "id": "20260928T091041Z-da0c8798",
+  "status": "complete",
+  "tool": "scripts/diagnose_false_sharing.py",
+  "tool_sha256": "074deafbe1a749c5bba86c335eb4f9ecde830cf04c953c942e1cf74ac2be4759",
+  "scene": "imbalanced",
+  "preset": "medium",
+  "repeats": 5,
+  "warmups": 1,
+  "conditions": [
+    "openmp-4-original",
+    "openmp-4-padded",
+    "hybrid-static-1x4-original",
+    "hybrid-static-1x4-padded",
+    "hybrid-static-2x2-original",
+    "hybrid-static-2x2-padded"
+  ],
+  "git_sha": "83e33e8e82044a3c095bc813b929b3dd2dd7ed32",
+  "src_matches_head": true,
+  "builds": {
+    "original": {
+      "core_cpp_sha256": "0ec54b4f3d92591737290f38f54d1dca28e1b762b8b73bb6623c09a4b1d4cb72",
+      "helios_sha256": "b6e17c0d327e091e72f9fab18b23fa0b795b44f0110e124ed750858d43de33ff",
+      "helios_mpi_sha256": "a8225185aedda86c754f44c9f2bdf842224124f403de046a45a1b7229c50c837",
+      "dir": "C:\\Users\\lorenzodario\\Documents\\PersonalProjects\\Helios\\build-diag-falseshare\\original"
+    },
+    "padded": {
+      "core_cpp_sha256": "60828351c2a2075463c2f8b62f1ca95d7794b34fabef683b9dd081bd00ddbd3f",
+      "helios_sha256": "b5364d606f7084633dbe7688b2c9974c8f3de874194e14434df0a7aea317efa8",
+      "helios_mpi_sha256": "cd61728eea91fec9774f8c8ab683e1dd3bafeb3560e9106fc0e6cccf487eaaed",
+      "dir": "C:\\Users\\lorenzodario\\Documents\\PersonalProjects\\Helios\\build-diag-falseshare\\padded"
+    }
+  },
+  "compile_flags": [
+    "-std=c++20",
+    "-Wall",
+    "-Wextra",
+    "-Wpedantic",
+    "-Wconversion",
+    "-fopenmp",
+    "-DHELIOS_OPENMP=1",
+    "-O2",
+    "-DNDEBUG"
+  ],
+  "hardware": {
+    "os": "Windows-10-10.0.26200-SP0",
+    "logical_processors": 8,
+    "cpu": "11th Gen Intel(R) Core(TM) i7-11370H @ 3.30GHz",
+    "physical_cores": "not directly measured",
+    "physical_ram_bytes": 16843112448
+  },
+  "created_utc": "2026-09-28T09:11:06.179870+00:00",
+  "records": 36,
+  "failures": 0
+}

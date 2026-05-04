@@ -1,0 +1,179 @@
+{
+  "classification": "diagnostic-not-formal",
+  "groups": {
+    "mpi-static-4": {
+      "original": {
+        "n": 5,
+        "median_seconds": 3.6721998,
+        "seconds": [
+          3.7314078,
+          3.6254047,
+          3.5987561,
+          3.6721998,
+          3.7296075
+        ],
+        "median_worker_compute_seconds": [
+          0.5207309,
+          1.4558362,
+          3.6714388,
+          3.4969124
+        ]
+      },
+      "padded": {
+        "n": 5,
+        "median_seconds": 3.7095342,
+        "seconds": [
+          3.6653644,
+          3.7101606,
+          3.6632355,
+          3.7551311,
+          3.7095342
+        ],
+        "median_worker_compute_seconds": [
+          0.516566,
+          1.4731385,
+          3.7088764,
+          3.5401914
+        ]
+      },
+      "padded-dynamic": {
+        "n": 5,
+        "median_seconds": 3.6085446,
+        "seconds": [
+          3.6085446,
+          3.7359447,
+          3.600113,
+          3.6814001,
+          3.6052639
+        ],
+        "median_worker_compute_seconds": [
+          0.520252,
+          1.4592081,
+          3.6079421,
+          3.4609285
+        ]
+      },
+      "paired_blocks": 5,
+      "padded_over_original_ratios": [
+        0.982300674828412,
+        1.023378327942257,
+        1.017917135312393,
+        1.0225835478777598,
+        0.9946178518785153
+      ],
+      "median_padded_over_original": 1.017917135312393,
+      "blocks_padded_faster": 2
+    },
+    "hybrid-static-1x4": {
+      "original": {
+        "n": 5,
+        "median_seconds": 3.8026488,
+        "seconds": [
+          3.8026488,
+          3.8624732,
+          3.8651465,
+          3.7657063,
+          3.7909476
+        ],
+        "median_worker_compute_seconds": [
+          3.8018903
+        ]
+      },
+      "padded": {
+        "n": 5,
+        "median_seconds": 2.9405226,
+        "seconds": [
+          2.9782019,
+          3.0115909,
+          2.9405226,
+          2.8901392,
+          2.9153623
+        ],
+        "median_worker_compute_seconds": [
+          2.9397902
+        ]
+      },
+      "padded-dynamic": {
+        "n": 5,
+        "median_seconds": 2.7601766,
+        "seconds": [
+          2.6348794,
+          2.691171,
+          2.7601766,
+          2.7864157,
+          2.8545798
+        ],
+        "median_worker_compute_seconds": [
+          2.7595129
+        ]
+      },
+      "paired_blocks": 5,
+      "padded_over_original_ratios": [
+        0.7831914164673845,
+        0.7797053193793033,
+        0.760779080430716,
+        0.7674892755178491,
+        0.7690326028246869
+      ],
+      "median_padded_over_original": 0.7690326028246869,
+      "blocks_padded_faster": 5
+    },
+    "hybrid-static-2x2": {
+      "original": {
+        "n": 5,
+        "median_seconds": 4.3387621,
+        "seconds": [
+          4.2663781,
+          4.6744059,
+          4.1306959,
+          4.3468155,
+          4.3387621
+        ],
+        "median_worker_compute_seconds": [
+          1.2471275,
+          4.3373906
+        ]
+      },
+      "padded": {
+        "n": 5,
+        "median_seconds": 3.7552685,
+        "seconds": [
+          3.7116028,
+          3.7516043,
+          3.8866354,
+          3.7552685,
+          3.8102662
+        ],
+        "median_worker_compute_seconds": [
+          1.098383,
+          3.7541111
+        ]
+      },
+      "padded-dynamic": {
+        "n": 5,
+        "median_seconds": 3.7262125,
+        "seconds": [
+          3.7631239,
+          3.7599491,
+          3.5534391,
+          3.7076067,
+          3.7262125
+        ],
+        "median_worker_compute_seconds": [
+          1.0304456,
+          3.7250879
+        ]
+      },
+      "paired_blocks": 5,
+      "padded_over_original_ratios": [
+        0.8699657444800779,
+        0.8025841957798316,
+        0.9409154036248468,
+        0.8639125585155386,
+        0.8781920078079413
+      ],
+      "median_padded_over_original": 0.8699657444800779,
+      "blocks_padded_faster": 5
+    }
+  }
+}

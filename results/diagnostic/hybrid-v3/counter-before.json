@@ -1,0 +1,21 @@
+{
+  "classification": "observational-counter-sample-not-thermal-telemetry",
+  "timestamp_utc": "2026-09-28T08:16:59.7669575Z",
+  "counters": [
+    {
+      "path": "\\\\lorenzodario\\processor information(_total)\\actual frequency",
+      "cooked_value": 3726.1901024658177,
+      "status": 0
+    },
+    {
+      "path": "\\\\lorenzodario\\processor information(_total)\\% processor performance",
+      "cooked_value": 112.86584726073596,
+      "status": 0
+    },
+    {
+      "path": "\\\\lorenzodario\\processor(_total)\\% processor time",
+      "cooked_value": 14.037388672561345,
+      "status": 0
+    }
+  ]
+}
