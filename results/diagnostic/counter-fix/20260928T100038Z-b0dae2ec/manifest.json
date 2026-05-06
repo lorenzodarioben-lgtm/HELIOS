@@ -1,0 +1,67 @@
+{
+  "classification": "diagnostic-not-formal",
+  "id": "20260928T100038Z-b0dae2ec",
+  "status": "complete",
+  "tool": "scripts/diagnose_counter_fix.py",
+  "tool_sha256": "a799fc86ece9c91a37a0038c085dbf2147fc38483d37ed9fb1d31267078d5142",
+  "scene": "imbalanced",
+  "preset": "medium",
+  "repeats": 7,
+  "warmups": 1,
+  "order_seed": 20260930,
+  "prefix_rev": "6270d440b0da74d577933b2ff8a03acd2a22c78a",
+  "fixed_source": "working tree src/ and include/",
+  "git_sha": "6270d440b0da74d577933b2ff8a03acd2a22c78a",
+  "git_status_porcelain": " M docs/ENVIRONMENT.md\n M scripts/benchmark_v2.py\n M scripts/check_binary_repro.py\n M scripts/diagnose_false_sharing.py\n M scripts/diagnose_hybrid.py\n M scripts/diagnose_scheduler.py\n M src/core.cpp\n M tests/tests.cpp\n?? HANDOFF.md\n?? results/diagnostic/counter-fix/\n?? scripts/compare_strong_scaling.py\n?? scripts/diagnose_counter_fix.py\n",
+  "builds": {
+    "prefix": {
+      "core_cpp_sha256": "b912b3d89586deea9b0c311d75d63309b29b8a94aca680e84443ee74da651cb8",
+      "main_cpp_sha256": "84e1e6b4b22c21910e75d6aa179850e1f40662e3cc54ffd585686022a163b5a0",
+      "helios_sha256": "2ebe96537bcb33ba850921a2f112d943a7c56642fa988deb457f568edbac2358",
+      "helios_mpi_sha256": "0fb31d1acf3c26bf66e98ed3e321941bda0d8b1c0e461f3cfdcf1290228c8f9a",
+      "dir": "C:\\Users\\lorenzodario\\Documents\\PersonalProjects\\Helios\\build-diag-counterfix\\prefix\\original"
+    },
+    "fixed": {
+      "core_cpp_sha256": "c9c52a3347b23bc8d3dfeb120537324e24dfcbf83a30e6d0c7a5efdd656c914c",
+      "main_cpp_sha256": "dc5dda0e074c231abe96f3223d472ce78fa009cbe9d0b8bfa2e92b0c4e0eb2cf",
+      "helios_sha256": "1c18709965a1275c81c18e3d2400bd246a6faf00fcd260005f2972563bdd33a7",
+      "helios_mpi_sha256": "a36848cbe0210c350e2b753f5cc6b0599b0a91a957966bd5e6d14f55cf8eaecc",
+      "dir": "C:\\Users\\lorenzodario\\Documents\\PersonalProjects\\Helios\\build-diag-counterfix\\fixed\\original"
+    },
+    "prefix-padded": {
+      "core_cpp_sha256": "60828351c2a2075463c2f8b62f1ca95d7794b34fabef683b9dd081bd00ddbd3f",
+      "main_cpp_sha256": "84e1e6b4b22c21910e75d6aa179850e1f40662e3cc54ffd585686022a163b5a0",
+      "helios_sha256": "1a2a57f0c3453798b923ab85168f287bb0df23a26e0027ba985a320ccd445d45",
+      "helios_mpi_sha256": "0291237bc2373839b9057d5d2ae99dfd668a1df6e131c9bae577e260abb111f0",
+      "dir": "C:\\Users\\lorenzodario\\Documents\\PersonalProjects\\Helios\\build-diag-counterfix\\prefix-padded\\original"
+    },
+    "fixed-stackarray": {
+      "core_cpp_sha256": "46a41791870f8153858282cff1616347983f7b51cce0fcc627f896a18381374d",
+      "main_cpp_sha256": "dc5dda0e074c231abe96f3223d472ce78fa009cbe9d0b8bfa2e92b0c4e0eb2cf",
+      "helios_sha256": "d3373a70f3666b0346a504f100ecf1162f16558501da054a5d0906035545b7d0",
+      "helios_mpi_sha256": "9cb0cbdae71319a72bc27b4ca95ce0f55f119bd30d9a234a6e06f26209268a37",
+      "dir": "C:\\Users\\lorenzodario\\Documents\\PersonalProjects\\Helios\\build-diag-counterfix\\fixed-stackarray\\original"
+    }
+  },
+  "compile_flags": [
+    "-std=c++20",
+    "-Wall",
+    "-Wextra",
+    "-Wpedantic",
+    "-Wconversion",
+    "-fopenmp",
+    "-DHELIOS_OPENMP=1",
+    "-O2",
+    "-DNDEBUG"
+  ],
+  "hardware": {
+    "os": "Windows-10-10.0.26200-SP0",
+    "logical_processors": 8,
+    "cpu": "11th Gen Intel(R) Core(TM) i7-11370H @ 3.30GHz",
+    "physical_cores": "not directly measured",
+    "physical_ram_bytes": 16843112448
+  },
+  "created_utc": "2026-09-28T10:01:22.412004+00:00",
+  "records": 97,
+  "failures": 0
+}

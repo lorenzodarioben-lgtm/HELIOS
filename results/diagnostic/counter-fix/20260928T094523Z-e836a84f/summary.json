@@ -1,0 +1,252 @@
+{
+  "classification": "diagnostic-not-formal",
+  "reference_hash": "da1762d641f51b4e",
+  "reference_counters": {
+    "rays": 16895790,
+    "shadow_rays": 3283138,
+    "node_visits": 352163566,
+    "primitive_tests": 116716033,
+    "pixels": 36864
+  },
+  "groups": {
+    "openmp-4": {
+      "prefix": {
+        "n": 7,
+        "median_seconds": 3.7569149,
+        "seconds": [
+          3.7818168,
+          3.7297406,
+          3.743627,
+          3.7086017,
+          3.8747243,
+          3.9400209,
+          3.7569149
+        ],
+        "median_worker_compute_seconds": [
+          0.5428445,
+          1.5387391,
+          3.7564889,
+          3.6381965
+        ]
+      },
+      "fixed": {
+        "n": 7,
+        "median_seconds": 3.7004913,
+        "seconds": [
+          3.7656074,
+          3.6958983,
+          3.6720909,
+          3.8693815,
+          3.7368031,
+          3.7004913,
+          3.6395912
+        ],
+        "median_worker_compute_seconds": [
+          0.5102184,
+          1.5047237,
+          3.7000694,
+          3.5237267
+        ]
+      },
+      "paired_blocks": 7,
+      "blocks_fixed_faster": 6,
+      "median_relative_change": -0.019108768047671365,
+      "relative_ci95": [
+        -0.03559510027590873,
+        -0.004286140989166909
+      ],
+      "relative_changes": [
+        -0.004286140989166909,
+        -0.009073633699887784,
+        -0.019108768047671365,
+        0.04335321315308671,
+        -0.03559510027590873,
+        -0.06079399223491433,
+        -0.031228735045342626
+      ],
+      "median_absolute_seconds": -0.07153609999999988,
+      "absolute_ci95_seconds": [
+        -0.13792120000000008,
+        -0.01620940000000015
+      ]
+    },
+    "mpi-static-4": {
+      "prefix": {
+        "n": 7,
+        "median_seconds": 3.6617681,
+        "seconds": [
+          3.6057625,
+          3.6678038,
+          3.7188366,
+          3.7580024,
+          3.6617681,
+          3.6172863,
+          3.5844446
+        ],
+        "median_worker_compute_seconds": [
+          0.5141807,
+          1.4958616,
+          3.6611153,
+          3.4675668
+        ]
+      },
+      "fixed": {
+        "n": 7,
+        "median_seconds": 3.6572377,
+        "seconds": [
+          3.6554794,
+          3.6906916,
+          3.9219063,
+          3.6763882,
+          3.6293421,
+          3.6572377,
+          3.6235383
+        ],
+        "median_worker_compute_seconds": [
+          0.5336408,
+          1.4931932,
+          3.656234,
+          3.4783253
+        ]
+      },
+      "paired_blocks": 7,
+      "blocks_fixed_faster": 2,
+      "median_relative_change": 0.010906487437412293,
+      "relative_ci95": [
+        -0.008855284964659593,
+        0.013788179337934858
+      ],
+      "relative_changes": [
+        0.013788179337934858,
+        0.006240192018995172,
+        0.05460570652660568,
+        -0.02171744222409233,
+        -0.008855284964659593,
+        0.011044577809613765,
+        0.010906487437412293
+      ],
+      "median_absolute_seconds": 0.03909370000000001,
+      "absolute_ci95_seconds": [
+        -0.032426000000000066,
+        0.04971689999999995
+      ]
+    },
+    "hybrid-static-1x4": {
+      "prefix": {
+        "n": 7,
+        "median_seconds": 3.7241049,
+        "seconds": [
+          3.6598723,
+          3.8159182,
+          3.7241049,
+          3.7484344,
+          3.7076934,
+          3.6814494,
+          3.7890076
+        ],
+        "median_worker_compute_seconds": [
+          3.7233991
+        ]
+      },
+      "fixed": {
+        "n": 7,
+        "median_seconds": 3.4998313,
+        "seconds": [
+          3.4658504,
+          3.5859031,
+          3.5346314,
+          3.4357158,
+          3.4984037,
+          3.5620879,
+          3.4998313
+        ],
+        "median_worker_compute_seconds": [
+          3.4993663
+        ]
+      },
+      "paired_blocks": 7,
+      "blocks_fixed_faster": 7,
+      "median_relative_change": -0.0564474128308452,
+      "relative_ci95": [
+        -0.07631979941132883,
+        -0.05087759477451881
+      ],
+      "relative_changes": [
+        -0.05301329775905028,
+        -0.06027778582884724,
+        -0.05087759477451881,
+        -0.08342645665614412,
+        -0.0564474128308452,
+        -0.03242242036519638,
+        -0.07631979941132883
+      ],
+      "median_absolute_seconds": -0.20928970000000024,
+      "absolute_ci95_seconds": [
+        -0.2891763000000003,
+        -0.18947350000000007
+      ]
+    },
+    "hybrid-static-2x2": {
+      "prefix": {
+        "n": 7,
+        "median_seconds": 3.7117717,
+        "seconds": [
+          3.8100007,
+          3.6800271,
+          3.7243284,
+          3.6811113,
+          3.6429913,
+          3.7117717,
+          3.8473087
+        ],
+        "median_worker_compute_seconds": [
+          1.4795868,
+          3.7107307
+        ]
+      },
+      "fixed": {
+        "n": 7,
+        "median_seconds": 3.7764733,
+        "seconds": [
+          3.8813134,
+          3.9840817,
+          3.7764733,
+          3.6899135,
+          3.7572433,
+          3.9039942,
+          3.7096431
+        ],
+        "median_worker_compute_seconds": [
+          1.1270264,
+          3.7753798
+        ]
+      },
+      "paired_blocks": 7,
+      "blocks_fixed_faster": 1,
+      "median_relative_change": 0.018717240655625078,
+      "relative_ci95": [
+        0.002391180076516619,
+        0.0517872637479293
+      ],
+      "relative_changes": [
+        0.018717240655625078,
+        0.08262292416270522,
+        0.014001155214991234,
+        0.002391180076516619,
+        0.03136213913000563,
+        0.0517872637479293,
+        -0.03578231193145487
+      ],
+      "median_absolute_seconds": 0.0713127,
+      "absolute_ci95_seconds": [
+        0.008802199999999871,
+        0.19222250000000018
+      ]
+    }
+  },
+  "definitions": {
+    "relative_change": "per-block fixed/prefix render seconds - 1; negative means the fix is faster",
+    "ci95": "95% percentile bootstrap of the median paired change, 4000 resamples, n>=7 only",
+    "validation": "pixel hash and rays/shadow_rays/node_visits/primitive_tests/pixels equal the sequential reference"
+  }
+}

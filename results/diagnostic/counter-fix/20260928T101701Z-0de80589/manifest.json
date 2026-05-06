@@ -1,0 +1,61 @@
+{
+  "classification": "diagnostic-not-formal",
+  "id": "20260928T101701Z-0de80589",
+  "status": "complete",
+  "tool": "scripts/diagnose_counter_fix.py",
+  "tool_sha256": "8fb0b1a58c2764b7e2d1ce486802be3dffc404477d7e0c2267ea64ba246f2b80",
+  "scene": "imbalanced",
+  "preset": "medium",
+  "repeats": 7,
+  "warmups": 1,
+  "order_seed": 20260930,
+  "prefix_rev": "6270d440b0da74d577933b2ff8a03acd2a22c78a",
+  "counter_rev": "dca8628fa070f2a3c11f7cc89af7e5bc4215b22c",
+  "fixed_source": "working tree src/ and include/",
+  "git_sha": "9dfc5a05dd31ee29bbfb51fc0c69218921d26ab6",
+  "git_status_porcelain": " M include/helios/core.hpp\n M scripts/diagnose_counter_fix.py\n M src/core.cpp\n M tests/tests.cpp\n?? HANDOFF.md\n",
+  "builds": {
+    "prefix": {
+      "core_cpp_sha256": "b912b3d89586deea9b0c311d75d63309b29b8a94aca680e84443ee74da651cb8",
+      "main_cpp_sha256": "84e1e6b4b22c21910e75d6aa179850e1f40662e3cc54ffd585686022a163b5a0",
+      "helios_sha256": "5503bdb3c21694bf08ed59e7d53d41cc75caf70dd1b54340d2423599ed3a125d",
+      "helios_mpi_sha256": "7b96e2c3e7d5967481154ea61219bd675fcd04005423d74d774e26e5a22e13b3",
+      "dir": "C:\\Users\\lorenzodario\\Documents\\PersonalProjects\\Helios\\build-diag-counterfix\\prefix\\original"
+    },
+    "fixed": {
+      "core_cpp_sha256": "32fcfba5af8874076f07a48ed324937a0785e52dc88b7ae6962c338abf685c0e",
+      "main_cpp_sha256": "dc5dda0e074c231abe96f3223d472ce78fa009cbe9d0b8bfa2e92b0c4e0eb2cf",
+      "helios_sha256": "7a4f58cdb5ca0f97baf090f7bd396bc66e07b65c2fdb6b67248c2dd31ded4ab4",
+      "helios_mpi_sha256": "426146e8b60919fedb133a17c8a1dc1122e02fe728d6b928cba20b434e272166",
+      "dir": "C:\\Users\\lorenzodario\\Documents\\PersonalProjects\\Helios\\build-diag-counterfix\\fixed\\original"
+    },
+    "counter-only": {
+      "core_cpp_sha256": "c9c52a3347b23bc8d3dfeb120537324e24dfcbf83a30e6d0c7a5efdd656c914c",
+      "main_cpp_sha256": "84e1e6b4b22c21910e75d6aa179850e1f40662e3cc54ffd585686022a163b5a0",
+      "helios_sha256": "cbb24b9d77e099d885b512e0a99076f4ba81ff2e52f9d7b47b203464789a30d9",
+      "helios_mpi_sha256": "abed8c58e97d55a90efd454992059591d94080a68f5e5b0666a7c54bb5568ebf",
+      "dir": "C:\\Users\\lorenzodario\\Documents\\PersonalProjects\\Helios\\build-diag-counterfix\\counter-only\\original"
+    }
+  },
+  "compile_flags": [
+    "-std=c++20",
+    "-Wall",
+    "-Wextra",
+    "-Wpedantic",
+    "-Wconversion",
+    "-fopenmp",
+    "-DHELIOS_OPENMP=1",
+    "-O2",
+    "-DNDEBUG"
+  ],
+  "hardware": {
+    "os": "Windows-10-10.0.26200-SP0",
+    "logical_processors": 8,
+    "cpu": "11th Gen Intel(R) Core(TM) i7-11370H @ 3.30GHz",
+    "physical_cores": "not directly measured",
+    "physical_ram_bytes": 16843112448
+  },
+  "created_utc": "2026-09-28T10:17:34.636913+00:00",
+  "records": 121,
+  "failures": 0
+}

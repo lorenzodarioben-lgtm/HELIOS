@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "project": "Helios",
+  "backend": "mpi-static",
+  "scene": "imbalanced",
+  "width": 256, "height": 144, "spp": 192, "max_depth": 8, "seed": 42, "tile": 16, "bvh": true, "bvh_nodes": 127, "ranks": 4, "threads_per_rank": 1, "slow_rank": -1, "slow_us_per_tile": 0, "slow_factor_milli": 1000, "fixed_batch": 1, "adaptive_initial_batch": 2, "adaptive_target_ms": 50, "coordinator_only": false, "omp_schedule": "static",
+  "render_wall_seconds": 3.6057625, "rays": 16895790, "shadow_rays": 3283138, "node_visits": 352163566, "primitive_tests": 116716033, "pixels": 36864, "tiles": 144,
+  "image_hash_fnv1a64": "da1762d641f51b4e",
+  "workers": [
+    {"id": 0, "assignments": 36, "compute_seconds": 0.5141807, "stall_seconds": 0, "assigned_work_seconds": 0.5141807, "tiles": 36, "pixels": 9216, "rays": 1769472, "assignment_wait_seconds": 0, "worker_requests": 0, "result_wait_seconds": 9.88e-05, "mpi_send_seconds": 0, "mpi_receive_seconds": 3.0912752, "effective_pixels_per_second": 17923.6599},
+    {"id": 1, "assignments": 36, "compute_seconds": 1.4708072, "stall_seconds": 0, "assigned_work_seconds": 1.4708072, "tiles": 36, "pixels": 9216, "rays": 2485375, "assignment_wait_seconds": 0, "worker_requests": 0, "result_wait_seconds": 0, "mpi_send_seconds": 0.0004361, "mpi_receive_seconds": 0, "effective_pixels_per_second": 6265.94703},
+    {"id": 2, "assignments": 36, "compute_seconds": 3.6050736, "stall_seconds": 0, "assigned_work_seconds": 3.6050736, "tiles": 36, "pixels": 9216, "rays": 6397592, "assignment_wait_seconds": 0, "worker_requests": 0, "result_wait_seconds": 0, "mpi_send_seconds": 0.0004292, "mpi_receive_seconds": 0, "effective_pixels_per_second": 2556.39718},
+    {"id": 3, "assignments": 36, "compute_seconds": 3.4650145, "stall_seconds": 0, "assigned_work_seconds": 3.4650145, "tiles": 36, "pixels": 9216, "rays": 6243351, "assignment_wait_seconds": 0, "worker_requests": 0, "result_wait_seconds": 0, "mpi_send_seconds": 0.0004133, "mpi_receive_seconds": 0, "effective_pixels_per_second": 2659.72913}
+  ],
+  "scheduler": {"trace_mode": false, "assignments_dispatched": 0, "completed_microtiles": 0, "average_batch_size": 0, "median_batch_size": 0, "min_batch_size": 0, "max_batch_size": 0, "coordinator_handling_seconds": 0, "first_batch_completion_seconds": 0, "tail90_start_seconds": 0, "tail90_seconds": 0, "first_final_worker_completion_seconds": 0, "last_final_worker_completion_seconds": 0, "last_worker_spread_seconds": 0, "final_worker_completion_seconds": [0, 0, 0, 0], "batch_histogram": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]}
+}

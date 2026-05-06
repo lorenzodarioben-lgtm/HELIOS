@@ -1,0 +1,51 @@
+{
+  "label": "sequential-prefix-b3",
+  "variant": "prefix",
+  "started_utc": "2026-09-28T10:22:11.431098+00:00",
+  "command": [
+    "C:\\Users\\lorenzodario\\Documents\\PersonalProjects\\Helios\\build-diag-counterfix\\prefix\\original\\helios.exe",
+    "render",
+    "--backend",
+    "sequential",
+    "--scene",
+    "imbalanced",
+    "--width",
+    "256",
+    "--height",
+    "144",
+    "--spp",
+    "192",
+    "--max-depth",
+    "8",
+    "--seed",
+    "42",
+    "--tile",
+    "16",
+    "--threads",
+    "1",
+    "--output",
+    "C:\\Users\\lorenzodario\\Documents\\PersonalProjects\\Helios\\results\\diagnostic\\counter-fix\\20260928T101701Z-0de80589\\raw\\sequential-prefix-b3.ppm",
+    "--stats-json",
+    "C:\\Users\\lorenzodario\\Documents\\PersonalProjects\\Helios\\results\\diagnostic\\counter-fix\\20260928T101701Z-0de80589\\raw\\sequential-prefix-b3.stats.json"
+  ],
+  "return_code": 0,
+  "stdout": "Rendered 256x144 scene=imbalanced backend=sequential ranks=1 threads=1 time=7.2373 s hash=da1762d641f51b4e output=C:\\Users\\lorenzodario\\Documents\\PersonalProjects\\Helios\\results\\diagnostic\\counter-fix\\20260928T101701Z-0de80589\\raw\\sequential-prefix-b3.ppm\n",
+  "stderr": "",
+  "render_wall_seconds": 7.2373404,
+  "image_hash": "da1762d641f51b4e",
+  "counters": {
+    "rays": 16895790,
+    "shadow_rays": 3283138,
+    "node_visits": 352163566,
+    "primitive_tests": 116716033,
+    "pixels": 36864,
+    "tiles": 144
+  },
+  "worker_compute_seconds": [
+    7.2370719
+  ],
+  "condition": "sequential",
+  "block": 3,
+  "position": 11,
+  "warmup": false
+}
