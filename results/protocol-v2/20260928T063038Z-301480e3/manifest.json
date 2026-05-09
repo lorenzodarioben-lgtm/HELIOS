@@ -1,0 +1,137 @@
+{
+  "protocol_version": 2,
+  "classification": "final-candidate",
+  "experiment_id": "20260928T063038Z-301480e3",
+  "created_utc": "2026-09-28T06:30:38.694327+00:00",
+  "status": "complete",
+  "experiment": "strong",
+  "scenes": [
+    "imbalanced"
+  ],
+  "preset": "medium",
+  "calibrated_presets": {
+    "small": [
+      256,
+      144,
+      64
+    ],
+    "medium": [
+      256,
+      144,
+      192
+    ],
+    "large": [
+      256,
+      144,
+      512
+    ]
+  },
+  "repeats": 7,
+  "warmups": 1,
+  "order_seed": 20260929,
+  "timeout_seconds": 60.0,
+  "max_total_seconds": 600.0,
+  "slow_factor_milli": 1000,
+  "build_type": "Release (scripts/build.ps1 -Configuration release)",
+  "compiler": "g++ (Rev3, Built by MSYS2 project) 14.1.0",
+  "git_sha": "8d92429f8d0c0bafd81f7eb0690f58ee77e83470",
+  "git_status_porcelain": "M scripts/analyse_results.py\n?? results/protocol-v2/\n?? scripts/plot_aggregate.py",
+  "hardware": {
+    "os": "Windows-10-10.0.26200-SP0",
+    "logical_processors": 8,
+    "cpu": "11th Gen Intel(R) Core(TM) i7-11370H @ 3.30GHz",
+    "physical_cores": "not directly measured",
+    "physical_ram_bytes": 16843112448
+  },
+  "executable_sha256": "5aa48c680939533709418421779673d6da3b3f11581cde63da908ef909e7f54e",
+  "mpi_executable_sha256": "90940d6c6153c9506bb4b3f680961d8ad073e0e54f8afe07a9e4fd676c4bcea8",
+  "source_sha256": {
+    "src\\main.cpp": "0b3b2f97bdba98fabc57da008ffed7b86dbc8978399d7d4af6b834de2e81f690",
+    "src\\core.cpp": "0ec54b4f3d92591737290f38f54d1dca28e1b762b8b73bb6623c09a4b1d4cb72",
+    "include\\helios\\core.hpp": "efd6a4d0c08a4fc61ab38ea58d3c11a1b8551528c9a18ea8537f22c9681717a3"
+  },
+  "conditions": [
+    {
+      "backend": "sequential",
+      "ranks": 1,
+      "threads_per_rank": 1,
+      "coordinator_only": false,
+      "compute_slots": 1
+    },
+    {
+      "backend": "openmp",
+      "ranks": 1,
+      "threads_per_rank": 1,
+      "coordinator_only": false,
+      "compute_slots": 1
+    },
+    {
+      "backend": "openmp",
+      "ranks": 1,
+      "threads_per_rank": 2,
+      "coordinator_only": false,
+      "compute_slots": 2
+    },
+    {
+      "backend": "openmp",
+      "ranks": 1,
+      "threads_per_rank": 4,
+      "coordinator_only": false,
+      "compute_slots": 4
+    },
+    {
+      "backend": "openmp",
+      "ranks": 1,
+      "threads_per_rank": 8,
+      "coordinator_only": false,
+      "compute_slots": 8
+    },
+    {
+      "backend": "mpi-static",
+      "ranks": 1,
+      "threads_per_rank": 1,
+      "coordinator_only": false,
+      "compute_slots": 1
+    },
+    {
+      "backend": "mpi-static",
+      "ranks": 2,
+      "threads_per_rank": 1,
+      "coordinator_only": false,
+      "compute_slots": 2
+    },
+    {
+      "backend": "mpi-static",
+      "ranks": 4,
+      "threads_per_rank": 1,
+      "coordinator_only": false,
+      "compute_slots": 4
+    },
+    {
+      "backend": "hybrid-static",
+      "ranks": 1,
+      "threads_per_rank": 4,
+      "coordinator_only": false,
+      "compute_slots": 4
+    },
+    {
+      "backend": "hybrid-static",
+      "ranks": 2,
+      "threads_per_rank": 2,
+      "coordinator_only": false,
+      "compute_slots": 4
+    },
+    {
+      "backend": "hybrid-static",
+      "ranks": 4,
+      "threads_per_rank": 1,
+      "coordinator_only": false,
+      "compute_slots": 4
+    }
+  ],
+  "timing_boundary": "render_wall_seconds excludes setup and file output; includes tile processing and MPI scheduling/gather",
+  "trace_policy": "dynamic assignment trace and per-tile metrics on every run",
+  "records": 88,
+  "failures": 0,
+  "hash_validation": "within scene and SPP; weak scaled SPP requires separate same-SPP reference"
+}
