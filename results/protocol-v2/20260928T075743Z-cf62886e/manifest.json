@@ -1,0 +1,92 @@
+{
+  "protocol_version": 2,
+  "classification": "final-candidate",
+  "experiment_id": "20260928T075743Z-cf62886e",
+  "created_utc": "2026-09-28T07:57:43.403471+00:00",
+  "status": "complete",
+  "experiment": "scheduler",
+  "scenes": [
+    "imbalanced",
+    "reflective",
+    "scheduler_stress",
+    "uniform"
+  ],
+  "preset": "medium",
+  "calibrated_presets": {
+    "small": [
+      256,
+      144,
+      64
+    ],
+    "medium": [
+      256,
+      144,
+      192
+    ],
+    "large": [
+      256,
+      144,
+      512
+    ]
+  },
+  "repeats": 7,
+  "warmups": 1,
+  "order_seed": 20260928,
+  "timeout_seconds": 60.0,
+  "max_total_seconds": 1200.0,
+  "slow_factor_milli": 1000,
+  "build_type": "Release (scripts/build.ps1 -Configuration release)",
+  "compiler": "g++ (Rev3, Built by MSYS2 project) 14.1.0",
+  "git_sha": "87be6a8c15b37f8914b098a131c50b722e68313b",
+  "git_status_porcelain": "",
+  "hardware": {
+    "os": "Windows-10-10.0.26200-SP0",
+    "logical_processors": 8,
+    "cpu": "11th Gen Intel(R) Core(TM) i7-11370H @ 3.30GHz",
+    "physical_cores": "not directly measured",
+    "physical_ram_bytes": 16843112448
+  },
+  "executable_sha256": "9c627b5931c45d9ce782768de4d0e962ac574b2a5ec95edd7b66978eb10fb42a",
+  "mpi_executable_sha256": "30946ef41725b578cb949a570c9d9bbb7b004b54123a2854d1a1e9553d7cb4e0",
+  "source_sha256": {
+    "src\\main.cpp": "dc5dda0e074c231abe96f3223d472ce78fa009cbe9d0b8bfa2e92b0c4e0eb2cf",
+    "src\\core.cpp": "0ec54b4f3d92591737290f38f54d1dca28e1b762b8b73bb6623c09a4b1d4cb72",
+    "include\\helios\\core.hpp": "efd6a4d0c08a4fc61ab38ea58d3c11a1b8551528c9a18ea8537f22c9681717a3"
+  },
+  "conditions": [
+    {
+      "backend": "sequential",
+      "ranks": 1,
+      "threads_per_rank": 1,
+      "coordinator_only": false,
+      "compute_slots": 1
+    },
+    {
+      "backend": "mpi-static",
+      "ranks": 3,
+      "threads_per_rank": 1,
+      "coordinator_only": true,
+      "compute_slots": 2
+    },
+    {
+      "backend": "mpi-dynamic",
+      "ranks": 3,
+      "threads_per_rank": 1,
+      "coordinator_only": false,
+      "compute_slots": 2
+    },
+    {
+      "backend": "hybrid-adaptive",
+      "ranks": 3,
+      "threads_per_rank": 1,
+      "coordinator_only": false,
+      "compute_slots": 2
+    }
+  ],
+  "timing_boundary": "render_wall_seconds excludes setup and file output; includes tile processing and MPI scheduling/gather",
+  "trace_policy": "dynamic assignment trace and per-tile metrics on every run",
+  "trace_mode": "diagnostic",
+  "records": 128,
+  "failures": 0,
+  "hash_validation": "within scene and SPP; weak scaled SPP checked against excluded sequential reference renders"
+}
