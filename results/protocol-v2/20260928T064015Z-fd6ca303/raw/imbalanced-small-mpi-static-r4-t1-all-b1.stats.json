@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "project": "Helios",
+  "backend": "mpi-static",
+  "scene": "imbalanced",
+  "width": 256, "height": 144, "spp": 256, "max_depth": 8, "seed": 42, "tile": 16, "bvh": true, "bvh_nodes": 127, "ranks": 4, "threads_per_rank": 1, "slow_rank": -1, "slow_us_per_tile": 0, "slow_factor_milli": 1000, "coordinator_only": false, "omp_schedule": "static",
+  "render_wall_seconds": 4.1599594, "rays": 22526392, "shadow_rays": 4377120, "node_visits": 469508950, "primitive_tests": 155597012, "pixels": 36864, "tiles": 144,
+  "image_hash_fnv1a64": "7a165b2074c412bd",
+  "workers": [
+    {"id": 0, "assignments": 36, "compute_seconds": 0.5999717, "stall_seconds": 0, "assigned_work_seconds": 0.5999717, "tiles": 36, "pixels": 9216, "rays": 2359296, "assignment_wait_seconds": 0, "result_wait_seconds": 8.74e-05, "mpi_send_seconds": 0, "mpi_receive_seconds": 3.5597522},
+    {"id": 1, "assignments": 36, "compute_seconds": 1.6162818, "stall_seconds": 0, "assigned_work_seconds": 1.6162818, "tiles": 36, "pixels": 9216, "rays": 3314035, "assignment_wait_seconds": 0, "result_wait_seconds": 0, "mpi_send_seconds": 0.0003157, "mpi_receive_seconds": 0},
+    {"id": 2, "assignments": 36, "compute_seconds": 4.1594846, "stall_seconds": 0, "assigned_work_seconds": 4.1594846, "tiles": 36, "pixels": 9216, "rays": 8529319, "assignment_wait_seconds": 0, "result_wait_seconds": 0, "mpi_send_seconds": 0.0003472, "mpi_receive_seconds": 0},
+    {"id": 3, "assignments": 36, "compute_seconds": 4.0030488, "stall_seconds": 0, "assigned_work_seconds": 4.0030488, "tiles": 36, "pixels": 9216, "rays": 8323742, "assignment_wait_seconds": 0, "result_wait_seconds": 0, "mpi_send_seconds": 0.0003421, "mpi_receive_seconds": 0}
+  ]
+}
