@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "project": "Helios",
+  "backend": "hybrid-adaptive",
+  "scene": "reflective",
+  "width": 256, "height": 144, "spp": 512, "max_depth": 8, "seed": 42, "tile": 16, "bvh": true, "bvh_nodes": 9, "ranks": 3, "threads_per_rank": 1, "slow_rank": -1, "slow_us_per_tile": 0, "slow_factor_milli": 1000, "fixed_batch": 1, "adaptive_initial_batch": 2, "adaptive_target_ms": 50, "coordinator_only": false, "omp_schedule": "static",
+  "render_wall_seconds": 7.658872, "rays": 52685307, "shadow_rays": 9219291, "node_visits": 372515857, "primitive_tests": 420137730, "pixels": 36864, "tiles": 144,
+  "image_hash_fnv1a64": "b21b94878dffcda5",
+  "workers": [
+    {"id": 0, "assignments": 0, "compute_seconds": 0, "stall_seconds": 0, "assigned_work_seconds": 0, "tiles": 0, "pixels": 0, "rays": 0, "assignment_wait_seconds": 0, "worker_requests": 0, "result_wait_seconds": 7.6575512, "mpi_send_seconds": 0.0003467, "mpi_receive_seconds": 0.0006616, "effective_pixels_per_second": 0},
+    {"id": 1, "assignments": 66, "compute_seconds": 7.5807801, "stall_seconds": 0, "assigned_work_seconds": 7.5807801, "tiles": 71, "pixels": 18176, "rays": 26107752, "assignment_wait_seconds": 0.0053214, "worker_requests": 67, "result_wait_seconds": 0, "mpi_send_seconds": 0.0006077, "mpi_receive_seconds": 0, "effective_pixels_per_second": 2397.64243},
+    {"id": 2, "assignments": 65, "compute_seconds": 7.6530618, "stall_seconds": 0, "assigned_work_seconds": 7.6530618, "tiles": 73, "pixels": 18688, "rays": 26577555, "assignment_wait_seconds": 0.0050351, "worker_requests": 66, "result_wait_seconds": 0, "mpi_send_seconds": 0.0006426, "mpi_receive_seconds": 0, "effective_pixels_per_second": 2441.89848}
+  ],
+  "scheduler": {"trace_mode": true, "assignments_dispatched": 131, "completed_microtiles": 144, "average_batch_size": 1.09923664, "median_batch_size": 1, "min_batch_size": 1, "max_batch_size": 2, "coordinator_handling_seconds": 0.00128, "first_batch_completion_seconds": 0.056515, "tail90_start_seconds": 6.6926255, "tail90_seconds": 0.9662465, "first_final_worker_completion_seconds": 7.5868267, "last_final_worker_completion_seconds": 7.6588633, "last_worker_spread_seconds": 0.0720366, "final_worker_completion_seconds": [0, 7.5868267, 7.6588633], "batch_histogram": [0, 118, 13, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]}
+}
