@@ -1,0 +1,268 @@
+{
+  "experiment_id": "20260928T102644Z-100e1393",
+  "git_sha": "e4a219ce573c22f908287607382cf83c3a649608",
+  "paired": [
+    {
+      "candidate": "hybrid-static 2x2",
+      "reference": "openmp 1x4",
+      "n_blocks": 7,
+      "candidate_faster_blocks": 4,
+      "median_relative_change": -0.0030325828879335104,
+      "relative_ci95": [
+        -0.020204898454313946,
+        0.03287669926282777
+      ],
+      "median_absolute_seconds": -0.006295300000000115,
+      "absolute_ci95_seconds": [
+        -0.043728699999999954,
+        0.06549050000000012
+      ]
+    },
+    {
+      "candidate": "hybrid-static 2x2",
+      "reference": "mpi-static 4x1",
+      "n_blocks": 7,
+      "candidate_faster_blocks": 2,
+      "median_relative_change": 0.01844552535558086,
+      "relative_ci95": [
+        -0.0019457215681936146,
+        0.04015529031486875
+      ],
+      "median_absolute_seconds": 0.03726420000000008,
+      "absolute_ci95_seconds": [
+        -0.004034700000000058,
+        0.07904440000000013
+      ]
+    },
+    {
+      "candidate": "hybrid-static 1x4",
+      "reference": "openmp 1x4",
+      "n_blocks": 7,
+      "candidate_faster_blocks": 7,
+      "median_relative_change": -0.20658172101400907,
+      "relative_ci95": [
+        -0.2594630050156119,
+        -0.18796713961596956
+      ],
+      "median_absolute_seconds": -0.41481559999999984,
+      "absolute_ci95_seconds": [
+        -0.5615459999999999,
+        -0.3744312000000001
+      ]
+    },
+    {
+      "candidate": "hybrid-static 4x1",
+      "reference": "mpi-static 4x1",
+      "n_blocks": 7,
+      "candidate_faster_blocks": 0,
+      "median_relative_change": 0.010128324349310436,
+      "relative_ci95": [
+        0.005424747155539089,
+        0.019554441666384426
+      ],
+      "median_absolute_seconds": 0.0216132,
+      "absolute_ci95_seconds": [
+        0.011248900000000006,
+        0.03913150000000032
+      ]
+    },
+    {
+      "candidate": "openmp 1x4",
+      "reference": "mpi-static 4x1",
+      "n_blocks": 7,
+      "candidate_faster_blocks": 2,
+      "median_relative_change": 0.0034185230681098577,
+      "relative_ci95": [
+        -0.013971826373415541,
+        0.08148474656697702
+      ],
+      "median_absolute_seconds": 0.006841000000000097,
+      "absolute_ci95_seconds": [
+        -0.028226300000000037,
+        0.16306690000000001
+      ]
+    },
+    {
+      "candidate": "openmp 1x8",
+      "reference": "openmp 1x4",
+      "n_blocks": 7,
+      "candidate_faster_blocks": 7,
+      "median_relative_change": -0.3468779676217204,
+      "relative_ci95": [
+        -0.3991697771568631,
+        -0.32309125337570677
+      ],
+      "median_absolute_seconds": -0.6986952,
+      "absolute_ci95_seconds": [
+        -0.8639081,
+        -0.6593150999999999
+      ]
+    },
+    {
+      "candidate": "hybrid-static 1x4",
+      "reference": "hybrid-static 2x2",
+      "n_blocks": 7,
+      "candidate_faster_blocks": 7,
+      "median_relative_change": -0.22472529432377364,
+      "relative_ci95": [
+        -0.24419198073541493,
+        -0.1867075823016121
+      ],
+      "median_absolute_seconds": -0.46180829999999995,
+      "absolute_ci95_seconds": [
+        -0.5178172999999999,
+        -0.3864084999999997
+      ]
+    }
+  ],
+  "definitions": {
+    "relative_change": "per-block candidate/reference render seconds - 1; negative = candidate faster",
+    "ci95": "95% percentile bootstrap of the median paired change, 4000 resamples, n>=7 only"
+  },
+  "historical_experiment_id": "20260928T063038Z-301480e3",
+  "historical_unpaired": [
+    {
+      "condition": "hybrid-static 1x4",
+      "historical_median_seconds": 3.6343903,
+      "historical_ci95": [
+        3.538277,
+        3.6927268
+      ],
+      "new_median_seconds": 1.6027163,
+      "new_ci95": [
+        1.5829299,
+        1.6761582
+      ]
+    },
+    {
+      "condition": "hybrid-static 2x2",
+      "historical_median_seconds": 4.706773,
+      "historical_ci95": [
+        4.6447833,
+        4.7179073
+      ],
+      "new_median_seconds": 2.057494,
+      "new_ci95": [
+        2.0475123,
+        2.1205336
+      ]
+    },
+    {
+      "condition": "hybrid-static 4x1",
+      "historical_median_seconds": 3.061683,
+      "historical_ci95": [
+        3.0514544,
+        3.1779334
+      ],
+      "new_median_seconds": 2.0345823,
+      "new_ci95": [
+        2.0294222,
+        2.0848755
+      ]
+    },
+    {
+      "condition": "mpi-static 1x1",
+      "historical_median_seconds": 6.1290082,
+      "historical_ci95": [
+        6.0849026,
+        6.3449969
+      ],
+      "new_median_seconds": 3.9096874,
+      "new_ci95": [
+        3.9053076,
+        3.9374095
+      ]
+    },
+    {
+      "condition": "mpi-static 2x1",
+      "historical_median_seconds": 5.0899162,
+      "historical_ci95": [
+        4.9888564,
+        5.2287054
+      ],
+      "new_median_seconds": 3.3044733,
+      "new_ci95": [
+        3.2865786,
+        3.3179152
+      ]
+    },
+    {
+      "condition": "mpi-static 4x1",
+      "historical_median_seconds": 3.092154,
+      "historical_ci95": [
+        2.979732,
+        3.1165811
+      ],
+      "new_median_seconds": 2.0202298,
+      "new_ci95": [
+        2.0011566,
+        2.0736266
+      ]
+    },
+    {
+      "condition": "openmp 1x1",
+      "historical_median_seconds": 6.1531057,
+      "historical_ci95": [
+        6.1419504,
+        6.2282494
+      ],
+      "new_median_seconds": 3.9233534,
+      "new_ci95": [
+        3.8884191,
+        4.0930581
+      ]
+    },
+    {
+      "condition": "openmp 1x2",
+      "historical_median_seconds": 5.1700337,
+      "historical_ci95": [
+        5.1067175,
+        5.3725726
+      ],
+      "new_median_seconds": 3.3039155,
+      "new_ci95": [
+        3.2920324,
+        3.3407512
+      ]
+    },
+    {
+      "condition": "openmp 1x4",
+      "historical_median_seconds": 3.2082502,
+      "historical_ci95": [
+        3.1556813,
+        3.3655348
+      ],
+      "new_median_seconds": 2.0406467,
+      "new_ci95": [
+        2.0079976,
+        2.1642623
+      ]
+    },
+    {
+      "condition": "openmp 1x8",
+      "historical_median_seconds": 2.1158108,
+      "historical_ci95": [
+        2.0888115,
+        2.3646469
+      ],
+      "new_median_seconds": 1.3228324,
+      "new_ci95": [
+        1.3003542,
+        1.3813316
+      ]
+    },
+    {
+      "condition": "sequential 1x1",
+      "historical_median_seconds": 6.2787569,
+      "historical_ci95": [
+        6.1984876,
+        6.3869459
+      ],
+      "new_median_seconds": 3.9328157,
+      "new_ci95": [
+        3.8858385,
+        4.1058596
+      ]
+    }
+  ]
+}
