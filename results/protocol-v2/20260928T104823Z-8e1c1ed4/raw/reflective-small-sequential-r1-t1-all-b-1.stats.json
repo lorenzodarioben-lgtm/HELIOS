@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "project": "Helios",
+  "backend": "sequential",
+  "scene": "reflective",
+  "width": 256, "height": 144, "spp": 64, "max_depth": 8, "seed": 42, "tile": 16, "bvh": true, "bvh_nodes": 9, "ranks": 1, "threads_per_rank": 1, "slow_rank": -1, "slow_us_per_tile": 0, "slow_factor_milli": 1000, "fixed_batch": 1, "adaptive_initial_batch": 2, "adaptive_target_ms": 50, "coordinator_only": false, "omp_schedule": "static",
+  "render_wall_seconds": 1.0444448, "rays": 6587271, "shadow_rays": 1153483, "node_visits": 46577199, "primitive_tests": 52539726, "pixels": 36864, "tiles": 144,
+  "image_hash_fnv1a64": "c84e68134f3ffcac",
+  "workers": [
+    {"id": 0, "assignments": 144, "compute_seconds": 1.0441891, "stall_seconds": 0, "assigned_work_seconds": 1.0441891, "tiles": 144, "pixels": 36864, "rays": 6587271, "assignment_wait_seconds": 0, "worker_requests": 0, "result_wait_seconds": 0, "mpi_send_seconds": 0, "mpi_receive_seconds": 0, "effective_pixels_per_second": 35303.9502}
+  ],
+  "scheduler": {"trace_mode": false, "assignments_dispatched": 0, "completed_microtiles": 0, "average_batch_size": 0, "median_batch_size": 0, "min_batch_size": 0, "max_batch_size": 0, "coordinator_handling_seconds": 0, "first_batch_completion_seconds": 0, "tail90_start_seconds": 0, "tail90_seconds": 0, "first_final_worker_completion_seconds": 0, "last_final_worker_completion_seconds": 0, "last_worker_spread_seconds": 0, "final_worker_completion_seconds": [], "batch_histogram": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]}
+}
