@@ -1,0 +1,62 @@
+﻿{
+    "classification":  "supervised-stress-evidence",
+    "candidate":  "scheduler_stress 1280x720 2048 SPP depth 16 sequential",
+    "run_id":  "20260928T111419Z-5832e956",
+    "started_utc":  "2026-09-28T11:14:21.0885323Z",
+    "ended_utc":  "2026-09-28T11:24:21.4335083Z",
+    "elapsed_wall_seconds":  600.34067759999994,
+    "timeout_seconds":  600,
+    "timed_out":  true,
+    "exit_code":  null,
+    "launch_error":  null,
+    "executable":  "C:\\Users\\lorenzodario\\Documents\\PersonalProjects\\Helios\\build-release\\helios.exe",
+    "executable_sha256":  "956685fbc2b7b314d67f59332a37f46d7376218f01b394e5434e61b835203ef3",
+    "arguments":  [
+                      "render",
+                      "--backend",
+                      "sequential",
+                      "--scene",
+                      "scheduler_stress",
+                      "--width",
+                      "1280",
+                      "--height",
+                      "720",
+                      "--spp",
+                      "2048",
+                      "--max-depth",
+                      "16",
+                      "--tile",
+                      "16",
+                      "--seed",
+                      "42",
+                      "--output",
+                      "C:\\Users\\lorenzodario\\Documents\\PersonalProjects\\Helios\\results\\stress\\20260928T111419Z-5832e956\\stress.ppm",
+                      "--stats-json",
+                      "C:\\Users\\lorenzodario\\Documents\\PersonalProjects\\Helios\\results\\stress\\20260928T111419Z-5832e956\\stress.json"
+                  ],
+    "exact_command":  "\"C:\\Users\\lorenzodario\\Documents\\PersonalProjects\\Helios\\build-release\\helios.exe\" render --backend sequential --scene scheduler_stress --width 1280 --height 720 --spp 2048 --max-depth 16 --tile 16 --seed 42 --output C:\\Users\\lorenzodario\\Documents\\PersonalProjects\\Helios\\results\\stress\\20260928T111419Z-5832e956\\stress.ppm --stats-json C:\\Users\\lorenzodario\\Documents\\PersonalProjects\\Helios\\results\\stress\\20260928T111419Z-5832e956\\stress.json",
+    "git_sha":  "836238077ba5d1057db1160c377b3aaa731f6770",
+    "machine":  {
+                    "computer":  "LORENZODARIO",
+                    "os":  "Microsoft Windows NT 10.0.26200.0",
+                    "logical_processors":  8,
+                    "cpu":  {
+                                "Name":  "11th Gen Intel(R) Core(TM) i7-11370H @ 3.30GHz",
+                                "NumberOfCores":  4,
+                                "NumberOfLogicalProcessors":  8,
+                                "MaxClockSpeed":  3302
+                            }
+                },
+    "files":  {
+                  "stdout":  "C:\\Users\\lorenzodario\\Documents\\PersonalProjects\\Helios\\results\\stress\\20260928T111419Z-5832e956\\stdout.log",
+                  "stderr":  "C:\\Users\\lorenzodario\\Documents\\PersonalProjects\\Helios\\results\\stress\\20260928T111419Z-5832e956\\stderr.log",
+                  "ppm":  "C:\\Users\\lorenzodario\\Documents\\PersonalProjects\\Helios\\results\\stress\\20260928T111419Z-5832e956\\stress.ppm",
+                  "stats_json":  "C:\\Users\\lorenzodario\\Documents\\PersonalProjects\\Helios\\results\\stress\\20260928T111419Z-5832e956\\stress.json"
+              },
+    "file_exists":  {
+                        "stdout":  true,
+                        "stderr":  true,
+                        "ppm":  false,
+                        "stats_json":  false
+                    }
+}
