@@ -1,0 +1,3 @@
+# Report assets
+
+Scheduler source: `results\protocol-v2\20260928T075743Z-cf62886e` (20260928T075743Z-cf62886e). Strong source: `C:\Users\lorenzodario\Documents\PersonalProjects\Helios\results\protocol-v2\20260928T063038Z-301480e3`. Weak source: `C:\Users\lorenzodario\Documents\PersonalProjects\Helios\results\protocol-v2\20260928T064015Z-fd6ca303`. Tables and charts are derived from saved raw-derived V2 aggregates. The optional assignment timeline and batch-progression plots use `results\diagnostic\adaptive-v3\20260928T073928Z-ca32eece\raw\imbalanced-adaptive-50-b0.run.json` and are exploratory diagnostic traces, not formal samples. Runtime bars start at zero. Bootstrap intervals and exact definitions are in the Markdown tables and V2 protocol.
