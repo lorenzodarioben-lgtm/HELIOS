@@ -1,0 +1,3 @@
+# Report assets
+
+Scheduler source: `results\protocol-v2\20260928T103934Z-edc10839` (20260928T103934Z-edc10839). Strong source: `results\protocol-v2\20260928T102644Z-100e1393`. Weak source: `results\protocol-v2\20260928T103116Z-c00a63fc`. Tables and charts are derived from saved raw-derived V2 aggregates. The optional assignment timeline and batch-progression plots use `results\protocol-v2\20260928T103934Z-edc10839\raw\imbalanced-medium-hybrid-adaptive-r3-t1-all-b0.run.json` and are exploratory diagnostic traces, not formal samples. Runtime bars start at zero. Bootstrap intervals and exact definitions are in the Markdown tables and V2 protocol.
