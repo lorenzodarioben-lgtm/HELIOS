@@ -1,0 +1,8 @@
+{
+  "name": "helios-report-build",
+  "private": true,
+  "description": "Formats report/HELIOS_FINAL_REPORT.md as DOCX (see README.md)",
+  "dependencies": {
+    "docx": "9.8.0"
+  }
+}
