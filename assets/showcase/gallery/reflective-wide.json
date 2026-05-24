@@ -1,0 +1,23 @@
+{
+  "note": "Presentation render, not formal benchmark evidence.",
+  "git_head": "b823a268d3c0d982959165677cc38f89587b0bb4",
+  "helios_exe_sha256": "956685fbc2b7b314d67f59332a37f46d7376218f01b394e5434e61b835203ef3",
+  "helios_mpi_exe_sha256": "0313fe16a502f17d35ec52ebaa88da2260cf2be211df038b6374f6ed991714a5",
+  "generated_utc": "2026-09-28T19:15:02+00:00",
+  "render": {
+    "width": 2400,
+    "height": 1000,
+    "scene": "reflective",
+    "backend": "openmp",
+    "ranks": 1,
+    "threads": 8,
+    "render_seconds": 238.9236,
+    "hash_fnv1a64": "a4c94d5f68f2236e",
+    "command": "./build-release/helios.exe render --backend openmp --threads 8 --omp-schedule dynamic --scene reflective --width 2400 --height 1000 --spp 1024 --max-depth 8 --seed 42 --output assets/showcase/_work/gallery/reflective-wide.ppm --stats-json assets/showcase/_work/gallery/reflective-wide.json",
+    "hash_recomputed": "a4c94d5f68f2236e",
+    "spp": 1024,
+    "max_depth": 8,
+    "seed": 42,
+    "png": "assets/showcase/gallery/reflective-wide.png"
+  }
+}
