@@ -1,0 +1,3 @@
+# Scratch renders and raw PPM output are not committed; final PNG/MP4 and provenance JSON are.
+_work/
+*.ppm
