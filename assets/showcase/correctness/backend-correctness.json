@@ -1,0 +1,103 @@
+{
+  "note": "Presentation render, not formal benchmark evidence.",
+  "git_head": "b823a268d3c0d982959165677cc38f89587b0bb4",
+  "helios_exe_sha256": "956685fbc2b7b314d67f59332a37f46d7376218f01b394e5434e61b835203ef3",
+  "helios_mpi_exe_sha256": "0313fe16a502f17d35ec52ebaa88da2260cf2be211df038b6374f6ed991714a5",
+  "generated_utc": "2026-09-28T18:41:32+00:00",
+  "configuration": {
+    "scene": "showcase",
+    "width": 800,
+    "height": 450,
+    "spp": 64,
+    "depth": 8,
+    "seed": 42
+  },
+  "all_hashes_identical": true,
+  "runtime_note": "Runtimes are single informational runs, not benchmarks.",
+  "backends": [
+    {
+      "label": "Sequential",
+      "backend": "sequential",
+      "mpi_ranks": 1,
+      "threads_per_rank": 1,
+      "command": "./build-release/helios.exe render --backend sequential --threads 1 --scene showcase --width 800 --height 450 --spp 64 --max-depth 8 --seed 42 --output assets/showcase/_work/correctness/sequential.ppm --stats-json assets/showcase/_work/correctness/sequential.json",
+      "hash": "57881d257daf2474",
+      "hash_recomputed": "57881d257daf2474",
+      "runtime_seconds_informational": 5.1214,
+      "output_path": "assets/showcase/_work/correctness/sequential.ppm",
+      "thumbnail": "assets/showcase/correctness/thumbs/sequential.png"
+    },
+    {
+      "label": "OpenMP",
+      "backend": "openmp",
+      "mpi_ranks": 1,
+      "threads_per_rank": 4,
+      "command": "./build-release/helios.exe render --backend openmp --threads 4 --scene showcase --width 800 --height 450 --spp 64 --max-depth 8 --seed 42 --output assets/showcase/_work/correctness/openmp.ppm --stats-json assets/showcase/_work/correctness/openmp.json",
+      "hash": "57881d257daf2474",
+      "hash_recomputed": "57881d257daf2474",
+      "runtime_seconds_informational": 2.7685,
+      "output_path": "assets/showcase/_work/correctness/openmp.ppm",
+      "thumbnail": "assets/showcase/correctness/thumbs/openmp.png"
+    },
+    {
+      "label": "MPI static",
+      "backend": "mpi-static",
+      "mpi_ranks": 4,
+      "threads_per_rank": 1,
+      "command": "mpiexec -n 4 ./build-release/helios_mpi.exe render --backend mpi-static --threads 1 --scene showcase --width 800 --height 450 --spp 64 --max-depth 8 --seed 42 --output assets/showcase/_work/correctness/mpi-static.ppm --stats-json assets/showcase/_work/correctness/mpi-static.json",
+      "hash": "57881d257daf2474",
+      "hash_recomputed": "57881d257daf2474",
+      "runtime_seconds_informational": 2.8358,
+      "output_path": "assets/showcase/_work/correctness/mpi-static.ppm",
+      "thumbnail": "assets/showcase/correctness/thumbs/mpi-static.png"
+    },
+    {
+      "label": "MPI dynamic",
+      "backend": "mpi-dynamic",
+      "mpi_ranks": 3,
+      "threads_per_rank": 1,
+      "command": "mpiexec -n 3 ./build-release/helios_mpi.exe render --backend mpi-dynamic --threads 1 --scene showcase --width 800 --height 450 --spp 64 --max-depth 8 --seed 42 --output assets/showcase/_work/correctness/mpi-dynamic.ppm --stats-json assets/showcase/_work/correctness/mpi-dynamic.json",
+      "hash": "57881d257daf2474",
+      "hash_recomputed": "57881d257daf2474",
+      "runtime_seconds_informational": 3.0016,
+      "output_path": "assets/showcase/_work/correctness/mpi-dynamic.ppm",
+      "thumbnail": "assets/showcase/correctness/thumbs/mpi-dynamic.png"
+    },
+    {
+      "label": "Hybrid static",
+      "backend": "hybrid-static",
+      "mpi_ranks": 2,
+      "threads_per_rank": 2,
+      "command": "mpiexec -n 2 ./build-release/helios_mpi.exe render --backend hybrid-static --threads 2 --scene showcase --width 800 --height 450 --spp 64 --max-depth 8 --seed 42 --output assets/showcase/_work/correctness/hybrid-static.ppm --stats-json assets/showcase/_work/correctness/hybrid-static.json",
+      "hash": "57881d257daf2474",
+      "hash_recomputed": "57881d257daf2474",
+      "runtime_seconds_informational": 3.0394,
+      "output_path": "assets/showcase/_work/correctness/hybrid-static.ppm",
+      "thumbnail": "assets/showcase/correctness/thumbs/hybrid-static.png"
+    },
+    {
+      "label": "Hybrid dynamic",
+      "backend": "hybrid-dynamic",
+      "mpi_ranks": 3,
+      "threads_per_rank": 2,
+      "command": "mpiexec -n 3 ./build-release/helios_mpi.exe render --backend hybrid-dynamic --threads 2 --scene showcase --width 800 --height 450 --spp 64 --max-depth 8 --seed 42 --output assets/showcase/_work/correctness/hybrid-dynamic.ppm --stats-json assets/showcase/_work/correctness/hybrid-dynamic.json",
+      "hash": "57881d257daf2474",
+      "hash_recomputed": "57881d257daf2474",
+      "runtime_seconds_informational": 1.9436,
+      "output_path": "assets/showcase/_work/correctness/hybrid-dynamic.ppm",
+      "thumbnail": "assets/showcase/correctness/thumbs/hybrid-dynamic.png"
+    },
+    {
+      "label": "Hybrid adaptive",
+      "backend": "hybrid-adaptive",
+      "mpi_ranks": 3,
+      "threads_per_rank": 2,
+      "command": "mpiexec -n 3 ./build-release/helios_mpi.exe render --backend hybrid-adaptive --threads 2 --scene showcase --width 800 --height 450 --spp 64 --max-depth 8 --seed 42 --output assets/showcase/_work/correctness/hybrid-adaptive.ppm --stats-json assets/showcase/_work/correctness/hybrid-adaptive.json",
+      "hash": "57881d257daf2474",
+      "hash_recomputed": "57881d257daf2474",
+      "runtime_seconds_informational": 1.8121,
+      "output_path": "assets/showcase/_work/correctness/hybrid-adaptive.ppm",
+      "thumbnail": "assets/showcase/correctness/thumbs/hybrid-adaptive.png"
+    }
+  ]
+}
