@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Helios video presenter</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  :root { --bg: #0a0f16; --text: #e8eef3; --muted: #687888; --accent: #34c5d0; }
+  html, body { margin: 0; height: 100%; background: var(--bg); color: var(--text); font-family: "Segoe UI", Arial, sans-serif; overflow: hidden; }
+  #stage { position: fixed; inset: 0; display: flex; align-items: center; justify-content: center; }
+  #stage img, #stage video { max-width: 100vw; max-height: 100vh; width: 100vw; height: 100vh; object-fit: contain; }
+  #hud { position: fixed; left: 16px; bottom: 12px; font-size: 13px; color: var(--muted); opacity: 0; transition: opacity .2s; }
+  body.hud #hud { opacity: 1; }
+  #hud b { color: var(--accent); font-weight: 600; }
+</style>
+</head>
+<body>
+<div id="stage"></div>
+<div id="hud"></div>
+<script>
+// Playback aid for recording the SIT315 video (docs/VIDEO_SCRIPT.md). Local files only; nothing is fetched.
+// Keys: Right/Space = next, Left = previous, R = replay video, H = toggle this label, 1-9 = jump.
+const ITEMS = [
+  ["branding/helios-title-16x9.png", "1 Title"],
+  ["convergence/convergence.mp4", "2 Convergence"],
+  ["scheduler/tile-cost-map.png", "2 Tile cost map"],
+  ["architecture/architecture-video.png", "3 Architecture"],
+  ["correctness/backend-correctness-wall.png", "10 Correctness wall"],
+  ["scheduler/tile-cost-static-partitions.png", "11 Static partition cap"],
+  ["scheduler/scheduler-comparison.mp4", "12 Scheduler comparison"],
+  ["performance/performance-investigation-story-16x9.png", "13 Investigation story"],
+  ["performance/optimisation-before-after.png", "13 Before / after"],
+  ["evidence/stress-test-summary.png", "14 Stress test"],
+  ["performance/helios-performance-dashboard.png", "16 Dashboard"],
+  ["video/gallery-montage.mp4", "16 Gallery"],
+];
+let i = 0;
+const stage = document.getElementById("stage"), hud = document.getElementById("hud");
+function show(k) {
+  i = Math.max(0, Math.min(ITEMS.length - 1, k));
+  const [src, label] = ITEMS[i];
+  stage.innerHTML = "";
+  const el = document.createElement(src.endsWith(".mp4") ? "video" : "img");
+  el.src = src;
+  if (el.tagName === "VIDEO") { el.muted = true; el.autoplay = true; el.playsInline = true; }
+  stage.appendChild(el);
+  hud.innerHTML = `<b>${i + 1}/${ITEMS.length}</b> &nbsp; ${label} &nbsp; · &nbsp; ${src}`;
+}
+document.addEventListener("keydown", e => {
+  if (e.key === "ArrowRight" || e.key === " " || e.key === "PageDown") show(i + 1);
+  else if (e.key === "ArrowLeft" || e.key === "PageUp") show(i - 1);
+  else if (e.key.toLowerCase() === "h") document.body.classList.toggle("hud");
+  else if (e.key.toLowerCase() === "r") { const v = stage.querySelector("video"); if (v) { v.currentTime = 0; v.play(); } }
+  else if (/^[1-9]$/.test(e.key)) show(parseInt(e.key, 10) - 1);
+});
+show(0);
+</script>
+</body>
+</html>
