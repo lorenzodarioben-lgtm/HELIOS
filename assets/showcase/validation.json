@@ -1,0 +1,250 @@
+{
+ "failures": [],
+ "checks": {
+  "gallery/reflective": {
+   "ok": true,
+   "detail": {
+    "hash": "270a7d2390617dca",
+    "png_equals_ppm": true,
+    "spp": 1024
+   }
+  },
+  "gallery/showcase": {
+   "ok": true,
+   "detail": {
+    "hash": "80618dc55f6d4a55",
+    "png_equals_ppm": true,
+    "spp": 1024
+   }
+  },
+  "gallery/bvh_stress": {
+   "ok": true,
+   "detail": {
+    "hash": "6f65dcba76303f7c",
+    "png_equals_ppm": true,
+    "spp": 1024
+   }
+  },
+  "gallery/uniform": {
+   "ok": true,
+   "detail": {
+    "hash": "c25064a44395781f",
+    "png_equals_ppm": true,
+    "spp": 1024
+   }
+  },
+  "gallery/imbalanced": {
+   "ok": true,
+   "detail": {
+    "hash": "d7579a41ebf56be1",
+    "png_equals_ppm": true,
+    "spp": 1024
+   }
+  },
+  "gallery/scheduler_stress": {
+   "ok": true,
+   "detail": {
+    "hash": "5f7ff54682233658",
+    "png_equals_ppm": true,
+    "spp": 1024
+   }
+  },
+  "convergence/invariants": {
+   "ok": true,
+   "detail": {
+    "spp": [
+     1,
+     2,
+     4,
+     8,
+     16,
+     32,
+     64,
+     128,
+     256
+    ],
+    "commands_differ_only_in_spp": true,
+    "all_hashes_distinct": true
+   }
+  },
+  "correctness/all-backends-byte-identical": {
+   "ok": true,
+   "detail": {
+    "backends": 7,
+    "hash": "57881d257daf2474",
+    "matches_figure11_evidence_hash": true
+   }
+  },
+  "scheduler/static-trace": {
+   "ok": true,
+   "detail": {
+    "run": "imbalanced-medium-mpi-static-r3-t1-co-b1",
+    "derived_end_s": 3.3762,
+    "recorded_wall_s": 3.3773
+   }
+  },
+  "scheduler/dynamic-trace": {
+   "ok": true,
+   "detail": {
+    "run": "imbalanced-medium-mpi-dynamic-r3-t1-all-b0",
+    "derived_end_s": 2.3007,
+    "recorded_wall_s": 2.3009,
+    "batches": 144,
+    "batch_sizes": [
+     1
+    ],
+    "max_receipt_slack_ms": 0.235
+   }
+  },
+  "scheduler/adaptive-trace": {
+   "ok": true,
+   "detail": {
+    "run": "imbalanced-medium-hybrid-adaptive-r3-t1-all-b5",
+    "derived_end_s": 2.2847,
+    "recorded_wall_s": 2.2848,
+    "batches": 73,
+    "batch_sizes": [
+     1,
+     2,
+     3,
+     5,
+     7,
+     8
+    ],
+    "max_receipt_slack_ms": 0.479
+   }
+  },
+  "png/no-accidental-low-resolution": {
+   "ok": true
+  },
+  "video/convergence/convergence.mp4": {
+   "ok": true,
+   "detail": {
+    "frames": 206,
+    "size": "1920x1080",
+    "fps": 30.0,
+    "seconds": 6.87,
+    "min_sampled_frame_std": 35.8
+   }
+  },
+  "video/scheduler/scheduler-adaptive.mp4": {
+   "ok": true,
+   "detail": {
+    "frames": 233,
+    "size": "1920x1080",
+    "fps": 30.0,
+    "seconds": 7.77,
+    "min_sampled_frame_std": 21.3
+   }
+  },
+  "video/scheduler/scheduler-comparison.mp4": {
+   "ok": true,
+   "detail": {
+    "frames": 299,
+    "size": "1920x1080",
+    "fps": 30.0,
+    "seconds": 9.97,
+    "min_sampled_frame_std": 27.0
+   }
+  },
+  "video/scheduler/scheduler-fixed-dynamic.mp4": {
+   "ok": true,
+   "detail": {
+    "frames": 234,
+    "size": "1920x1080",
+    "fps": 30.0,
+    "seconds": 7.8,
+    "min_sampled_frame_std": 20.7
+   }
+  },
+  "video/scheduler/scheduler-static.mp4": {
+   "ok": true,
+   "detail": {
+    "frames": 299,
+    "size": "1920x1080",
+    "fps": 30.0,
+    "seconds": 9.97,
+    "min_sampled_frame_std": 25.8
+   }
+  },
+  "video/video/correctness-wall-reveal.mp4": {
+   "ok": true,
+   "detail": {
+    "frames": 198,
+    "size": "1920x1080",
+    "fps": 30.0,
+    "seconds": 6.6,
+    "min_sampled_frame_std": 30.6
+   }
+  },
+  "video/video/gallery-montage.mp4": {
+   "ok": true,
+   "detail": {
+    "frames": 363,
+    "size": "1920x1080",
+    "fps": 30.0,
+    "seconds": 12.1,
+    "min_sampled_frame_std": 35.1
+   }
+  },
+  "video/video/helios-showcase-reel.mp4": {
+   "ok": true,
+   "detail": {
+    "frames": 937,
+    "size": "1920x1080",
+    "fps": 30.0,
+    "seconds": 31.23,
+    "min_sampled_frame_std": 23.1
+   }
+  },
+  "video/video/hero-slow-zoom.mp4": {
+   "ok": true,
+   "detail": {
+    "frames": 180,
+    "size": "1920x1080",
+    "fps": 30.0,
+    "seconds": 6.0,
+    "min_sampled_frame_std": 27.5
+   }
+  },
+  "video/video/optimisation-reveal.mp4": {
+   "ok": true,
+   "detail": {
+    "frames": 176,
+    "size": "1920x1080",
+    "fps": 30.0,
+    "seconds": 5.87,
+    "min_sampled_frame_std": 30.2
+   }
+  },
+  "video/video/performance-story-reveal.mp4": {
+   "ok": true,
+   "detail": {
+    "frames": 307,
+    "size": "1920x1080",
+    "fps": 30.0,
+    "seconds": 10.23,
+    "min_sampled_frame_std": 18.5
+   }
+  },
+  "values/match-report": {
+   "ok": true,
+   "detail": {
+    "openmp8_speedup": 2.97,
+    "mpi4_speedup": 1.95,
+    "hybrid1x4_speedup": 2.45,
+    "seq_both_fixes_pct": -44.62,
+    "cap4": 2.34,
+    "stress_elapsed": 600.34
+   }
+  },
+  "frozen/results+src+include+tests+report+assets unchanged": {
+   "ok": true,
+   "detail": {
+    "files": 11235,
+    "changed": [],
+    "missing": []
+   }
+  }
+ }
+}
