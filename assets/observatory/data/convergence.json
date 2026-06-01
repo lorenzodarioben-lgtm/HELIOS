@@ -1,0 +1,67 @@
+{
+ "scene": "reflective",
+ "width": 1280,
+ "height": 720,
+ "max_depth": 8,
+ "seed": 42,
+ "backend": "openmp",
+ "frames": [
+  {
+   "spp": 1,
+   "image": "../showcase/convergence/frames/reflective-0001spp.png",
+   "hash": "885615ee7f5bb46e",
+   "runtime_seconds": 0.1216
+  },
+  {
+   "spp": 2,
+   "image": "../showcase/convergence/frames/reflective-0002spp.png",
+   "hash": "760f6bb2886f1f76",
+   "runtime_seconds": 0.2222
+  },
+  {
+   "spp": 4,
+   "image": "../showcase/convergence/frames/reflective-0004spp.png",
+   "hash": "9aca1d3f8f1eb207",
+   "runtime_seconds": 0.4407
+  },
+  {
+   "spp": 8,
+   "image": "../showcase/convergence/frames/reflective-0008spp.png",
+   "hash": "90c410a4f602411c",
+   "runtime_seconds": 0.8542
+  },
+  {
+   "spp": 16,
+   "image": "../showcase/convergence/frames/reflective-0016spp.png",
+   "hash": "43faa068946ccff8",
+   "runtime_seconds": 1.6987
+  },
+  {
+   "spp": 32,
+   "image": "../showcase/convergence/frames/reflective-0032spp.png",
+   "hash": "b24c044732e9c4df",
+   "runtime_seconds": 3.6016
+  },
+  {
+   "spp": 64,
+   "image": "../showcase/convergence/frames/reflective-0064spp.png",
+   "hash": "2390410dfeb9e9a6",
+   "runtime_seconds": 7.0462
+  },
+  {
+   "spp": 128,
+   "image": "../showcase/convergence/frames/reflective-0128spp.png",
+   "hash": "a96626dd82f2c870",
+   "runtime_seconds": 13.7705
+  },
+  {
+   "spp": 256,
+   "image": "../showcase/convergence/frames/reflective-0256spp.png",
+   "hash": "19bb5483daa9cdb0",
+   "runtime_seconds": 28.2082
+  }
+ ],
+ "only_spp_changes": true,
+ "source": "assets/showcase/convergence/convergence.json",
+ "classification": "PRESENTATION"
+}
