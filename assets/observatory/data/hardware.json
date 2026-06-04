@@ -1,0 +1,262 @@
+{
+ "cpu": "11th Gen Intel(R) Core(TM) i7-11370H @ 3.30GHz",
+ "physical_cores": 4,
+ "logical_processors": 8,
+ "smt_pairs": [
+  [
+   0,
+   1
+  ],
+  [
+   2,
+   3
+  ],
+  [
+   4,
+   5
+  ],
+  [
+   6,
+   7
+  ]
+ ],
+ "ram_bytes": 16843112448,
+ "os": "Windows-10-10.0.26200-SP0",
+ "compiler": "g++ (Rev3, Built by MSYS2 project) 14.1.0",
+ "mpi": "Microsoft MPI Startup Program [Version 10.1.12498.52]",
+ "env_source": "results/stress/20260928T111419Z-5832e956/environment.json",
+ "cpu_set_table": [
+  {
+   "cpu_set_id": 256,
+   "logical_processor": 0,
+   "core_index": 0
+  },
+  {
+   "cpu_set_id": 257,
+   "logical_processor": 1,
+   "core_index": 0
+  },
+  {
+   "cpu_set_id": 258,
+   "logical_processor": 2,
+   "core_index": 2
+  },
+  {
+   "cpu_set_id": 259,
+   "logical_processor": 3,
+   "core_index": 2
+  },
+  {
+   "cpu_set_id": 260,
+   "logical_processor": 4,
+   "core_index": 4
+  },
+  {
+   "cpu_set_id": 261,
+   "logical_processor": 5,
+   "core_index": 4
+  },
+  {
+   "cpu_set_id": 262,
+   "logical_processor": 6,
+   "core_index": 6
+  },
+  {
+   "cpu_set_id": 263,
+   "logical_processor": 7,
+   "core_index": 6
+  }
+ ],
+ "cores": [
+  {
+   "core_index": 0,
+   "logical": [
+    0,
+    1
+   ]
+  },
+  {
+   "core_index": 2,
+   "logical": [
+    2,
+    3
+   ]
+  },
+  {
+   "core_index": 4,
+   "logical": [
+    4,
+    5
+   ]
+  },
+  {
+   "core_index": 6,
+   "logical": [
+    6,
+    7
+   ]
+  }
+ ],
+ "placement": {
+  "experiment": "20260928T090902Z-3f8c873d",
+  "classification": "DIAGNOSTIC",
+  "source": "results/diagnostic/hybrid-v3/placement-observer-20260928T090902Z-3f8c873d/manifest.json",
+  "caveat": "timings perturbed by sampling; masks are allowed CPUs, not observed run locations",
+  "git_sha": "83e33e8e82044a3c095bc813b929b3dd2dd7ed32",
+  "runs": {
+   "hybrid-static-2x2": {
+    "per_logical_cpu_busy_fraction": [
+     0.498,
+     0.54,
+     0.533,
+     0.576,
+     0.64,
+     0.713,
+     0.713,
+     0.747
+    ],
+    "active_threads_max": 4,
+    "rank_compute_seconds": [
+     1.248,
+     3.935
+    ],
+    "render_wall_seconds_perturbed": 3.9362679,
+    "hash_matches_reference": true,
+    "processes": [
+     {
+      "process_cpu_seconds": 6.688,
+      "process_masks": [
+       255
+      ],
+      "process_default_cpu_sets_logical": [
+       []
+      ],
+      "threads_over_0p1_cpu_s": 2
+     },
+     {
+      "process_cpu_seconds": 2.109,
+      "process_masks": [
+       255
+      ],
+      "process_default_cpu_sets_logical": [
+       []
+      ],
+      "threads_over_0p1_cpu_s": 2
+     }
+    ]
+   },
+   "hybrid-static-2x2-physicalcore": {
+    "per_logical_cpu_busy_fraction": [
+     0.954,
+     0.965,
+     0.432,
+     0.4,
+     0.595,
+     0.489,
+     0.486,
+     0.438
+    ],
+    "active_threads_max": 4,
+    "rank_compute_seconds": [
+     1.514,
+     5.599
+    ],
+    "render_wall_seconds_perturbed": 5.6003702,
+    "hash_matches_reference": true,
+    "processes": [
+     {
+      "process_cpu_seconds": 8.906,
+      "process_masks": [
+       255
+      ],
+      "process_default_cpu_sets_logical": [
+       [],
+       [
+        0,
+        1
+       ]
+      ],
+      "threads_over_0p1_cpu_s": 2
+     },
+     {
+      "process_cpu_seconds": 2.484,
+      "process_masks": [
+       255
+      ],
+      "process_default_cpu_sets_logical": [
+       [
+        4,
+        5
+       ]
+      ],
+      "threads_over_0p1_cpu_s": 2
+     }
+    ]
+   }
+  },
+  "mode_labels": {
+   "hybrid-static-2x2": "default launch (unbound)",
+   "hybrid-static-2x2-physicalcore": "-affinity_layout spr:p"
+  }
+ },
+ "affinity_study": {
+  "experiment": "20260928T081730Z-e41d9f1c",
+  "classification": "DIAGNOSTIC",
+  "source_state": "pre-fix source",
+  "source": "results/diagnostic/hybrid-v3/20260928T081730Z-e41d9f1c/summary.json",
+  "medians": {
+   "openmp-4": 3.3813,
+   "mpi-static-4": 3.1512,
+   "hybrid-static-2x2": 3.852,
+   "hybrid-dynamic-3x2": 2.6062,
+   "hybrid-static-2x2-noaffinity": 3.8303,
+   "hybrid-static-2x2-physicalcore": 5.1583
+  },
+  "n": {
+   "openmp-4": 3,
+   "mpi-static-4": 3,
+   "hybrid-static-2x2": 3,
+   "hybrid-dynamic-3x2": 3,
+   "hybrid-static-2x2-noaffinity": 3,
+   "hybrid-static-2x2-physicalcore": 3
+  }
+ },
+ "configurations": [
+  {
+   "id": "openmp4",
+   "label": "OpenMP 4",
+   "ranks": 1,
+   "threads": 4,
+   "coordinator": false
+  },
+  {
+   "id": "openmp8",
+   "label": "OpenMP 8",
+   "ranks": 1,
+   "threads": 8,
+   "coordinator": false
+  },
+  {
+   "id": "mpi4",
+   "label": "MPI 4×1",
+   "ranks": 4,
+   "threads": 1,
+   "coordinator": false
+  },
+  {
+   "id": "hybrid22",
+   "label": "Hybrid 2×2",
+   "ranks": 2,
+   "threads": 2,
+   "coordinator": false
+  },
+  {
+   "id": "hybrid14",
+   "label": "Hybrid 1×4",
+   "ranks": 1,
+   "threads": 4,
+   "coordinator": false
+  }
+ ],
+ "configuration_note": "Conceptual execution structure only. Formal runs were unbound: Windows chose the CPUs and the placement of unbound threads was not observed."
+}
