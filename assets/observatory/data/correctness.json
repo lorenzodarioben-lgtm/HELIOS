@@ -1,0 +1,176 @@
+{
+ "configuration": {
+  "scene": "showcase",
+  "width": 800,
+  "height": 450,
+  "spp": 64,
+  "depth": 8,
+  "seed": 42
+ },
+ "classification": "PRESENTATION",
+ "backends": [
+  {
+   "label": "Sequential",
+   "backend": "sequential",
+   "ranks": 1,
+   "threads": 1,
+   "hash": "57881d257daf2474",
+   "hash_recomputed_now": "57881d257daf2474",
+   "image": "../showcase/correctness/thumbs/sequential.png",
+   "command": "./build-release/helios.exe render --backend sequential --threads 1 --scene showcase --width 800 --height 450 --spp 64 --max-depth 8 --seed 42 --output assets/showcase/_work/correctness/sequential.ppm --stats-json assets/showcase/_work/correctness/sequential.json",
+   "runtime_seconds_informational": 5.1214
+  },
+  {
+   "label": "OpenMP",
+   "backend": "openmp",
+   "ranks": 1,
+   "threads": 4,
+   "hash": "57881d257daf2474",
+   "hash_recomputed_now": "57881d257daf2474",
+   "image": "../showcase/correctness/thumbs/openmp.png",
+   "command": "./build-release/helios.exe render --backend openmp --threads 4 --scene showcase --width 800 --height 450 --spp 64 --max-depth 8 --seed 42 --output assets/showcase/_work/correctness/openmp.ppm --stats-json assets/showcase/_work/correctness/openmp.json",
+   "runtime_seconds_informational": 2.7685
+  },
+  {
+   "label": "MPI static",
+   "backend": "mpi-static",
+   "ranks": 4,
+   "threads": 1,
+   "hash": "57881d257daf2474",
+   "hash_recomputed_now": "57881d257daf2474",
+   "image": "../showcase/correctness/thumbs/mpi-static.png",
+   "command": "mpiexec -n 4 ./build-release/helios_mpi.exe render --backend mpi-static --threads 1 --scene showcase --width 800 --height 450 --spp 64 --max-depth 8 --seed 42 --output assets/showcase/_work/correctness/mpi-static.ppm --stats-json assets/showcase/_work/correctness/mpi-static.json",
+   "runtime_seconds_informational": 2.8358
+  },
+  {
+   "label": "MPI dynamic",
+   "backend": "mpi-dynamic",
+   "ranks": 3,
+   "threads": 1,
+   "hash": "57881d257daf2474",
+   "hash_recomputed_now": "57881d257daf2474",
+   "image": "../showcase/correctness/thumbs/mpi-dynamic.png",
+   "command": "mpiexec -n 3 ./build-release/helios_mpi.exe render --backend mpi-dynamic --threads 1 --scene showcase --width 800 --height 450 --spp 64 --max-depth 8 --seed 42 --output assets/showcase/_work/correctness/mpi-dynamic.ppm --stats-json assets/showcase/_work/correctness/mpi-dynamic.json",
+   "runtime_seconds_informational": 3.0016
+  },
+  {
+   "label": "Hybrid static",
+   "backend": "hybrid-static",
+   "ranks": 2,
+   "threads": 2,
+   "hash": "57881d257daf2474",
+   "hash_recomputed_now": "57881d257daf2474",
+   "image": "../showcase/correctness/thumbs/hybrid-static.png",
+   "command": "mpiexec -n 2 ./build-release/helios_mpi.exe render --backend hybrid-static --threads 2 --scene showcase --width 800 --height 450 --spp 64 --max-depth 8 --seed 42 --output assets/showcase/_work/correctness/hybrid-static.ppm --stats-json assets/showcase/_work/correctness/hybrid-static.json",
+   "runtime_seconds_informational": 3.0394
+  },
+  {
+   "label": "Hybrid dynamic",
+   "backend": "hybrid-dynamic",
+   "ranks": 3,
+   "threads": 2,
+   "hash": "57881d257daf2474",
+   "hash_recomputed_now": "57881d257daf2474",
+   "image": "../showcase/correctness/thumbs/hybrid-dynamic.png",
+   "command": "mpiexec -n 3 ./build-release/helios_mpi.exe render --backend hybrid-dynamic --threads 2 --scene showcase --width 800 --height 450 --spp 64 --max-depth 8 --seed 42 --output assets/showcase/_work/correctness/hybrid-dynamic.ppm --stats-json assets/showcase/_work/correctness/hybrid-dynamic.json",
+   "runtime_seconds_informational": 1.9436
+  },
+  {
+   "label": "Hybrid adaptive",
+   "backend": "hybrid-adaptive",
+   "ranks": 3,
+   "threads": 2,
+   "hash": "57881d257daf2474",
+   "hash_recomputed_now": "57881d257daf2474",
+   "image": "../showcase/correctness/thumbs/hybrid-adaptive.png",
+   "command": "mpiexec -n 3 ./build-release/helios_mpi.exe render --backend hybrid-adaptive --threads 2 --scene showcase --width 800 --height 450 --spp 64 --max-depth 8 --seed 42 --output assets/showcase/_work/correctness/hybrid-adaptive.ppm --stats-json assets/showcase/_work/correctness/hybrid-adaptive.json",
+   "runtime_seconds_informational": 1.8121
+  }
+ ],
+ "all_identical": true,
+ "pairwise_different_pixels": {
+  "sequential|openmp": 0,
+  "sequential|mpi-static": 0,
+  "sequential|mpi-dynamic": 0,
+  "sequential|hybrid-static": 0,
+  "sequential|hybrid-dynamic": 0,
+  "sequential|hybrid-adaptive": 0,
+  "openmp|mpi-static": 0,
+  "openmp|mpi-dynamic": 0,
+  "openmp|hybrid-static": 0,
+  "openmp|hybrid-dynamic": 0,
+  "openmp|hybrid-adaptive": 0,
+  "mpi-static|mpi-dynamic": 0,
+  "mpi-static|hybrid-static": 0,
+  "mpi-static|hybrid-dynamic": 0,
+  "mpi-static|hybrid-adaptive": 0,
+  "mpi-dynamic|hybrid-static": 0,
+  "mpi-dynamic|hybrid-dynamic": 0,
+  "mpi-dynamic|hybrid-adaptive": 0,
+  "hybrid-static|hybrid-dynamic": 0,
+  "hybrid-static|hybrid-adaptive": 0,
+  "hybrid-dynamic|hybrid-adaptive": 0
+ },
+ "pixels_per_image": 360000,
+ "figure11_hash": "57881d257daf2474",
+ "figure11_source": "results/screenshot/showcase.json",
+ "source": "assets/showcase/correctness/backend-correctness.json",
+ "validation_stack": {
+  "ran_utc": "2026-09-29T18:55:14+00:00",
+  "skipped": false,
+  "layers": [
+   {
+    "label": "Core tests",
+    "source": "tests/tests.cpp",
+    "passed": true,
+    "count": null,
+    "unit": null,
+    "evidence_line": "All Helios core checks passed"
+   },
+   {
+    "label": "CLI validation",
+    "source": "scripts/validate_cli.py",
+    "passed": true,
+    "count": 12,
+    "unit": "cases",
+    "evidence_line": "Validated 12 CLI error cases"
+   },
+   {
+    "label": "BVH validation",
+    "source": "scripts/validate_bvh.py",
+    "passed": true,
+    "count": 6,
+    "unit": "scenes",
+    "evidence_line": "Validated BVH against brute force in all six scenes"
+   },
+   {
+    "label": "Backend validation",
+    "source": "scripts/validate_backends.py",
+    "passed": true,
+    "count": 11,
+    "unit": "configurations",
+    "evidence_line": "Validated 11 backend configurations",
+    "main_hash_lines": 11,
+    "distinct_main_hashes": [
+     "62e03422975cb8a6"
+    ]
+   },
+   {
+    "label": "Analysis tests",
+    "source": "tests/test_benchmark_analysis.py",
+    "passed": true,
+    "count": 4,
+    "unit": "tests",
+    "evidence_line": "Ran 4 tests"
+   },
+   {
+    "label": "Formal image rehash (final six experiments)",
+    "source": "scripts/verify_experiment.py",
+    "passed": true,
+    "count": 458,
+    "unit": "images",
+    "records": 458
+   }
+  ]
+ }
+}

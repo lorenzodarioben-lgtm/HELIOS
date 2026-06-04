@@ -1,0 +1,476 @@
+{
+ "experiments": [
+  {
+   "id": "20260928T102644Z-100e1393",
+   "name": "strong",
+   "classification": "FORMAL",
+   "experiment": "strong",
+   "git_sha": "e4a219ce573c22f908287607382cf83c3a649608",
+   "created_utc": "2026-09-28T10:26:44.628174+00:00",
+   "scenes": [
+    "imbalanced"
+   ],
+   "preset": "medium",
+   "conditions": 11,
+   "records": 88,
+   "failures": 0,
+   "repeats": 7,
+   "warmups": 1,
+   "order_seed": 20260929,
+   "status": "complete",
+   "executable_sha256": "956685fbc2b7b314d67f59332a37f46d7376218f01b394e5434e61b835203ef3",
+   "mpi_executable_sha256": "0313fe16a502f17d35ec52ebaa88da2260cf2be211df038b6374f6ed991714a5",
+   "verification": {
+    "records": 88,
+    "failed": 0,
+    "ppm_images_checked": 88,
+    "errors": 0,
+    "set": "final"
+   },
+   "plots": [
+    "results/protocol-v2/20260928T102644Z-100e1393/plots/compute-imbalance.svg",
+    "results/protocol-v2/20260928T102644Z-100e1393/plots/effective-work-imbalance.svg",
+    "results/protocol-v2/20260928T102644Z-100e1393/plots/median-runtime.svg"
+   ],
+   "manifest": "results/protocol-v2/20260928T102644Z-100e1393/manifest.json",
+   "aggregate": "results/protocol-v2/20260928T102644Z-100e1393/aggregate/summary.json",
+   "raw_dir": "results/protocol-v2/20260928T102644Z-100e1393/raw",
+   "superseded_by": null
+  },
+  {
+   "id": "20260928T103116Z-c00a63fc",
+   "name": "weak",
+   "classification": "FORMAL",
+   "experiment": "weak",
+   "git_sha": "e4a219ce573c22f908287607382cf83c3a649608",
+   "created_utc": "2026-09-28T10:31:16.302187+00:00",
+   "scenes": [
+    "imbalanced"
+   ],
+   "preset": "small",
+   "conditions": 6,
+   "records": 50,
+   "failures": 0,
+   "repeats": 7,
+   "warmups": 1,
+   "order_seed": 20261001,
+   "status": "complete",
+   "executable_sha256": "956685fbc2b7b314d67f59332a37f46d7376218f01b394e5434e61b835203ef3",
+   "mpi_executable_sha256": "0313fe16a502f17d35ec52ebaa88da2260cf2be211df038b6374f6ed991714a5",
+   "verification": {
+    "records": 50,
+    "failed": 0,
+    "ppm_images_checked": 50,
+    "errors": 0,
+    "set": "final"
+   },
+   "plots": [
+    "results/protocol-v2/20260928T103116Z-c00a63fc/plots/compute-imbalance.svg",
+    "results/protocol-v2/20260928T103116Z-c00a63fc/plots/effective-work-imbalance.svg",
+    "results/protocol-v2/20260928T103116Z-c00a63fc/plots/median-runtime.svg"
+   ],
+   "manifest": "results/protocol-v2/20260928T103116Z-c00a63fc/manifest.json",
+   "aggregate": "results/protocol-v2/20260928T103116Z-c00a63fc/aggregate/summary.json",
+   "raw_dir": "results/protocol-v2/20260928T103116Z-c00a63fc/raw",
+   "superseded_by": null
+  },
+  {
+   "id": "20260928T103934Z-edc10839",
+   "name": "scheduler-medium",
+   "classification": "FORMAL",
+   "experiment": "scheduler",
+   "git_sha": "6f30f5897fff19de643ec07a9e412621dc74b1a0",
+   "created_utc": "2026-09-28T10:39:34.407398+00:00",
+   "scenes": [
+    "imbalanced",
+    "reflective",
+    "scheduler_stress",
+    "uniform"
+   ],
+   "preset": "medium",
+   "conditions": 4,
+   "records": 128,
+   "failures": 0,
+   "repeats": 7,
+   "warmups": 1,
+   "order_seed": 20260928,
+   "status": "complete",
+   "executable_sha256": "956685fbc2b7b314d67f59332a37f46d7376218f01b394e5434e61b835203ef3",
+   "mpi_executable_sha256": "0313fe16a502f17d35ec52ebaa88da2260cf2be211df038b6374f6ed991714a5",
+   "verification": {
+    "records": 128,
+    "failed": 0,
+    "ppm_images_checked": 128,
+    "errors": 0,
+    "set": "final"
+   },
+   "plots": [
+    "results/protocol-v2/20260928T103934Z-edc10839/plots/compute-imbalance.svg",
+    "results/protocol-v2/20260928T103934Z-edc10839/plots/effective-work-imbalance.svg",
+    "results/protocol-v2/20260928T103934Z-edc10839/plots/median-runtime.svg"
+   ],
+   "manifest": "results/protocol-v2/20260928T103934Z-edc10839/manifest.json",
+   "aggregate": "results/protocol-v2/20260928T103934Z-edc10839/aggregate/summary.json",
+   "raw_dir": "results/protocol-v2/20260928T103934Z-edc10839/raw",
+   "superseded_by": null
+  },
+  {
+   "id": "20260928T104502Z-5e829d04",
+   "name": "scheduler-large",
+   "classification": "FORMAL",
+   "experiment": "scheduler",
+   "git_sha": "6f30f5897fff19de643ec07a9e412621dc74b1a0",
+   "created_utc": "2026-09-28T10:45:03.038346+00:00",
+   "scenes": [
+    "reflective"
+   ],
+   "preset": "large",
+   "conditions": 4,
+   "records": 32,
+   "failures": 0,
+   "repeats": 7,
+   "warmups": 1,
+   "order_seed": 20260928,
+   "status": "complete",
+   "executable_sha256": "956685fbc2b7b314d67f59332a37f46d7376218f01b394e5434e61b835203ef3",
+   "mpi_executable_sha256": "0313fe16a502f17d35ec52ebaa88da2260cf2be211df038b6374f6ed991714a5",
+   "verification": {
+    "records": 32,
+    "failed": 0,
+    "ppm_images_checked": 32,
+    "errors": 0,
+    "set": "final"
+   },
+   "plots": [
+    "results/protocol-v2/20260928T104502Z-5e829d04/plots/compute-imbalance.svg",
+    "results/protocol-v2/20260928T104502Z-5e829d04/plots/effective-work-imbalance.svg",
+    "results/protocol-v2/20260928T104502Z-5e829d04/plots/median-runtime.svg"
+   ],
+   "manifest": "results/protocol-v2/20260928T104502Z-5e829d04/manifest.json",
+   "aggregate": "results/protocol-v2/20260928T104502Z-5e829d04/aggregate/summary.json",
+   "raw_dir": "results/protocol-v2/20260928T104502Z-5e829d04/raw",
+   "superseded_by": null
+  },
+  {
+   "id": "20260928T104823Z-8e1c1ed4",
+   "name": "scheduler-small",
+   "classification": "FORMAL",
+   "experiment": "scheduler",
+   "git_sha": "6f30f5897fff19de643ec07a9e412621dc74b1a0",
+   "created_utc": "2026-09-28T10:48:23.723605+00:00",
+   "scenes": [
+    "uniform",
+    "imbalanced",
+    "reflective",
+    "scheduler_stress"
+   ],
+   "preset": "small",
+   "conditions": 4,
+   "records": 128,
+   "failures": 0,
+   "repeats": 7,
+   "warmups": 1,
+   "order_seed": 20260928,
+   "status": "complete",
+   "executable_sha256": "956685fbc2b7b314d67f59332a37f46d7376218f01b394e5434e61b835203ef3",
+   "mpi_executable_sha256": "0313fe16a502f17d35ec52ebaa88da2260cf2be211df038b6374f6ed991714a5",
+   "verification": {
+    "records": 128,
+    "failed": 0,
+    "ppm_images_checked": 128,
+    "errors": 0,
+    "set": "final"
+   },
+   "plots": [
+    "results/protocol-v2/20260928T104823Z-8e1c1ed4/plots/compute-imbalance.svg",
+    "results/protocol-v2/20260928T104823Z-8e1c1ed4/plots/effective-work-imbalance.svg",
+    "results/protocol-v2/20260928T104823Z-8e1c1ed4/plots/median-runtime.svg"
+   ],
+   "manifest": "results/protocol-v2/20260928T104823Z-8e1c1ed4/manifest.json",
+   "aggregate": "results/protocol-v2/20260928T104823Z-8e1c1ed4/aggregate/summary.json",
+   "raw_dir": "results/protocol-v2/20260928T104823Z-8e1c1ed4/raw",
+   "superseded_by": null
+  },
+  {
+   "id": "20260928T105023Z-1dd576e1",
+   "name": "heterogeneity",
+   "classification": "FORMAL",
+   "experiment": "heterogeneity",
+   "git_sha": "6f30f5897fff19de643ec07a9e412621dc74b1a0",
+   "created_utc": "2026-09-28T10:50:23.911706+00:00",
+   "scenes": [
+    "scheduler_stress"
+   ],
+   "preset": "small",
+   "conditions": 4,
+   "records": 32,
+   "failures": 0,
+   "repeats": 7,
+   "warmups": 1,
+   "order_seed": 20260930,
+   "status": "complete",
+   "executable_sha256": "956685fbc2b7b314d67f59332a37f46d7376218f01b394e5434e61b835203ef3",
+   "mpi_executable_sha256": "0313fe16a502f17d35ec52ebaa88da2260cf2be211df038b6374f6ed991714a5",
+   "verification": {
+    "records": 32,
+    "failed": 0,
+    "ppm_images_checked": 32,
+    "errors": 0,
+    "set": "final"
+   },
+   "plots": [
+    "results/protocol-v2/20260928T105023Z-1dd576e1/plots/compute-imbalance.svg",
+    "results/protocol-v2/20260928T105023Z-1dd576e1/plots/effective-work-imbalance.svg",
+    "results/protocol-v2/20260928T105023Z-1dd576e1/plots/median-runtime.svg"
+   ],
+   "manifest": "results/protocol-v2/20260928T105023Z-1dd576e1/manifest.json",
+   "aggregate": "results/protocol-v2/20260928T105023Z-1dd576e1/aggregate/summary.json",
+   "raw_dir": "results/protocol-v2/20260928T105023Z-1dd576e1/raw",
+   "superseded_by": null
+  },
+  {
+   "id": "20260928T063038Z-301480e3",
+   "name": "strong",
+   "classification": "HISTORICAL",
+   "experiment": "strong",
+   "git_sha": "8d92429f8d0c0bafd81f7eb0690f58ee77e83470",
+   "created_utc": "2026-09-28T06:30:38.694327+00:00",
+   "scenes": [
+    "imbalanced"
+   ],
+   "preset": "medium",
+   "conditions": 11,
+   "records": 88,
+   "failures": 0,
+   "repeats": 7,
+   "warmups": 1,
+   "order_seed": 20260929,
+   "status": "complete",
+   "executable_sha256": "5aa48c680939533709418421779673d6da3b3f11581cde63da908ef909e7f54e",
+   "mpi_executable_sha256": "90940d6c6153c9506bb4b3f680961d8ad073e0e54f8afe07a9e4fd676c4bcea8",
+   "verification": {
+    "records": 88,
+    "failed": 0,
+    "ppm_images_checked": 88,
+    "errors": 0,
+    "set": "historical"
+   },
+   "plots": [
+    "results/protocol-v2/20260928T063038Z-301480e3/plots/compute-imbalance.svg",
+    "results/protocol-v2/20260928T063038Z-301480e3/plots/effective-work-imbalance.svg",
+    "results/protocol-v2/20260928T063038Z-301480e3/plots/median-runtime.svg"
+   ],
+   "manifest": "results/protocol-v2/20260928T063038Z-301480e3/manifest.json",
+   "aggregate": "results/protocol-v2/20260928T063038Z-301480e3/aggregate/summary.json",
+   "raw_dir": "results/protocol-v2/20260928T063038Z-301480e3/raw",
+   "superseded_by": "20260928T102644Z-100e1393"
+  },
+  {
+   "id": "20260928T064015Z-fd6ca303",
+   "name": "weak",
+   "classification": "HISTORICAL",
+   "experiment": "weak",
+   "git_sha": "8d92429f8d0c0bafd81f7eb0690f58ee77e83470",
+   "created_utc": "2026-09-28T06:40:15.922781+00:00",
+   "scenes": [
+    "imbalanced"
+   ],
+   "preset": "small",
+   "conditions": 6,
+   "records": 50,
+   "failures": 0,
+   "repeats": 7,
+   "warmups": 1,
+   "order_seed": 20261001,
+   "status": "complete",
+   "executable_sha256": "5aa48c680939533709418421779673d6da3b3f11581cde63da908ef909e7f54e",
+   "mpi_executable_sha256": "90940d6c6153c9506bb4b3f680961d8ad073e0e54f8afe07a9e4fd676c4bcea8",
+   "verification": {
+    "records": 50,
+    "failed": 0,
+    "ppm_images_checked": 50,
+    "errors": 0,
+    "set": "historical"
+   },
+   "plots": [
+    "results/protocol-v2/20260928T064015Z-fd6ca303/plots/compute-imbalance.svg",
+    "results/protocol-v2/20260928T064015Z-fd6ca303/plots/effective-work-imbalance.svg",
+    "results/protocol-v2/20260928T064015Z-fd6ca303/plots/median-runtime.svg"
+   ],
+   "manifest": "results/protocol-v2/20260928T064015Z-fd6ca303/manifest.json",
+   "aggregate": "results/protocol-v2/20260928T064015Z-fd6ca303/aggregate/summary.json",
+   "raw_dir": "results/protocol-v2/20260928T064015Z-fd6ca303/raw",
+   "superseded_by": "20260928T103116Z-c00a63fc"
+  },
+  {
+   "id": "20260928T062641Z-d865a73c",
+   "name": "scheduler-small",
+   "classification": "HISTORICAL",
+   "experiment": "scheduler",
+   "git_sha": "8d92429f8d0c0bafd81f7eb0690f58ee77e83470",
+   "created_utc": "2026-09-28T06:26:41.935114+00:00",
+   "scenes": [
+    "uniform",
+    "imbalanced",
+    "reflective",
+    "scheduler_stress"
+   ],
+   "preset": "small",
+   "conditions": 4,
+   "records": 128,
+   "failures": 0,
+   "repeats": 7,
+   "warmups": 1,
+   "order_seed": 20260928,
+   "status": "complete",
+   "executable_sha256": "5aa48c680939533709418421779673d6da3b3f11581cde63da908ef909e7f54e",
+   "mpi_executable_sha256": "90940d6c6153c9506bb4b3f680961d8ad073e0e54f8afe07a9e4fd676c4bcea8",
+   "verification": {
+    "records": 128,
+    "failed": 0,
+    "ppm_images_checked": 128,
+    "errors": 0,
+    "set": "historical"
+   },
+   "plots": [
+    "results/protocol-v2/20260928T062641Z-d865a73c/plots/compute-imbalance.svg",
+    "results/protocol-v2/20260928T062641Z-d865a73c/plots/effective-work-imbalance.svg",
+    "results/protocol-v2/20260928T062641Z-d865a73c/plots/median-runtime.svg",
+    "results/protocol-v2/20260928T062641Z-d865a73c/plots/scheduler_stress-small-hybrid-adaptive-r3-t1-all-b0/assignment-timeline.svg",
+    "results/protocol-v2/20260928T062641Z-d865a73c/plots/scheduler_stress-small-hybrid-adaptive-r3-t1-all-b0/batch-size-over-time.svg",
+    "results/protocol-v2/20260928T062641Z-d865a73c/plots/scheduler_stress-small-hybrid-adaptive-r3-t1-all-b0/tile-ownership.svg",
+    "results/protocol-v2/20260928T062641Z-d865a73c/plots/scheduler_stress-small-hybrid-adaptive-r3-t1-all-b0/worker-tile-count.svg"
+   ],
+   "manifest": "results/protocol-v2/20260928T062641Z-d865a73c/manifest.json",
+   "aggregate": "results/protocol-v2/20260928T062641Z-d865a73c/aggregate/summary.json",
+   "raw_dir": "results/protocol-v2/20260928T062641Z-d865a73c/raw",
+   "superseded_by": "20260928T104823Z-8e1c1ed4"
+  },
+  {
+   "id": "20260928T063756Z-d01e8d9f",
+   "name": "heterogeneity",
+   "classification": "HISTORICAL",
+   "experiment": "heterogeneity",
+   "git_sha": "8d92429f8d0c0bafd81f7eb0690f58ee77e83470",
+   "created_utc": "2026-09-28T06:37:56.176356+00:00",
+   "scenes": [
+    "scheduler_stress"
+   ],
+   "preset": "small",
+   "conditions": 4,
+   "records": 32,
+   "failures": 0,
+   "repeats": 7,
+   "warmups": 1,
+   "order_seed": 20260930,
+   "status": "complete",
+   "executable_sha256": "5aa48c680939533709418421779673d6da3b3f11581cde63da908ef909e7f54e",
+   "mpi_executable_sha256": "90940d6c6153c9506bb4b3f680961d8ad073e0e54f8afe07a9e4fd676c4bcea8",
+   "verification": {
+    "records": 32,
+    "failed": 0,
+    "ppm_images_checked": 32,
+    "errors": 0,
+    "set": "historical"
+   },
+   "plots": [
+    "results/protocol-v2/20260928T063756Z-d01e8d9f/plots/compute-imbalance.svg",
+    "results/protocol-v2/20260928T063756Z-d01e8d9f/plots/effective-work-imbalance.svg",
+    "results/protocol-v2/20260928T063756Z-d01e8d9f/plots/median-runtime.svg",
+    "results/protocol-v2/20260928T063756Z-d01e8d9f/plots/scheduler_stress-small-hybrid-adaptive-r3-t1-all-b0/assignment-timeline.svg",
+    "results/protocol-v2/20260928T063756Z-d01e8d9f/plots/scheduler_stress-small-hybrid-adaptive-r3-t1-all-b0/batch-size-over-time.svg",
+    "results/protocol-v2/20260928T063756Z-d01e8d9f/plots/scheduler_stress-small-hybrid-adaptive-r3-t1-all-b0/tile-ownership.svg",
+    "results/protocol-v2/20260928T063756Z-d01e8d9f/plots/scheduler_stress-small-hybrid-adaptive-r3-t1-all-b0/worker-tile-count.svg"
+   ],
+   "manifest": "results/protocol-v2/20260928T063756Z-d01e8d9f/manifest.json",
+   "aggregate": "results/protocol-v2/20260928T063756Z-d01e8d9f/aggregate/summary.json",
+   "raw_dir": "results/protocol-v2/20260928T063756Z-d01e8d9f/raw",
+   "superseded_by": "20260928T105023Z-1dd576e1"
+  },
+  {
+   "id": "20260928T075743Z-cf62886e",
+   "name": "scheduler-medium",
+   "classification": "HISTORICAL",
+   "experiment": "scheduler",
+   "git_sha": "87be6a8c15b37f8914b098a131c50b722e68313b",
+   "created_utc": "2026-09-28T07:57:43.403471+00:00",
+   "scenes": [
+    "imbalanced",
+    "reflective",
+    "scheduler_stress",
+    "uniform"
+   ],
+   "preset": "medium",
+   "conditions": 4,
+   "records": 128,
+   "failures": 0,
+   "repeats": 7,
+   "warmups": 1,
+   "order_seed": 20260928,
+   "status": "complete",
+   "executable_sha256": "9c627b5931c45d9ce782768de4d0e962ac574b2a5ec95edd7b66978eb10fb42a",
+   "mpi_executable_sha256": "30946ef41725b578cb949a570c9d9bbb7b004b54123a2854d1a1e9553d7cb4e0",
+   "verification": {
+    "records": 128,
+    "failed": 0,
+    "ppm_images_checked": 128,
+    "errors": 0,
+    "set": "historical"
+   },
+   "plots": [
+    "results/protocol-v2/20260928T075743Z-cf62886e/plots/compute-imbalance.svg",
+    "results/protocol-v2/20260928T075743Z-cf62886e/plots/effective-work-imbalance.svg",
+    "results/protocol-v2/20260928T075743Z-cf62886e/plots/median-runtime.svg",
+    "results/protocol-v2/20260928T075743Z-cf62886e/plots/scheduler_stress-medium-hybrid-adaptive-r3-t1-all-b0/assignment-timeline.svg",
+    "results/protocol-v2/20260928T075743Z-cf62886e/plots/scheduler_stress-medium-hybrid-adaptive-r3-t1-all-b0/batch-size-over-time.svg",
+    "results/protocol-v2/20260928T075743Z-cf62886e/plots/scheduler_stress-medium-hybrid-adaptive-r3-t1-all-b0/tile-ownership.svg",
+    "results/protocol-v2/20260928T075743Z-cf62886e/plots/scheduler_stress-medium-hybrid-adaptive-r3-t1-all-b0/worker-tile-count.svg"
+   ],
+   "manifest": "results/protocol-v2/20260928T075743Z-cf62886e/manifest.json",
+   "aggregate": "results/protocol-v2/20260928T075743Z-cf62886e/aggregate/summary.json",
+   "raw_dir": "results/protocol-v2/20260928T075743Z-cf62886e/raw",
+   "superseded_by": "20260928T103934Z-edc10839"
+  },
+  {
+   "id": "20260928T080938Z-fe56f15c",
+   "name": "scheduler-large",
+   "classification": "HISTORICAL",
+   "experiment": "scheduler",
+   "git_sha": "83e33e8e82044a3c095bc813b929b3dd2dd7ed32",
+   "created_utc": "2026-09-28T08:09:38.078794+00:00",
+   "scenes": [
+    "reflective"
+   ],
+   "preset": "large",
+   "conditions": 4,
+   "records": 32,
+   "failures": 0,
+   "repeats": 7,
+   "warmups": 1,
+   "order_seed": 20260928,
+   "status": "complete",
+   "executable_sha256": "9c627b5931c45d9ce782768de4d0e962ac574b2a5ec95edd7b66978eb10fb42a",
+   "mpi_executable_sha256": "30946ef41725b578cb949a570c9d9bbb7b004b54123a2854d1a1e9553d7cb4e0",
+   "verification": {
+    "records": 32,
+    "failed": 0,
+    "ppm_images_checked": 32,
+    "errors": 0,
+    "set": "historical"
+   },
+   "plots": [
+    "results/protocol-v2/20260928T080938Z-fe56f15c/plots/compute-imbalance.svg",
+    "results/protocol-v2/20260928T080938Z-fe56f15c/plots/effective-work-imbalance.svg",
+    "results/protocol-v2/20260928T080938Z-fe56f15c/plots/median-runtime.svg",
+    "results/protocol-v2/20260928T080938Z-fe56f15c/plots/reflective-large-hybrid-adaptive-r3-t1-all-b0/assignment-timeline.svg",
+    "results/protocol-v2/20260928T080938Z-fe56f15c/plots/reflective-large-hybrid-adaptive-r3-t1-all-b0/batch-size-over-time.svg",
+    "results/protocol-v2/20260928T080938Z-fe56f15c/plots/reflective-large-hybrid-adaptive-r3-t1-all-b0/tile-ownership.svg",
+    "results/protocol-v2/20260928T080938Z-fe56f15c/plots/reflective-large-hybrid-adaptive-r3-t1-all-b0/worker-tile-count.svg"
+   ],
+   "manifest": "results/protocol-v2/20260928T080938Z-fe56f15c/manifest.json",
+   "aggregate": "results/protocol-v2/20260928T080938Z-fe56f15c/aggregate/summary.json",
+   "raw_dir": "results/protocol-v2/20260928T080938Z-fe56f15c/raw",
+   "superseded_by": "20260928T104502Z-5e829d04"
+  }
+ ]
+}

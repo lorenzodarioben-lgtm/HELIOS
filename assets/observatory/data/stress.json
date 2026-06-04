@@ -1,0 +1,45 @@
+{
+ "run_id": "20260928T111419Z-5832e956",
+ "classification": "FORMAL",
+ "scene": "scheduler_stress",
+ "backend": "sequential",
+ "width": 1280,
+ "height": 720,
+ "spp": 2048,
+ "max_depth": 16,
+ "seed": 42,
+ "tile": 16,
+ "pixels": 921600,
+ "camera_samples": 1887436800,
+ "timeout_seconds": 600,
+ "elapsed_seconds": 600.341,
+ "timed_out": true,
+ "exit_code": null,
+ "started_utc": "2026-09-28T11:14:21.0885323Z",
+ "ended_utc": "2026-09-28T11:24:21.4335083Z",
+ "git_sha": "836238077ba5d1057db1160c377b3aaa731f6770",
+ "executable_sha256": "956685fbc2b7b314d67f59332a37f46d7376218f01b394e5434e61b835203ef3",
+ "stdout_bytes": 0,
+ "stderr_bytes": 0,
+ "output_files_exist": {
+  "stdout": true,
+  "stderr": true,
+  "ppm": false,
+  "stats_json": false
+ },
+ "host": {
+  "cpu": "11th Gen Intel(R) Core(TM) i7-11370H @ 3.30GHz",
+  "cores": 4,
+  "logical": 8,
+  "ram_bytes": 16843112448
+ },
+ "sources": [
+  "results/stress/20260928T111419Z-5832e956/manifest.json",
+  "results/stress/20260928T111419Z-5832e956/environment.json",
+  "results/stress/20260928T111419Z-5832e956/stdout.log",
+  "results/stress/20260928T111419Z-5832e956/stderr.log"
+ ],
+ "command": "./scripts/run_supervised_stress.ps1 -IUnderstandThisIsLong -TimeoutSeconds 600",
+ "command_source": "docs/STRESS_TEST_PLAN.md (Invocation row)",
+ "renderer_arguments": "render --backend sequential --scene scheduler_stress --width 1280 --height 720 --spp 2048 --max-depth 16 --tile 16 --seed 42 --output results/stress/20260928T111419Z-5832e956/stress.ppm --stats-json results/stress/20260928T111419Z-5832e956/stress.json"
+}
