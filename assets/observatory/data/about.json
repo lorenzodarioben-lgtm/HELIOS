@@ -1,0 +1,11 @@
+{
+ "frozen_source": "e2c13e2204ca28aecb90d2d33703587bd16027a1",
+ "presentation_head": "333a9b706ddebb6efdd49f2a4a51cba9b6dd5bea",
+ "build_utc": "2026-09-29T18:55:34+00:00",
+ "protocol": "Protocol V2",
+ "environment": "Windows-10-10.0.26200-SP0 · g++ (Rev3, Built by MSYS2 project) 14.1.0 · Microsoft MPI Startup Program [Version 10.1.12498.52]",
+ "cpu": "11th Gen Intel(R) Core(TM) i7-11370H @ 3.30GHz",
+ "cores": 4,
+ "logical": 8,
+ "formal_verified": true
+}

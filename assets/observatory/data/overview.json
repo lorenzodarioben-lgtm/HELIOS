@@ -1,0 +1,55 @@
+{
+ "title": "HELIOS",
+ "subtitle": "Adaptive Hybrid Distributed Rendering Engine",
+ "tagline": "Distributed ray tracing. Hybrid parallelism. Adaptive scheduling.",
+ "description": "A C++20 distributed ray-tracing engine for Monte Carlo light transport, combining BVH acceleration, OpenMP, MPI, hybrid parallelism, dynamic load balancing and adaptive scheduling.",
+ "hero": "../showcase/hero/helios-hero-wide.png",
+ "hero_16x9": "../showcase/hero/helios-hero.png",
+ "montage": "../showcase/video/gallery-montage.mp4",
+ "metrics": [
+  {
+   "label": "OpenMP 8 threads",
+   "value": "2.97×",
+   "detail": "speedup over sequential · median 1.323 s",
+   "classification": "FORMAL",
+   "route": "performance?view=speedup"
+  },
+  {
+   "label": "MPI 4 ranks",
+   "value": "1.95×",
+   "detail": "speedup · median 2.020 s",
+   "classification": "FORMAL",
+   "route": "performance?view=speedup"
+  },
+  {
+   "label": "Hybrid 1×4",
+   "value": "2.45×",
+   "detail": "speedup · median 1.603 s",
+   "classification": "FORMAL",
+   "route": "performance?view=speedup"
+  },
+  {
+   "label": "Formal images verified",
+   "value": "458/458",
+   "detail": "independently rehashed, 0 mismatches",
+   "classification": "FORMAL",
+   "route": "correctness"
+  },
+  {
+   "label": "Stress workload",
+   "value": "600.34 s",
+   "detail": "controlled DNF at the 600 s limit",
+   "classification": "FORMAL",
+   "route": "stress"
+  },
+  {
+   "label": "Frozen source",
+   "value": "e2c13e2",
+   "detail": "src/, include/, tests/ unchanged since",
+   "classification": "FORMAL",
+   "route": "provenance"
+  }
+ ],
+ "sequential_median": 3.9328,
+ "strong_experiment": "20260928T102644Z-100e1393"
+}

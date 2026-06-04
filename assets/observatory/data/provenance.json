@@ -1,0 +1,390 @@
+{
+ "chains": [
+  {
+   "id": "strong",
+   "claim": "OpenMP 8 reaches 2.97× over sequential (final strong scaling)",
+   "classification": "FORMAL",
+   "stages": [
+    {
+     "label": "C++ source",
+     "kind": "source",
+     "detail": "frozen e2c13e2; src/include/tests identical at every later commit",
+     "path": "src/core.cpp",
+     "exists": true,
+     "status": "ok"
+    },
+    {
+     "label": "Release binary",
+     "kind": "binary",
+     "detail": "helios.exe SHA-256 956685fbc2b7b314…; helios_mpi.exe 0313fe16a502f17d…",
+     "path": null,
+     "exists": null,
+     "status": "ok"
+    },
+    {
+     "label": "Formal experiment",
+     "kind": "experiment",
+     "detail": "20260928T102644Z-100e1393 · manifest git e4a219c · 88 records, 0 failures",
+     "path": "results/protocol-v2/20260928T102644Z-100e1393/manifest.json",
+     "exists": true,
+     "status": "ok"
+    },
+    {
+     "label": "Raw runs",
+     "kind": "raw",
+     "detail": "per-run stats.json, tiles.csv, run.json",
+     "path": "results/protocol-v2/20260928T102644Z-100e1393/raw",
+     "exists": true,
+     "status": "ok"
+    },
+    {
+     "label": "Independent hash verification",
+     "kind": "verify",
+     "detail": "88 PPMs rehashed, 0 failed",
+     "path": "scripts/verify_experiment.py",
+     "exists": true,
+     "status": "ok"
+    },
+    {
+     "label": "Aggregate",
+     "kind": "aggregate",
+     "detail": "median 1.323 s, speedup 2.973",
+     "path": "results/protocol-v2/20260928T102644Z-100e1393/aggregate/summary.json",
+     "exists": true,
+     "status": "ok"
+    },
+    {
+     "label": "Plot",
+     "kind": "plot",
+     "detail": "speedup chart (report Figure 8)",
+     "path": "report/assets/20260928T103934Z-edc10839/speedup.svg",
+     "exists": true,
+     "status": "ok"
+    },
+    {
+     "label": "Report",
+     "kind": "report",
+     "detail": "Table 9, Section 7.2",
+     "path": "report/HELIOS_FINAL_REPORT.md",
+     "exists": true,
+     "status": "ok"
+    }
+   ],
+   "report": {
+    "reference": "Table 9 (Section 7.2)",
+    "verified_in_report_text": true
+   }
+  },
+  {
+   "id": "scheduler",
+   "claim": "Fixed dynamic beats static on all 9 natural-scene cases (27.5% to 31.8%)",
+   "classification": "FORMAL",
+   "stages": [
+    {
+     "label": "C++ source",
+     "kind": "source",
+     "detail": "frozen e2c13e2; src/include/tests identical at every later commit",
+     "path": "src/core.cpp",
+     "exists": true,
+     "status": "ok"
+    },
+    {
+     "label": "Release binary",
+     "kind": "binary",
+     "detail": "helios_mpi.exe SHA-256 0313fe16a502f17d…",
+     "path": null,
+     "exists": null,
+     "status": "ok"
+    },
+    {
+     "label": "Formal experiments",
+     "kind": "experiment",
+     "detail": "20260928T103934Z-edc10839, 20260928T104502Z-5e829d04, 20260928T104823Z-8e1c1ed4",
+     "path": "results/protocol-v2/20260928T103934Z-edc10839/manifest.json",
+     "exists": true,
+     "status": "ok"
+    },
+    {
+     "label": "Raw runs + traces",
+     "kind": "raw",
+     "detail": "trace.csv for every dynamic/adaptive run",
+     "path": "results/protocol-v2/20260928T103934Z-edc10839/raw",
+     "exists": true,
+     "status": "ok"
+    },
+    {
+     "label": "Independent hash verification",
+     "kind": "verify",
+     "detail": "128 + 32 + 128 PPMs, 0 failed",
+     "path": "scripts/verify_experiment.py",
+     "exists": true,
+     "status": "ok"
+    },
+    {
+     "label": "Aggregate",
+     "kind": "aggregate",
+     "detail": "paired_scheduler_comparisons",
+     "path": "results/protocol-v2/20260928T103934Z-edc10839/aggregate/summary.json",
+     "exists": true,
+     "status": "ok"
+    },
+    {
+     "label": "Plot",
+     "kind": "plot",
+     "detail": "report Figure 11 (scheduler runtime)",
+     "path": "report/assets/20260928T103934Z-edc10839/scheduler-runtime.svg",
+     "exists": true,
+     "status": "ok"
+    },
+    {
+     "label": "Report",
+     "kind": "report",
+     "detail": "Table 12, Section 7.4",
+     "path": "report/HELIOS_FINAL_REPORT.md",
+     "exists": true,
+     "status": "ok"
+    }
+   ],
+   "report": {
+    "reference": "Table 12 (Section 7.4)",
+    "verified_in_report_text": true
+   }
+  },
+  {
+   "id": "ab",
+   "claim": "Both fixes make sequential -44.62% (counter fix alone +0.05%)",
+   "classification": "DIAGNOSTIC",
+   "stages": [
+    {
+     "label": "Builds",
+     "kind": "source",
+     "detail": "pre-fix 6270d44 · counter fix dca8628 · both fixes e2c13e2",
+     "path": null,
+     "exists": null,
+     "status": "ok"
+    },
+    {
+     "label": "Diagnostic A/B",
+     "kind": "experiment",
+     "detail": "20260928T101701Z-0de80589: 7 paired blocks per build",
+     "path": "results/diagnostic/counter-fix/20260928T101701Z-0de80589/summary.json",
+     "exists": true,
+     "status": "ok"
+    },
+    {
+     "label": "Raw runs",
+     "kind": "raw",
+     "detail": "per-run records; pixel hash and counters checked",
+     "path": "results/diagnostic/counter-fix/20260928T101701Z-0de80589/raw",
+     "exists": true,
+     "status": "ok"
+    },
+    {
+     "label": "Aggregate",
+     "kind": "aggregate",
+     "detail": "groups.*.median_relative_change and relative_ci95",
+     "path": "results/diagnostic/counter-fix/20260928T101701Z-0de80589/summary.json",
+     "exists": true,
+     "status": "ok"
+    },
+    {
+     "label": "Plot",
+     "kind": "plot",
+     "detail": "report Figure 6",
+     "path": "report/assets/optimisation-ab/optimisation-ab.svg",
+     "exists": true,
+     "status": "ok"
+    },
+    {
+     "label": "Report",
+     "kind": "report",
+     "detail": "Table 5, Section 5.5",
+     "path": "report/HELIOS_FINAL_REPORT.md",
+     "exists": true,
+     "status": "ok"
+    }
+   ],
+   "report": {
+    "reference": "Table 5 (Section 5.5)",
+    "verified_in_report_text": true
+   }
+  },
+  {
+   "id": "stress",
+   "claim": "Stress workload DNF: terminated at 600.34 s (timeout 600 s)",
+   "classification": "FORMAL",
+   "stages": [
+    {
+     "label": "Source",
+     "kind": "source",
+     "detail": "git 8362380 (source identical to e2c13e2)",
+     "path": null,
+     "exists": null,
+     "status": "ok"
+    },
+    {
+     "label": "Release binary",
+     "kind": "binary",
+     "detail": "helios.exe SHA-256 956685fbc2b7b314…",
+     "path": null,
+     "exists": null,
+     "status": "ok"
+    },
+    {
+     "label": "Supervised run",
+     "kind": "experiment",
+     "detail": "./scripts/run_supervised_stress.ps1 -IUnderstandThisIsLong -TimeoutSeconds 600",
+     "path": "scripts/run_supervised_stress.ps1",
+     "exists": true,
+     "status": "ok"
+    },
+    {
+     "label": "Manifest",
+     "kind": "raw",
+     "detail": "timed_out, elapsed, exit code, arguments",
+     "path": "results/stress/20260928T111419Z-5832e956/manifest.json",
+     "exists": true,
+     "status": "ok"
+    },
+    {
+     "label": "Logs",
+     "kind": "raw",
+     "detail": "stdout 0 bytes, stderr 0 bytes",
+     "path": "results/stress/20260928T111419Z-5832e956/stderr.log",
+     "exists": true,
+     "status": "ok"
+    },
+    {
+     "label": "Output image",
+     "kind": "output",
+     "detail": "none written (the renderer writes only on completion)",
+     "path": null,
+     "exists": null,
+     "status": "ok"
+    },
+    {
+     "label": "Report",
+     "kind": "report",
+     "detail": "Table 13, Section 8",
+     "path": "report/HELIOS_FINAL_REPORT.md",
+     "exists": true,
+     "status": "ok"
+    }
+   ],
+   "report": {
+    "reference": "Table 13 (Section 8.3)",
+    "verified_in_report_text": true
+   }
+  },
+  {
+   "id": "screenshot",
+   "claim": "End-to-end hybrid-adaptive run, hash 57881d257daf2474",
+   "classification": "FORMAL",
+   "stages": [
+    {
+     "label": "Source",
+     "kind": "source",
+     "detail": "HEAD 37da0c5 shown in the screenshot (source identical to e2c13e2)",
+     "path": null,
+     "exists": null,
+     "status": "ok"
+    },
+    {
+     "label": "Command",
+     "kind": "experiment",
+     "detail": "mpiexec -n 3 … --backend hybrid-adaptive --threads 2 (report Appendix A)",
+     "path": "report/HELIOS_FINAL_REPORT.md",
+     "exists": true,
+     "status": "ok"
+    },
+    {
+     "label": "Statistics",
+     "kind": "raw",
+     "detail": "render 1.6153 s, rays 54,402,020",
+     "path": "results/screenshot/showcase.json",
+     "exists": true,
+     "status": "ok"
+    },
+    {
+     "label": "Screenshot",
+     "kind": "output",
+     "detail": "captured manually by the user",
+     "path": "assets/helios-hybrid-adaptive-run-screenshot.png",
+     "exists": true,
+     "status": "ok"
+    },
+    {
+     "label": "Report",
+     "kind": "report",
+     "detail": "Figure 13, Section 9",
+     "path": "report/HELIOS_FINAL_REPORT.md",
+     "exists": true,
+     "status": "ok"
+    }
+   ],
+   "report": {
+    "reference": "Figure 13 (Section 9)",
+    "verified_in_report_text": true
+   }
+  },
+  {
+   "id": "correctness",
+   "claim": "Seven backends produce one image (hash 57881d257daf2474)",
+   "classification": "PRESENTATION + FORMAL",
+   "stages": [
+    {
+     "label": "Frozen binaries",
+     "kind": "binary",
+     "detail": "build-release/helios.exe and helios_mpi.exe (checked against frozen SHA-256)",
+     "path": null,
+     "exists": null,
+     "status": "ok"
+    },
+    {
+     "label": "Presentation renders",
+     "kind": "experiment",
+     "detail": "render_presentation.py correctness (7 backends, same config)",
+     "path": "assets/showcase/correctness/backend-correctness.json",
+     "exists": true,
+     "status": "ok"
+    },
+    {
+     "label": "Hash recomputation",
+     "kind": "verify",
+     "detail": "FNV-1a recomputed from each PPM; pairwise pixel differences counted",
+     "path": "scripts/verify_experiment.py",
+     "exists": true,
+     "status": "ok"
+    },
+    {
+     "label": "Validator",
+     "kind": "verify",
+     "detail": "11 backend configurations, one hash",
+     "path": "scripts/validate_backends.py",
+     "exists": true,
+     "status": "ok"
+    },
+    {
+     "label": "Formal runs",
+     "kind": "verify",
+     "detail": "458 formal images rehashed",
+     "path": "scripts/verify_experiment.py",
+     "exists": true,
+     "status": "ok"
+    },
+    {
+     "label": "Report",
+     "kind": "report",
+     "detail": "Table 2, Sections 4.7 and 6.7",
+     "path": "report/HELIOS_FINAL_REPORT.md",
+     "exists": true,
+     "status": "ok"
+    }
+   ],
+   "report": {
+    "reference": "Table 2 (Section 4.7)",
+    "verified_in_report_text": true
+   }
+  }
+ ]
+}

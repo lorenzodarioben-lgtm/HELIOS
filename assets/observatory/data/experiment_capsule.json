@@ -1,0 +1,167 @@
+{
+ "project": "Helios: Adaptive Hybrid Distributed Rendering Engine",
+ "frozen_source_sha": "e2c13e2204ca28aecb90d2d33703587bd16027a1",
+ "presentation_head": "333a9b706ddebb6efdd49f2a4a51cba9b6dd5bea",
+ "src_include_tests_identical_to_frozen": true,
+ "binaries": {
+  "helios.exe": "956685fbc2b7b314d67f59332a37f46d7376218f01b394e5434e61b835203ef3",
+  "helios_mpi.exe": "0313fe16a502f17d35ec52ebaa88da2260cf2be211df038b6374f6ed991714a5"
+ },
+ "compiler": "g++ (Rev3, Built by MSYS2 project) 14.1.0",
+ "mpi": "Microsoft MPI Startup Program [Version 10.1.12498.52]",
+ "os": "Windows-10-10.0.26200-SP0",
+ "cpu": "11th Gen Intel(R) Core(TM) i7-11370H @ 3.30GHz",
+ "physical_cores": 4,
+ "logical_processors": 8,
+ "ram_bytes": 16843112448,
+ "benchmark_protocol": "Protocol V2",
+ "formal_experiments": {
+  "strong": "20260928T102644Z-100e1393",
+  "weak": "20260928T103116Z-c00a63fc",
+  "scheduler-medium": "20260928T103934Z-edc10839",
+  "scheduler-large": "20260928T104502Z-5e829d04",
+  "scheduler-small": "20260928T104823Z-8e1c1ed4",
+  "heterogeneity": "20260928T105023Z-1dd576e1"
+ },
+ "historical_experiments": {
+  "strong": "20260928T063038Z-301480e3",
+  "weak": "20260928T064015Z-fd6ca303",
+  "scheduler-small": "20260928T062641Z-d865a73c",
+  "heterogeneity": "20260928T063756Z-d01e8d9f",
+  "scheduler-medium": "20260928T075743Z-cf62886e",
+  "scheduler-large": "20260928T080938Z-fe56f15c"
+ },
+ "verification": {
+  "20260928T102644Z-100e1393": {
+   "records": 88,
+   "failed": 0,
+   "ppm_images_checked": 88,
+   "errors": 0,
+   "set": "final"
+  },
+  "20260928T103116Z-c00a63fc": {
+   "records": 50,
+   "failed": 0,
+   "ppm_images_checked": 50,
+   "errors": 0,
+   "set": "final"
+  },
+  "20260928T103934Z-edc10839": {
+   "records": 128,
+   "failed": 0,
+   "ppm_images_checked": 128,
+   "errors": 0,
+   "set": "final"
+  },
+  "20260928T104502Z-5e829d04": {
+   "records": 32,
+   "failed": 0,
+   "ppm_images_checked": 32,
+   "errors": 0,
+   "set": "final"
+  },
+  "20260928T104823Z-8e1c1ed4": {
+   "records": 128,
+   "failed": 0,
+   "ppm_images_checked": 128,
+   "errors": 0,
+   "set": "final"
+  },
+  "20260928T105023Z-1dd576e1": {
+   "records": 32,
+   "failed": 0,
+   "ppm_images_checked": 32,
+   "errors": 0,
+   "set": "final"
+  },
+  "20260928T063038Z-301480e3": {
+   "records": 88,
+   "failed": 0,
+   "ppm_images_checked": 88,
+   "errors": 0,
+   "set": "historical"
+  },
+  "20260928T064015Z-fd6ca303": {
+   "records": 50,
+   "failed": 0,
+   "ppm_images_checked": 50,
+   "errors": 0,
+   "set": "historical"
+  },
+  "20260928T062641Z-d865a73c": {
+   "records": 128,
+   "failed": 0,
+   "ppm_images_checked": 128,
+   "errors": 0,
+   "set": "historical"
+  },
+  "20260928T063756Z-d01e8d9f": {
+   "records": 32,
+   "failed": 0,
+   "ppm_images_checked": 32,
+   "errors": 0,
+   "set": "historical"
+  },
+  "20260928T075743Z-cf62886e": {
+   "records": 128,
+   "failed": 0,
+   "ppm_images_checked": 128,
+   "errors": 0,
+   "set": "historical"
+  },
+  "20260928T080938Z-fe56f15c": {
+   "records": 32,
+   "failed": 0,
+   "ppm_images_checked": 32,
+   "errors": 0,
+   "set": "historical"
+  }
+ },
+ "formal_images_verified": 458,
+ "validators": {
+  "Core tests": {
+   "passed": true,
+   "count": null
+  },
+  "CLI validation": {
+   "passed": true,
+   "count": 12
+  },
+  "BVH validation": {
+   "passed": true,
+   "count": 6
+  },
+  "Backend validation": {
+   "passed": true,
+   "count": 11
+  },
+  "Analysis tests": {
+   "passed": true,
+   "count": 4
+  },
+  "Formal image rehash (final six experiments)": {
+   "passed": true,
+   "count": 458
+  }
+ },
+ "stress": {
+  "run_id": "20260928T111419Z-5832e956",
+  "elapsed_seconds": 600.341,
+  "outcome": "DNF (timeout)"
+ },
+ "demonstration": {
+  "stats": "results/screenshot/showcase.json",
+  "backend": "hybrid-adaptive",
+  "ranks": 3,
+  "threads_per_rank": 2,
+  "render_seconds": 1.6153331,
+  "hash": "57881d257daf2474",
+  "screenshot": "assets/helios-hybrid-adaptive-run-screenshot.png"
+ },
+ "report_sha256": {
+  "HELIOS_FINAL_REPORT.md": "859cf1c65d54027a2eb4c7fb88cf417537926882fa80b42d46eedff9aadccb72",
+  "HELIOS_FINAL_REPORT.docx": "8ef62d3d72de44285d184c632bde12bdab49e01cbad675f2dcb788598d0e02d8",
+  "HELIOS_FINAL_REPORT.pdf": "c6b94775778ee43df88e38d464f5467960b05621f29dc7e8f6fea5b6a3b06b36"
+ },
+ "observatory_build_utc": "2026-09-29T18:55:34+00:00"
+}
