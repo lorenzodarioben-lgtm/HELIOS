@@ -1,0 +1,259 @@
+{
+ "categories": [
+  "Architecture",
+  "Parallelism",
+  "Scheduling",
+  "Performance",
+  "Correctness",
+  "Methodology",
+  "Limitations"
+ ],
+ "questions": [
+  {
+   "id": "q01",
+   "category": "Architecture",
+   "question": "Why does every backend call the same render_tile function?",
+   "short": "Every backend only decides who renders which tile and when; they all call the same render_tile. So a backend that changed the image would have a bug, which makes exact image equality a correctness test.",
+   "evidence": [
+    "Seven backends produce hash 57881d257daf2474 for the showcase configuration",
+    "validate_backends.py: 11 configurations, one hash"
+   ],
+   "caveat": "Exact equality holds for this build; a different compiler could need a tolerance check.",
+   "caveat_label": "Trade-off",
+   "route": "render?panel=pipeline",
+   "sources": [
+    "report Section 3.1",
+    "src/core.cpp render_tile"
+   ]
+  },
+  {
+   "id": "q02",
+   "category": "Architecture",
+   "question": "Why use deterministic per-sample random numbers?",
+   "short": "Each sample seeds its own generator from (seed, pixel, sample), so a pixel's random numbers do not depend on which thread or rank renders it. A shared generator would change the image whenever scheduling changed.",
+   "evidence": [
+    "Rng{mix64(seed ^ mix64(pixel) ^ mix64(sample))} in render_tile",
+    "Samples are accumulated in a fixed order; each pixel has one writer"
+   ],
+   "caveat": "Determinism removes Monte Carlo noise from comparisons; it does not make timing deterministic.",
+   "caveat_label": "Context",
+   "route": "provenance?panel=code&snippet=render_tile",
+   "sources": [
+    "report Section 3.3"
+   ]
+  },
+  {
+   "id": "q03",
+   "category": "Parallelism",
+   "question": "Why use MPI when everything runs on one machine?",
+   "short": "MPI models distributed memory: separate processes, explicit messages and a coordinator. On one host it measures the programming model and scheduling protocol, not a network.",
+   "evidence": [
+    "MPI 4 ranks: 1.95× (static partition)",
+    "Coordinator/worker protocol with MPI_ANY_SOURCE"
+   ],
+   "caveat": "No network latency or bandwidth effect was measured; the results do not predict cluster behaviour.",
+   "caveat_label": "Limitation",
+   "route": "hardware",
+   "sources": [
+    "report Sections 1.2, 2.4",
+    "report Section 11"
+   ]
+  },
+  {
+   "id": "q04",
+   "category": "Parallelism",
+   "question": "Why do 8 OpenMP threads improve runtime but reduce efficiency?",
+   "short": "Eight logical threads run on four physical cores. SMT lets a second thread use execution resources the first leaves idle, so runtime drops, but a hyperthread is not a second core, so efficiency per logical processor falls.",
+   "evidence": [
+    "OpenMP 8 1.323 s vs OpenMP 4 2.041 s: -34.69% (7/7 blocks)",
+    "Efficiency: OpenMP 4 0.48, OpenMP 8 0.37 per logical processor"
+   ],
+   "caveat": "Why this workload benefits (for example memory stalls in BVH traversal) was not measured.",
+   "caveat_label": "Limitation",
+   "route": "hardware",
+   "sources": [
+    "report Section 7.7"
+   ]
+  },
+  {
+   "id": "q05",
+   "category": "Parallelism",
+   "question": "Why combine MPI and OpenMP?",
+   "short": "MPI distributes tiles between processes and OpenMP splits each tile between threads. Varying ranks × threads with the rendering code fixed shows how the two layers compose.",
+   "evidence": [
+    "Hybrid 1×4 2.45×, 2×2 1.91×, 4×1 1.93×"
+   ],
+   "caveat": "On a single host the MPI layer adds no hardware; hybrid can only win by decomposing work better.",
+   "caveat_label": "Trade-off",
+   "route": "hardware",
+   "sources": [
+    "report Sections 2.5, 10.4"
+   ]
+  },
+  {
+   "id": "q06",
+   "category": "Parallelism",
+   "question": "Why was Hybrid 1×4 the strongest four-slot layout?",
+   "short": "It never partitions the tile list: every tile is split four ways inside, so the tile-level imbalance that caps static partitions does not arise.",
+   "evidence": [
+    "Hybrid 1×4 vs OpenMP 4: -20.66% (CI -25.95% to -18.80%), faster in 7/7 blocks",
+    "Speedup 2.45× exceeds the 2.34× cap of the equal-count 4-way partition"
+   ],
+   "caveat": "A decomposition effect, not evidence that hybrid is intrinsically faster. OpenMP with dynamic tile scheduling was not in the formal matrix.",
+   "caveat_label": "Context",
+   "route": "workload?overlay=4",
+   "sources": [
+    "report Section 7.6"
+   ]
+  },
+  {
+   "id": "q07",
+   "category": "Scheduling",
+   "question": "Why did dynamic scheduling help?",
+   "short": "The expensive tiles sit in one band. A static contiguous split gives that band to one worker; one-tile dynamic assignment lets both workers draw from the whole image, so neither is left with much more than one tile of extra work.",
+   "evidence": [
+    "Fixed dynamic vs static: 27.5% to 31.8% faster on all 9 natural-scene cases; every interval excludes zero",
+    "With rank 1 slowed 2× (synthetic): -12.06%"
+   ],
+   "caveat": "The scenes were designed to be uneven, which favours dynamic scheduling.",
+   "caveat_label": "Context",
+   "route": "scheduler?policy=compare",
+   "sources": [
+    "report Sections 7.4, 10.2"
+   ]
+  },
+  {
+   "id": "q08",
+   "category": "Scheduling",
+   "question": "Why did adaptive batching not consistently outperform fixed dynamic scheduling?",
+   "short": "Fixed dynamic already removed the imbalance, and on one host messages are cheap. Adaptive cut the number of assignments but the waiting it saved was a few milliseconds, smaller than run-to-run variation.",
+   "evidence": [
+    "8 of 10 adaptive-vs-fixed intervals include zero",
+    "The two that exclude zero point in opposite directions: medium uniform -2.73%; large reflective +1.83%",
+    "Assignments 28 to 100 instead of 144",
+    "Medium runs: worker assignment wait 9 to 10 ms (fixed) vs 3 to 7 ms (adaptive) per render"
+   ],
+   "caveat": "This does not show adaptive batching would fail over a real network or with very small tiles; that was not tested.",
+   "caveat_label": "Limitation",
+   "route": "scheduler?policy=adaptive",
+   "sources": [
+    "report Sections 7.5, 10.3"
+   ]
+  },
+  {
+   "id": "q09",
+   "category": "Performance",
+   "question": "Why are static speedups only about 2× at four slots?",
+   "short": "The measured tile costs cap any equal-count contiguous split: the heaviest range sets the time even with perfect workers.",
+   "evidence": [
+    "Cap 1.23× (2-way) and 2.34× (4-way) from the per-tile costs",
+    "Observed OpenMP 4 1.93×, MPI 4 1.95×"
+   ],
+   "caveat": "A cost-aware split could do better; none of these backends uses one.",
+   "caveat_label": "Trade-off",
+   "route": "workload?overlay=4",
+   "sources": [
+    "report Section 7.2"
+   ]
+  },
+  {
+   "id": "q10",
+   "category": "Performance",
+   "question": "What caused the hybrid performance anomaly?",
+   "short": "Two real defects: per-thread counters that false-shared cache lines (only the intra-tile hybrid path exposed it) and a heap-allocated BVH traversal stack on every ray query (a serial cost in every backend).",
+   "evidence": [
+    "Historical hybrid 2×2 4.707 s vs OpenMP 4 3.208 s (+43.46%)",
+    "Counter fix alone: hybrid 2×2 -13.99%, sequential +0.05% (no change resolved)",
+    "Both fixes: sequential -44.62%, hybrid 2×2 -53.36%",
+    "Final hybrid 2×2 vs OpenMP 4: -0.30% (CI -2.02% to +3.29%), no clear difference established"
+   ],
+   "caveat": "The historical 4.707 s was not reproduced by later rebuilds of the pre-fix source (3.72 to 4.02 s), so its full size was never attributed.",
+   "caveat_label": "Limitation",
+   "route": "performance?view=case",
+   "sources": [
+    "report Section 5",
+    "docs/HYBRID_TOPOLOGY_AUDIT.md"
+   ]
+  },
+  {
+   "id": "q11",
+   "category": "Performance",
+   "question": "Is hybrid 2×2 now as fast as OpenMP 4 and MPI 4?",
+   "short": "No clear difference was established. The intervals include zero; that is not proof of equality.",
+   "evidence": [
+    "vs OpenMP 4: -0.30% (CI -2.02% to +3.29%)",
+    "vs MPI 4: +1.84% (CI -0.19% to +4.02%)"
+   ],
+   "caveat": "Seven blocks give coarse intervals; the MPI interval only just contains zero, so a small penalty cannot be ruled out.",
+   "caveat_label": "Limitation",
+   "route": "performance?view=uncertainty",
+   "sources": [
+    "report Section 7.6"
+   ]
+  },
+  {
+   "id": "q12",
+   "category": "Methodology",
+   "question": "Why is weak scaling described as single-host?",
+   "short": "SPP was raised in proportion to rendering slots on one laptop. That measures how extra cores on the same machine absorb extra work, not cluster scalability.",
+   "evidence": [
+    "Weak efficiency at 4 slots: OpenMP 0.49, MPI 0.49, hybrid 2×2 0.48"
+   ],
+   "caveat": "The same equal-count partitions are used, so these values mostly re-measure the spatial imbalance.",
+   "caveat_label": "Limitation",
+   "route": "performance?view=weak",
+   "sources": [
+    "report Sections 6.9, 7.3"
+   ]
+  },
+  {
+   "id": "q13",
+   "category": "Correctness",
+   "question": "How is deterministic correctness verified?",
+   "short": "Every timed run's image hash is compared with the sequential reference, formal images are rehashed independently, and the validators and core tests check backends, the BVH and edge cases.",
+   "evidence": [
+    "458 of 458 formal images rehashed, 0 failed",
+    "11 backend configurations · 6 BVH scenes · 12 CLI cases · 4 analysis tests",
+    "Intra-tile thread test fails on a deliberately racy counter mutant"
+   ],
+   "caveat": "Equality is exact for this build and toolchain.",
+   "caveat_label": "Context",
+   "route": "correctness",
+   "sources": [
+    "report Section 4.7, Table 2"
+   ]
+  },
+  {
+   "id": "q14",
+   "category": "Limitations",
+   "question": "What does the controlled DNF demonstrate?",
+   "short": "A deliberately oversized workload was run once under a supervisor with a planned 600 s limit. It ran until it was stopped, with no crash or error output, and the manifest records exactly what ran. Helios writes its image and statistics only when a render completes and prints no progress, so no partial image exists.",
+   "evidence": [
+    "1280×720 at 2048 SPP = 1,887,436,800 camera samples",
+    "Terminated at 600.34 s; stderr 0 bytes"
+   ],
+   "caveat": "How far it got is unknown. Memory use was not recorded; the 8-bit RGB image buffer is about 2.8 MB.",
+   "caveat_label": "Limitation",
+   "route": "stress",
+   "sources": [
+    "report Section 8"
+   ]
+  },
+  {
+   "id": "q15",
+   "category": "Limitations",
+   "question": "What are the main limits of the evaluation?",
+   "short": "One laptop (4 cores, 8 logical processors), single-host MPI, an uncontrolled Windows system, no temperature telemetry, synthetic heterogeneity and a small procedural scene catalogue.",
+   "evidence": [
+    "Mitigations: warm-up, 7 randomised blocks, medians, paired bootstrap intervals, frozen source, independent hash checks, no removal of slow runs"
+   ],
+   "caveat": "These limit generalisation, not the within-experiment comparisons.",
+   "caveat_label": "Context",
+   "route": "stress?panel=limits",
+   "sources": [
+    "report Sections 11, 12"
+   ]
+  }
+ ],
+ "source_note": "Answers are grounded in the Helios technical report; every number is filled in from extracted evidence at build time."
+}

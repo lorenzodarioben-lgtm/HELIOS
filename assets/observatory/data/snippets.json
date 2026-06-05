@@ -1,0 +1,74 @@
+{
+ "snippets": [
+  {
+   "id": "render_tile",
+   "file": "src/core.cpp",
+   "first_line": 320,
+   "last_line": 358,
+   "commit": "e2c13e2",
+   "matches_frozen_commit": true,
+   "note": "Shared rendering kernel: thread-private counters, deterministic per-sample RNG (the line with Rng rng{…}).",
+   "text": "TileResult render_tile(const Scene& scene,const Camera& camera,const RenderConfig& cfg,const Tile& tile,int threads) {\n  const auto started=std::chrono::steady_clock::now();\n  const int w=tile.x1-tile.x0,h=tile.y1-tile.y0;\n  TileResult out;\n  out.rgb.resize(static_cast<std::size_t>(w*h*3));\n#ifdef HELIOS_OPENMP\n#pragma omp parallel num_threads(threads) if(threads>1)\n#endif\n  {\n    // Each thread counts into its own stack object and merges once per tile. A shared\n    // per-thread array put neighbours' hot counters on one cache line (false sharing).\n    Counters stats;\n#ifdef HELIOS_OPENMP\n#pragma omp for schedule(static)\n#endif\n    for(int i=0;i<w*h;++i) {\n      const int x=tile.x0+i%w,y=tile.y0+i/w;\n      Vec3 sum;\n      for(int sample=0;sample<cfg.spp;++sample) {\n        const std::uint64_t pixel=static_cast<std::uint64_t>(y)*static_cast<std::uint64_t>(cfg.width)+static_cast<std::uint64_t>(x);\n        Rng rng{mix64(cfg.seed^mix64(pixel)^mix64(static_cast<std::uint64_t>(sample)))};\n        const double u=(x+rng.uniform())/cfg.width;\n        const double v=1.0-(y+rng.uniform())/cfg.height;\n        sum+=trace(scene,camera.ray(u,v),cfg,rng,stats);\n      }\n      sum=sum/static_cast<double>(cfg.spp);\n      const std::size_t offset=static_cast<std::size_t>(i)*3;\n      out.rgb[offset]=encode(sum.x);out.rgb[offset+1]=encode(sum.y);out.rgb[offset+2]=encode(sum.z);\n      ++stats.pixels;\n    }\n#ifdef HELIOS_OPENMP\n#pragma omp critical(helios_tile_counters)\n#endif\n    out.counters+=stats;\n  }\n  out.counters.tiles=1;\n  out.seconds=std::chrono::duration<double>(std::chrono::steady_clock::now()-started).count();\n  return out;\n}"
+  },
+  {
+   "id": "scene_hit",
+   "file": "src/core.cpp",
+   "first_line": 229,
+   "last_line": 259,
+   "commit": "e2c13e2",
+   "matches_frozen_commit": true,
+   "note": "BVH traversal with the fixed-size stack (the heap-allocation fix).",
+   "text": "bool Scene::hit(const Ray& ray,double tmin,double tmax,Hit& best,Counters& counters,bool use_bvh) const {\n  bool found=false;\n  if(!use_bvh||nodes_.empty()) {\n    for(const Primitive& p:primitives) {\n      ++counters.primitive_tests;\n      Hit h;\n      if(intersect(p,ray,tmin,tmax,h)) { best=h;tmax=h.t;found=true; }\n    }\n    return found;\n  }\n  // Fixed-size stack: allocating a std::vector per query dominated threaded runs.\n  // Pushing both children of each visited node needs at most depth+1 slots.\n  int stack[max_traversal_stack];\n  int top=0;\n  stack[top++]=0;\n  while(top>0) {\n    const int id=stack[--top];\n    const BvhNode& node=nodes_[static_cast<std::size_t>(id)];\n    ++counters.node_visits;\n    if(!node.box.hit(ray,tmin,tmax)) continue;\n    if(node.count>0) {\n      for(int i=0;i<node.count;++i) {\n        const Primitive& p=primitives[static_cast<std::size_t>(order_[static_cast<std::size_t>(node.start+i)])];\n        ++counters.primitive_tests;\n        Hit h;\n        if(intersect(p,ray,tmin,tmax,h)) {best=h;tmax=h.t;found=true;}\n      }\n    } else { stack[top++]=node.right;stack[top++]=node.left; }\n  }\n  return found;\n}"
+  },
+  {
+   "id": "openmp_loop",
+   "file": "src/main.cpp",
+   "first_line": 127,
+   "last_line": 135,
+   "commit": "e2c13e2",
+   "matches_frozen_commit": true,
+   "note": "OpenMP backend: one parallel loop over tiles.",
+   "text": "#pragma omp parallel for schedule(runtime) num_threads(workers)\n    for(int i=0;i<static_cast<int>(tiles.size());++i) {\n      const Tile& tile=tiles[static_cast<std::size_t>(i)];\n      const TileResult result=render_tile(scene,camera,o.cfg,tile);\n      place_tile(out.image,o.cfg.width,tile,result.rgb);\n      const int worker=omp_get_thread_num();\n      accumulate(out.workers[static_cast<std::size_t>(worker)],result);\n      out.tiles[static_cast<std::size_t>(tile.id)]={worker,result.seconds,result.stall_seconds,result.counters};\n    }"
+  },
+  {
+   "id": "mpi_static",
+   "file": "src/main.cpp",
+   "first_line": 208,
+   "last_line": 215,
+   "commit": "e2c13e2",
+   "matches_frozen_commit": true,
+   "note": "Static MPI: contiguous equal-count tile range per rank.",
+   "text": "  if(is_static(o.backend)||ranks==1) {\n    std::vector<int> ids;\n    const int worker_index=o.coordinator_only?rank-1:rank;\n    const int worker_count=o.coordinator_only?ranks-1:ranks;\n    const int begin=worker_index<0?0:static_cast<int>(static_cast<std::int64_t>(tiles.size())*worker_index/worker_count);\n    const int end=worker_index<0?0:static_cast<int>(static_cast<std::int64_t>(tiles.size())*(worker_index+1)/worker_count);\n    for(int i=begin;i<end;++i) ids.push_back(i);\n    if(rank==0) {"
+  },
+  {
+   "id": "coordinator",
+   "file": "src/main.cpp",
+   "first_line": 246,
+   "last_line": 306,
+   "commit": "e2c13e2",
+   "matches_frozen_commit": true,
+   "note": "Dynamic coordinator: dispatch, MPI_Recv(MPI_ANY_SOURCE), throughput update, next dispatch.",
+   "text": "  } else if(rank==0) {\n    int next=0,active=0;\n    std::vector<double> throughput(static_cast<std::size_t>(ranks));\n    std::vector<std::size_t> pending(static_cast<std::size_t>(ranks));\n    auto dispatch=[&](int worker) {\n      const int remaining=static_cast<int>(tiles.size())-next;\n      Work work{next,batch_size(o,remaining,ranks,throughput[static_cast<std::size_t>(worker)],static_cast<double>(o.cfg.tile)*o.cfg.tile)};\n      next+=work.count;\n      if(work.count>0) {\n        ++out.scheduler.assignments;\n        ++out.scheduler.batch_histogram[static_cast<std::size_t>(work.count)];\n        out.scheduler.min_batch=out.scheduler.min_batch?std::min(out.scheduler.min_batch,work.count):work.count;\n        out.scheduler.max_batch=std::max(out.scheduler.max_batch,work.count);\n        if(!o.trace_csv.empty()) {\n          pending[static_cast<std::size_t>(worker)]=out.trace.size();\n          out.trace.push_back({worker,work.begin,work.count,0,elapsed(),0,0,0,throughput[static_cast<std::size_t>(worker)]});\n        }\n      }\n      const auto sent=std::chrono::steady_clock::now();\n      MPI_Send(&work,2,MPI_INT,worker,assignment,MPI_COMM_WORLD);\n      local_timing.mpi_send+=seconds_since(sent);\n      if(work.count>0) ++active;\n    };\n    for(int worker=1;worker<ranks;++worker) dispatch(worker);\n    while(active>0) {\n      int count=0;MPI_Status status;\n      const auto waited=std::chrono::steady_clock::now();\n      MPI_Recv(&count,1,MPI_INT,MPI_ANY_SOURCE,batch_result,MPI_COMM_WORLD,&status);\n      local_timing.result_wait+=seconds_since(waited);\n      const auto handling_started=std::chrono::steady_clock::now();\n      const int worker=status.MPI_SOURCE;\n      double work_seconds=0,stall_seconds=0;std::uint64_t pixels=0;\n      for(int k=0;k<count;++k) {\n        Packet packet;\n        TileResult result=receive_result(tiles,worker,packet,local_timing);\n        place_tile(out.image,o.cfg.width,tiles[static_cast<std::size_t>(packet.id)],result.rgb);\n        out.tiles[static_cast<std::size_t>(packet.id)]={worker,result.seconds,result.stall_seconds,result.counters};\n        WorkerMetrics& metrics=out.workers[static_cast<std::size_t>(worker)];\n        metrics.counters+=result.counters;\n        metrics.compute+=result.seconds-result.stall_seconds;\n        metrics.stall+=result.stall_seconds;\n        work_seconds+=result.seconds;stall_seconds+=result.stall_seconds;pixels+=result.counters.pixels;\n      }\n      ++out.workers[static_cast<std::size_t>(worker)].assignments;\n      const double completed_at=elapsed();\n      out.scheduler.completed_tiles+=count;\n      out.scheduler.final_worker_completion_seconds[static_cast<std::size_t>(worker)]=completed_at;\n      if(out.scheduler.first_batch_completion_seconds==0) out.scheduler.first_batch_completion_seconds=completed_at;\n      if(out.scheduler.tail90_start_seconds==0 && out.scheduler.completed_tiles*10>=static_cast<int>(tiles.size())*9)\n        out.scheduler.tail90_start_seconds=completed_at;\n      if(!o.trace_csv.empty()) {\n        TraceRecord& record=out.trace[pending[static_cast<std::size_t>(worker)]];\n        record.completed=completed_at;record.compute=work_seconds-stall_seconds;record.stall=stall_seconds;\n        record.remaining_on_completion=static_cast<int>(tiles.size())-out.scheduler.completed_tiles;\n      }\n      if(work_seconds>0) {\n        const double rate=static_cast<double>(pixels)/work_seconds;\n        double& estimate=throughput[static_cast<std::size_t>(worker)];\n        estimate=estimate==0?rate:0.5*estimate+0.5*rate;\n      }\n      --active;dispatch(worker);"
+  },
+  {
+   "id": "worker_loop",
+   "file": "src/main.cpp",
+   "first_line": 310,
+   "last_line": 325,
+   "commit": "e2c13e2",
+   "matches_frozen_commit": true,
+   "note": "Worker loop: receive assignment, render, send tiles back, stop on count 0.",
+   "text": "    while(true) {\n      Work work{};\n      const auto waited=std::chrono::steady_clock::now();\n      MPI_Recv(&work,2,MPI_INT,0,assignment,MPI_COMM_WORLD,MPI_STATUS_IGNORE);\n      local_timing.assignment_wait+=seconds_since(waited);\n      ++local_timing.worker_requests;\n      if(work.count==0) break;\n      std::vector<TileResult> results;\n      results.reserve(static_cast<std::size_t>(work.count));\n      for(int i=0;i<work.count;++i)\n        results.push_back(render_assigned(tiles[static_cast<std::size_t>(work.begin+i)]));\n      const auto sent=std::chrono::steady_clock::now();\n      MPI_Send(&work.count,1,MPI_INT,0,batch_result,MPI_COMM_WORLD);\n      local_timing.mpi_send+=seconds_since(sent);\n      for(int i=0;i<work.count;++i) send_result(tiles[static_cast<std::size_t>(work.begin+i)],results[static_cast<std::size_t>(i)],0,local_timing);\n    }"
+  },
+  {
+   "id": "batch_size",
+   "file": "src/main.cpp",
+   "first_line": 169,
+   "last_line": 175,
+   "commit": "e2c13e2",
+   "matches_frozen_commit": true,
+   "note": "Adaptive batch size: target ~50 ms from measured throughput, clamp 1..8, fairness taper.",
+   "text": "int batch_size(const Options& o,int remaining,int ranks,double throughput,double tile_pixels) {\n  if(remaining<=0) return 0;\n  if(!is_adaptive(o.backend)) return std::min(remaining,o.fixed_batch);\n  // Measured pixels/second targets roughly 50 ms per assignment; taper near queue exhaustion.\n  const int observed=throughput>0?static_cast<int>(std::clamp(throughput*static_cast<double>(o.adaptive_target_ms)/1000.0/tile_pixels,1.0,8.0)):o.adaptive_initial_batch;\n  const int fair=std::max(1,remaining/std::max(1,(ranks-1)*2));\n  return std::min({remaining,observed,fair,8});"
+  }
+ ]
+}
