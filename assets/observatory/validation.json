@@ -1,0 +1,168 @@
+{
+  "generated_utc": "2026-09-29T19:49:31+00:00",
+  "frozen_source": "e2c13e2204ca28aecb90d2d33703587bd16027a1",
+  "passed": true,
+  "summary": "32/32 checks passed",
+  "checks": [
+    {
+      "check": "protected evidence (src/include/tests/results) identical to pre-sprint snapshot",
+      "passed": true,
+      "detail": "11211/11211 files byte-identical"
+    },
+    {
+      "check": "frozen source src/include/tests identical to e2c13e2",
+      "passed": true,
+      "detail": "no differences"
+    },
+    {
+      "check": "no uncommitted changes under src/include/tests/results",
+      "passed": true,
+      "detail": "clean"
+    },
+    {
+      "check": "all generated data files parse as strict JSON",
+      "passed": true,
+      "detail": "15 files"
+    },
+    {
+      "check": "no NaN or Infinity values",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "no placeholder strings (TODO/TBD/undefined/NaN)",
+      "passed": true,
+      "detail": "[]"
+    },
+    {
+      "check": "no local user paths in data",
+      "passed": true,
+      "detail": "[]"
+    },
+    {
+      "check": "offline bundle.js matches the JSON data files",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "12 formal experiment IDs present in data and on disk",
+      "passed": true,
+      "detail": "6 final + 6 historical"
+    },
+    {
+      "check": "final experiments FORMAL, historical ones HISTORICAL and superseded",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "every experiment independently rehashed with 0 failures",
+      "passed": true,
+      "detail": "916 images"
+    },
+    {
+      "check": "experiment browser values agree with manifests",
+      "passed": true,
+      "detail": "git SHA, records, failures, repeats, status"
+    },
+    {
+      "check": "every referenced file exists",
+      "passed": true,
+      "detail": "158 paths"
+    },
+    {
+      "check": "no runtime internet references (fonts, CDNs, APIs)",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "convergence frames exist, ascending SPP, only SPP changes",
+      "passed": true,
+      "detail": "9 frames, SPP 1-256"
+    },
+    {
+      "check": "gallery hashes recomputed and matching",
+      "passed": true,
+      "detail": "6 scenes"
+    },
+    {
+      "check": "scheduler events and tile ownership match raw trace.csv/tiles.csv",
+      "passed": true,
+      "detail": "static 0 events, dynamic 144 events, adaptive 73 events"
+    },
+    {
+      "check": "static timeline labelled RECONSTRUCTED",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "workload: 144 tiles, positive times, ratio consistent, deterministic counters",
+      "passed": true,
+      "detail": "33.73x spread"
+    },
+    {
+      "check": "correctness: 7 backends, one hash, recomputed, 0 differing pixels, matches the recorded end-to-end run",
+      "passed": true,
+      "detail": "57881d257daf2474"
+    },
+    {
+      "check": "validation stack re-run at build: all layers PASS",
+      "passed": true,
+      "detail": "Core tests, CLI validation, BVH validation, Backend validation, Analysis tests, Formal image rehash (final six experiments)"
+    },
+    {
+      "check": "stress values match the stress manifest",
+      "passed": true,
+      "detail": "600.341 s, timeout 600 s"
+    },
+    {
+      "check": "provenance chains: every path exists, every claim found in report text",
+      "passed": true,
+      "detail": "6 chains"
+    },
+    {
+      "check": "source inspector excerpts identical to the frozen commit",
+      "passed": true,
+      "detail": "7 snippets"
+    },
+    {
+      "check": "classification labels valid",
+      "passed": true,
+      "detail": "44 labels"
+    },
+    {
+      "check": "10 navigation sections with controllers and unique keys",
+      "passed": true,
+      "detail": "1:overview 2:render 3:workload 4:scheduler 5:hardware 6:performance 7:correctness 8:stress 9:provenance 0:defence"
+    },
+    {
+      "check": "deep-link routes point to real sections",
+      "passed": true,
+      "detail": "21 routes"
+    },
+    {
+      "check": "no duplicate IDs",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "technical Q&A questions have answer, evidence, a labelled trade-off/limitation/context and sources",
+      "passed": true,
+      "detail": "15 questions"
+    },
+    {
+      "check": "experiment capsule: frozen SHA and formal experiment IDs",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "final report MD/DOCX/PDF match the hashes recorded in the experiment capsule",
+      "passed": true,
+      "detail": "HELIOS_FINAL_REPORT.docx, HELIOS_FINAL_REPORT.md, HELIOS_FINAL_REPORT.pdf"
+    },
+    {
+      "check": "required Observatory screenshots exist at 1920x1080",
+      "passed": true,
+      "detail": "13 PNGs"
+    }
+  ]
+}
