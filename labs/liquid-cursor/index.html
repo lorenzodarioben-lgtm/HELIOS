@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Liquid Cursor Lab · Phase 4.5</title>
+<meta name="description" content="Isolated Helios lab for the experimental liquid cursor: the approved Santioni-style primary body and, in Mode B, the Phase 4.5 connected goo wake (with the droplet-centric rich goo, the Phase 4 pool and the approved Phase 3 single droplet as snapshots), with the Phase 1 disc, the Phase 2 original and the refined body side by side. Not linked from the Observatory.">
+<meta name="robots" content="noindex">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 16 16%22%3E%3Ccircle cx=%228%22 cy=%228%22 r=%225%22 fill=%22%231b1e21%22/%3E%3C/svg%3E">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="bar">
+  <h1>Liquid cursor lab<small>Phase 4.5 · approved body + reference goo spine</small></h1>
+  <fieldset id="presets">
+    <legend>Compare</legend>
+    <span class="compare" title="Keys 1, 2 and 3 switch presets from anywhere on the page">
+      <label><input type="radio" name="compare" value="phase1Disc"><kbd>1</kbd> Phase 1 disc</label>
+      <label><input type="radio" name="compare" value="phase2Original"><kbd>2</kbd> Phase 2 original</label>
+      <label><input type="radio" name="compare" value="santioniRefined" checked><kbd>3</kbd> Santioni refined</label>
+    </span>
+    <label class="sr" for="preset">All presets</label><select id="preset"></select>
+  </fieldset>
+  <fieldset id="modes">
+    <legend>Mode</legend>
+    <label><input type="radio" name="mode" value="A" checked> A · Baseline</label>
+    <label><input type="radio" name="mode" value="B"> B · Hybrid (reference goo)</label>
+    <label><input type="radio" name="mode" value="C"> C · Debug</label>
+  </fieldset>
+  <fieldset id="masks">
+    <legend>Mask</legend>
+    <label><input type="radio" name="mask" value="difference" checked> Difference</label>
+    <label><input type="radio" name="mask" value="plain"> Plain diagnostic</label>
+  </fieldset>
+  <fieldset>
+    <legend>Lab</legend>
+    <label><input type="checkbox" id="opt-enabled" checked> Custom cursor</label>
+    <label><input type="checkbox" id="opt-native"> Show native cursor too</label>
+  </fieldset>
+</header>
+<p class="phase-banner" id="banner-b" role="status" hidden>PHASE 4.5 — REFERENCE GOO. Fast motion turns the body into a heavy teardrop trailing a neck along its path; beads break off its end. Slow motion stays the clean body. Keys 4-9, 0 compare.</p>
+<div class="droplet-bar" id="droplet-bar" hidden>
+  <span class="tag"><b>Droplets</b> · lab</span>
+  <button type="button" class="btn quiet" id="drop-trigger" title="Starts one real droplet event from the body (key D does the same wherever the pointer is)">Shed <kbd>D</kbd></button>
+  <button type="button" class="btn quiet" id="drop-strong" title="A strong flick: a larger bead; rich goo: its synthetic swing (1.3x) also breaks off a secondary" aria-label="Strong flick">Strong</button>
+  <button type="button" class="btn quiet" id="drop-extreme" title="An extreme flick: rich goo adds a secondary and a micro (2.05x swing); the Phase 4 pool, one residual satellite" aria-label="Extreme flick">Extreme</button>
+  <button type="button" class="btn quiet" id="drop-goo" title="Rich goo burst (key G): two primaries 140 ms apart through the real scheduler, with their residuals">Goo burst <kbd>G</kbd></button>
+  <button type="button" class="btn quiet" id="drop-heavy" title="Heavy burst (key H): three violent primaries through the real scheduler (capacity and neck rules still apply)">Heavy burst <kbd>H</kbd></button>
+  <button type="button" class="btn quiet" id="drop-clear" title="Ends every droplet now">Clear</button>
+  <label>Direction <select id="drop-dir">
+    <option value="auto">Auto</option><option value="0">→</option><option value="45">↘</option><option value="90">↓</option><option value="135">↙</option>
+    <option value="180">←</option><option value="-135">↖</option><option value="-90">↑</option><option value="-45">↗</option></select></label>
+  <label>Launch <input type="range" id="drop-speed" min="0" max="1200" step="20" value="420"> <output id="drop-speed-out" for="drop-speed">420 px/s</output></label>
+  <label>Droplet <select id="drop-preset"></select></label>
+  <label>Pool <select id="pool-preset"></select></label>
+  <label>Capacity <select id="pool-cap"><option value="preset">snapshot</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></label>
+  <label id="drop-enable-wrap" hidden><input type="checkbox" id="drop-enable" checked> Droplets (Mode C)</label>
+  <label id="drop-natural-wrap" hidden><input type="checkbox" id="drop-natural" checked> Natural emissions (Mode C)</label>
+  <span class="out" id="drop-status" aria-live="off"></span>
+</div>
+<p class="gl-fail" id="gl-fail" role="alert" hidden></p>
+<p class="policy" id="policy" aria-live="polite"></p>
+
+<main>
+  <div class="row surfaces">
+    <section class="surface paper" aria-labelledby="s-a">
+      <span class="tag" id="s-a"><b>A</b> · Light table · expect a near-black disc</span>
+      <p class="big">HELIOS</p>
+      <p class="body">Adaptive hybrid distributed rendering. Small body copy on warm paper checks how text strokes invert inside the mask and whether the antialiased edge stays clean against fine type.</p>
+      <p class="meta">frozen source e2c13e2 · i7-11370H 4C/8T · protocol v2 · 1920×1080</p>
+    </section>
+    <section class="surface dark" aria-labelledby="s-b">
+      <span class="tag" id="s-b"><b>B</b> · Dark surface · expect a near-white disc</span>
+      <p class="big">DARKROOM</p>
+      <p>Charcoal ground (#121518) like the Observatory's trace inspector and code listings. Light text should turn dark inside the disc.</p>
+    </section>
+    <section class="surface swatches" aria-label="C · Colour surfaces">
+      <div class="swatch teal">C · Teal #0f7479</div>
+      <div class="swatch amber">C · Amber #c3821f</div>
+      <div class="swatch grey">C · Grey #9aa2a9</div>
+    </section>
+    <section class="surface image" aria-labelledby="s-d">
+      <span class="tag" id="s-d"><b>D</b> · Image · real Helios render</span>
+      <img src="../../assets/showcase/gallery/reflective-hero.png" alt="Helios reflective scene render, 1920×1080, used unchanged from the gallery" decoding="async">
+    </section>
+  </div>
+
+  <div class="row controls">
+    <section class="panel" aria-labelledby="s-e">
+      <span class="tag" id="s-e"><b>E</b> · Interactives · hover grows the body about 1.27× and calms its surface</span>
+      <div class="inter">
+        <button class="btn" type="button" id="btn-real">Real button</button>
+        <a href="#s-e" id="link-real">Text link</a>
+        <button class="btn quiet" type="button" disabled>Disabled button</button>
+        <details><summary>Details / summary</summary><p class="out">Opened natively.</p></details>
+        <label>Select <select id="sel"><option>Static</option><option>Dynamic</option><option>Adaptive</option></select></label>
+        <label>Range <input type="range" id="rng" min="0" max="100" value="40"></label>
+        <div class="card" data-cursor-interactive tabindex="0" role="button" id="card">data-cursor-interactive card</div>
+      </div>
+      <p class="note">Expected: button, link, summary and the card register as interactive; the disabled button, select and range do not. Pressing compresses the body slightly; releasing rebounds. <span class="out" id="inter-out">clicks: 0</span></p>
+    </section>
+    <section class="panel" aria-labelledby="s-f">
+      <span class="tag" id="s-f"><b>F</b> · Native-cursor escapes · every block is [data-cursor-ignore] · expect the disc to vanish and the native cursor to return</span>
+      <div class="native">
+        <p class="select-text" data-cursor-ignore>Select this sentence with the mouse: text selection needs the native I-beam so the caret position is exact.</p>
+        <pre class="code" data-cursor-ignore><code>render_tile(tile, scene, cfg)  // copy me
+  #pragma omp for schedule(static)</code></pre>
+        <div data-cursor-ignore><span class="tag">Copy-style field</span><button type="button" class="copy" id="copy" title="Copy the path">assets/observatory/data/experiment_capsule.json</button> <span class="out" id="copy-out"></span></div>
+        <div data-cursor-ignore><span class="tag">Wipe control (pointer capture)</span><div class="wipe" id="wipe"><div class="left"></div><div class="handle" id="wipe-handle" tabindex="0" role="slider" aria-label="Wipe position" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50"></div></div></div>
+        <div class="span2" data-cursor-ignore><span class="tag">Canvas precision target · <span id="prec-out">no cell</span></span><canvas class="precision" id="precision" tabindex="0" aria-label="Precision target grid, arrow keys move the selection"></canvas></div>
+      </div>
+    </section>
+  </div>
+</main>
+
+<aside class="debug" id="debug" data-cursor-ignore hidden aria-label="Mode C debug readout"><h2>Mode C · engineering readout</h2></aside>
+<details class="tuning" id="tuning" data-cursor-ignore>
+  <summary>Tuning <span class="out" id="tune-preset"></span></summary>
+  <div class="tuning-rows" id="tuning-rows"></div>
+  <div class="tuning-actions"><button type="button" id="tune-reset">Reset to preset</button><button type="button" id="tune-copy">Copy values</button><span class="out" id="tune-out"></span></div>
+</details>
+
+<script src="config.js"></script>
+<script src="droplet.js"></script>
+<script src="liquid-cursor.js"></script>
+<script src="debug.js"></script>
+<script src="lab.js"></script>
+</body>
+</html>
