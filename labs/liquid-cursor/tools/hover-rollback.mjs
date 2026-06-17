@@ -1,0 +1,21 @@
+// Regression evidence for normal pointer-following black hover after removing target morphing.
+import {readFileSync,writeFileSync,mkdirSync} from 'node:fs';
+import {resolve,join} from 'node:path';
+import {launch,sleep,labelledSheet} from './cdp.mjs';
+const OUT=resolve('labs/liquid-cursor/evidence/magnetic-rollback');mkdirSync(OUT,{recursive:true});
+const src=readFileSync('labs/liquid-cursor/tools/check-observatory.mjs','utf8'),driver=src.slice(src.indexOf('function installDriver()'),src.indexOf('const around =')),drv=`(${driver.slice(0,driver.lastIndexOf('}')+1)})()`;
+const B=await launch(),keep=setInterval(()=>{},1000),results={checks:[],when:new Date().toISOString()},rows=[];
+function check(name,ok,detail={}){results.checks.push({name,ok,...detail});console.log(ok?'PASS':'FAIL',name,JSON.stringify(detail));if(!ok)process.exitCode=1;}
+try{
+ for(const [name,route,sel,prep]of [['sidebar row','overview','.navpanel a[data-id=workload] .t','document.querySelector("#nav").classList.add("open");'],['wide numbered row','overview','.toc a[data-route=workload] .t','document.querySelector(".toc a[data-route=workload]").scrollIntoView({block:"center"});'],['ordinary tab','performance','#pf-tabs button','']]){
+  const {targetId}=await B.send('Target.createTarget',{url:'about:blank'}),{sessionId}=await B.send('Target.attachToTarget',{targetId,flatten:true}),s=(m,p)=>B.send(m,p,sessionId),ev=async expression=>{const r=await s('Runtime.evaluate',{expression,returnByValue:true,awaitPromise:true});if(r.exceptionDetails)throw Error(r.exceptionDetails.text);return r.result.value;};
+  await s('Page.enable');await s('Runtime.enable');await s('Emulation.setDeviceMetricsOverride',{width:1440,height:900,deviceScaleFactor:1,mobile:false});await s('Page.navigate',{url:`http://127.0.0.1:8315/assets/observatory/index.html?cursor=test&glass=target&hero=b#${route}`});
+  for(let i=0;i<120;i++){if(await ev('!!HeliosLiquidCursor?.test').catch(()=>false))break;await sleep(50);}await sleep(450);if(prep)await ev(prep+'1');await sleep(400);await ev(drv);
+  const pt=await ev(`(()=>{const e=document.querySelector(${JSON.stringify(sel)}),r=document.createRange();r.selectNodeContents(e);const b=r.getBoundingClientRect();return [b.left+8,b.top+b.height/2];})()`);await ev(`__pv.ready(${pt[0]},${pt[1]});__pv.hold(1500);1`);
+  const proof=await ev(`(()=>{const T=HeliosLiquidCursor.test,el=T.S.interactiveEl,b=el.getBoundingClientRect(),m=T.readMask();let loX=m.w,hiX=-1,loY=m.h,hiY=-1;for(let y=0;y<m.h;y++)for(let x=0;x<m.w;x++)if(m.px[(y*m.w+x)*4+3]>127){loX=Math.min(loX,x);hiX=Math.max(hiX,x);loY=Math.min(loY,y);hiY=Math.max(hiY,y);}const tx=T.S.renderX-210,ty=T.S.renderY-210;return {state:__pv.snap(),bodyWidth:hiX-loX+1,bodyHeight:hiY-loY+1,renderedCenter:[tx+(loX+hiX)/2,ty+m.h-1-(loY+hiY)/2],target:{cx:b.left+b.width/2,w:b.width},raw:[T.S.rawX,T.S.rawY],canvas:[T.canvas.width,T.canvas.height],magneticAPI:'magnetic' in T||'magnetic' in HeliosLiquidCursor.status()};})()`);
+  check(name+' follows pointer instead of target centre',Math.abs(proof.state.x-proof.raw[0])<.01&&Math.abs(proof.state.y-proof.raw[1])<.01&&Math.abs(proof.renderedCenter[0]-proof.raw[0])<1.5,{pointer:proof.raw,body:proof.renderedCenter,target:proof.target});
+  check(name+' retains round hover dimensions / fixed backing',proof.state.mat===0&&Math.abs(proof.bodyWidth-proof.bodyHeight)<3&&proof.bodyWidth<100&&proof.canvas[0]===420&&proof.canvas[1]===420&&!proof.magneticAPI,proof);
+  const shot=Buffer.from((await s('Page.captureScreenshot',{format:'png',clip:{x:0,y:await ev('scrollY')+Math.max(0,pt[1]-100),width:1440,height:230,scale:1}})).data,'base64');rows.push({label:name,cells:[shot]});await B.send('Target.closeTarget',{targetId});
+ }
+ writeFileSync(join(OUT,'01-normal-black-hover.png'),await labelledSheet(B,{title:'Magnetic morph removed: approved round pointer-following hover restored',note:'No target attraction or fitted rectangle. Sidebar/index remain difference; local Goo suppression policy is unchanged.',columns:['Actual nav / index / ordinary control'],rows}));writeFileSync(join(OUT,'hover-metrics.json'),JSON.stringify(results,null,2));console.log(results.checks.filter(c=>c.ok).length+'/'+results.checks.length+' passed');
+}finally{await B.close();clearInterval(keep);}
