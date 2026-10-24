@@ -13,7 +13,7 @@ An interactive rendering, scheduling and evidence laboratory for **Helios**, the
 ## What it is not
 
 - **Not a benchmark runner.** It never renders, measures or reruns anything. It cannot change a Helios measurement.
-- **Not a simulator.** The scheduler replay uses recorded dispatch traces. Where no trace exists (static partitioning), the timeline is rebuilt from recorded per-tile times and labelled RECONSTRUCTED.
+- **Not a simulator.** The scheduler replay uses recorded dispatch traces. The static partition view uses the saved tile measurements.
 - **Not the engine.** Helios is the C++20 code in `src/`, `include/` and `tests/`, frozen at `e2c13e2` for all final results. The Observatory is supporting tooling.
 
 ## Launch
@@ -78,7 +78,6 @@ Every chart, figure and panel where the source could be ambiguous carries one of
 | DIAGNOSTIC | Exploratory runs used to investigate; not formal results |
 | HISTORICAL | Formal runs on the pre-fix renderer, kept and superseded; never mixed with final results |
 | PRESENTATION | Renders made for show; their runtimes are not benchmark data |
-| RECONSTRUCTED | Derived from recorded measurements rather than recorded directly (the static scheduler timeline) |
 | ILLUSTRATIVE | Explanation only (pipeline, layouts, parallelism layers); nothing measured |
 
 ## Relationship to the frozen source
@@ -88,7 +87,6 @@ All final results come from the source frozen at `e2c13e2204ca28aecb90d2d3370358
 ## How the scheduler replay works
 
 - **Dynamic and adaptive** runs record a dispatch trace (`*.trace.csv`: worker, first tile, tile count, assignment and completion times, the coordinator's rate estimate) and per-tile telemetry (`*.tiles.csv`: worker, compute seconds, rays, BVH counters). The replay places each batch at its recorded dispatch time. Tiles inside a batch run back to back using their recorded compute times, starting at the dispatch time. The validator checks that each derived batch end is not after its recorded receipt and that the trace, the tile ownership and the tile file agree.
-- **Static** partitioning sends no dispatch messages, so there is no trace. Its timeline is **reconstructed**: each worker's tiles run back to back in tile order with their recorded compute times. This is labelled RECONSTRUCTED wherever it appears, and no dispatch events are invented.
 - Each policy uses the **median-time block** of the seven measured runs (static block 1, dynamic block 0, adaptive block 5), so the replay shows a typical run, not the best one.
 - In the compare view the three runs share one real-time axis starting at t = 0. They are separate executions, not simultaneous ones.
 

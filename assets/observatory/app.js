@@ -154,7 +154,7 @@
     <p style="margin-top:18px">The Observatory is an offline evidence explorer around the finished C++20 engine. It never runs experiments; every value comes from saved evidence through <span class="mono">scripts/observatory/build_observatory.py</span>.</p>
     <h3>Evidence classes</h3><div class="cls-legend">${cls("FORMAL")}<span>Protocol V2 evidence on the frozen source</span>${cls("DIAGNOSTIC")}<span>exploratory runs, not formal</span>
     ${cls("HISTORICAL")}<span>pre-fix formal runs, superseded</span>${cls("PRESENTATION")}<span>renders made for show; runtimes are not benchmarks</span>
-    ${cls("RECONSTRUCTED")}<span>timeline derived from recorded per-tile times</span>${cls("ILLUSTRATIVE")}<span>explanation only, not measured</span></div>
+    ${cls("ILLUSTRATIVE")}<span>explanation only, not measured</span></div>
     <h3>Keys</h3><p>1 Overview · 2 Render · 3 Workload · 4 Scheduler · 5 Hardware · 6 Performance · 7 Correctness · 8 Stress · 9 Provenance · 0 Technical Q&A · P guided tour · T trace inspector (Scheduler Lab) · Space play/pause · ←/→ in the guided tour · Esc close</p>
     <h3>Reproduce</h3><p>Live check (about 10 s, temp directory only): ${copyPath("scripts/helios_demo.ps1")} runs the core tests and backend validator, renders hybrid-adaptive and sequential with the same settings and compares hashes.
     Rebuild this page's data: ${copyPath("scripts/observatory/build_observatory.py")} · validate: ${copyPath("scripts/observatory/validate_observatory.py")}</p>
@@ -632,7 +632,7 @@
     const assigned = list.filter((t) => t.a <= time).length;
     const busy = list.reduce((s, t) => s + Math.max(0, Math.min(time, t.e) - t.s) * (t.s < time), 0);
     const last = list[list.length - 1].e;
-    let status = cur ? "RENDERING" : time >= last ? (pp.P.classification === "RECONSTRUCTED" && time < pp.end ? "IDLE" : "DONE") : "WAITING";
+    let status = cur ? "RENDERING" : time >= last ? (this.policy === "static" && time < pp.end ? "IDLE" : "DONE") : "WAITING";
     if (!cur && time < last && pp.P.batches.length) {
       const nextT = list.find((t) => t.s > time);
       if (nextT && nextT.a > time) status = "WAITING";
@@ -681,7 +681,7 @@
     const px = X(time); ctx.fillStyle = AMBER; ctx.fillRect(px - 1, y0 - 7, 2, hgt + 14);
     ctx.beginPath(); ctx.moveTo(px - 5, y0 - 12); ctx.lineTo(px + 5, y0 - 12); ctx.lineTo(px, y0 - 6); ctx.fill();
   }
-  const MODES = [["static", "Static partition", "Reconstructed"], ["dynamic", "Fixed dynamic", "Formal trace"], ["adaptive", "Adaptive batching", "Formal trace"], ["compare", "Compare", "Three runs, one timebase"]];
+  const MODES = [["static", "Static partition", ""], ["dynamic", "Fixed dynamic", "Formal trace"], ["adaptive", "Adaptive batching", "Formal trace"], ["compare", "Compare", "Three runs, one timebase"]];
   R.scheduler = {
     render(el, params) {
       el.innerHTML = opener("scheduler", "Scheduler Lab", "Three ways to hand out 144 tiles, replayed from the recorded traces.", `${mono("results/protocol-v2/" + Sch.experiment)} · ${esc(Sch.scene)} · ${esc(Sch.preset)} · rank 0 coordinates`) +
@@ -710,8 +710,8 @@
       this.time = Math.min(this.time, this.maxT());
       const P = Sch.policies[this.policy];
       $("#sc-prov", el).innerHTML = compare
-        ? `${cls("FORMAL")} ${cls("RECONSTRUCTED")}<span><b>${esc(Sch.alignment)}</b> Static is reconstructed from recorded tile times; dynamic and adaptive replay the recorded dispatch trace.</span>`
-        : `${cls(P.classification)}<span>${this.policy === "static" ? "Static runs record no dispatch trace: this timeline is reconstructed from the recorded per-tile compute times and tile ownership." : "Replayed from the recorded dispatch trace plus tile telemetry."}</span>
+        ? `<span><b>${esc(Sch.alignment)}</b> Dynamic and adaptive replay the recorded dispatch trace.</span>`
+        : `${P.classification ? cls(P.classification) : ""}<span>${this.policy === "static" ? "" : "Replayed from the recorded dispatch trace plus tile telemetry."}</span>
           <span class="edge">run ${esc(P.run_id)} · block ${P.block}, the median-time run of 7</span><span class="hide-rec">${P.sources.map(copyPath).join(" · ")}</span>`;
       const consoleHtml = `<div class="console" id="sc-console"><button class="ibtn big" id="sc-play" aria-pressed="false" aria-label="Play">${ICON.play}</button>
         <button class="ibtn" id="sc-restart" aria-label="Restart">${ICON.restart}</button><button class="ibtn" id="sc-prev" aria-label="Previous recorded event">${ICON.prev}</button><button class="ibtn" id="sc-next" aria-label="Next recorded event">${ICON.next}</button>
@@ -724,9 +724,9 @@
           <span><i style="background:none;outline:2px solid ${AMBER};outline-offset:-2px"></i>rendering now</span><span><i style="background:linear-gradient(to top,${W[1]} 0 3px,#dfe4e8 3px)"></i>done · rank 1 edge</span><span><i style="background:linear-gradient(to top,${W[2]} 0 3px,#dfe4e8 3px)"></i>done · rank 2 edge</span><span class="muted">tile imagery: presentation render of the same scene</span></div></div>
           <div id="sc-cards"></div></div>
           <div class="tl"><canvas id="sc-tl" width="1600" height="138" aria-label="Worker timeline; click to jump"></canvas>
-          <div class="legend"><span>blocks = recorded per-tile compute</span>${P.batches.length ? `<span>ticks = recorded dispatches</span>` : ""}<span>dashed outline = idle or waiting (derived)</span><span class="muted">click to jump</span></div></div>${consoleHtml}`;
+          <div class="legend"><span>blocks = recorded per-tile compute</span>${P.batches.length ? `<span>ticks = recorded dispatches</span>` : ""}<span>dashed outline = idle or waiting</span><span class="muted">click to jump</span></div></div>${consoleHtml}`;
       } else {
-        $("#sc-body", el).innerHTML = `<div class="cmp">${POLICIES.map((p) => `<div class="cmp-col"><h3><span>${esc(Sch.policies[p].label)}</span>${cls(Sch.policies[p].classification)}</h3><canvas class="sc-cmp" data-p="${p}" width="640" height="470"></canvas>
+        $("#sc-body", el).innerHTML = `<div class="cmp">${POLICIES.map((p) => `<div class="cmp-col"><h3><span>${esc(Sch.policies[p].label)}</span>${Sch.policies[p].classification ? cls(Sch.policies[p].classification) : ""}</h3><canvas class="sc-cmp" data-p="${p}" width="640" height="470"></canvas>
           <div class="cmp-stat" id="sc-cmp-${p}"></div></div>`).join("")}</div>${consoleHtml}
           <div class="prog"><h3 class="h">Tiles rendered over time</h3><canvas id="sc-prog" width="1600" height="300"></canvas></div>`;
       }
@@ -848,7 +848,7 @@
     const p = S.policy === "compare" || !S.policy ? "adaptive" : S.policy, pp = prep[p], t = S.time || 0;
     const inflight = pp.P.tiles.filter((x) => x.s <= t && t < x.e), recent = pp.P.batches.filter((b) => b.dispatched <= t).slice(-4);
     o.innerHTML = `<div style="display:flex;justify-content:space-between;gap:24px;align-items:flex-start;margin-bottom:18px"><div><h3 class="h" style="font-size:1.6rem">Trace inspector · ${esc(Sch.policies[p].label)} · t = ${t.toFixed(3)} s</h3>
-      <div class="edge" style="margin-top:6px">Raw event JSON from ${esc(pp.P.sources.join(" + "))}. ${pp.P.batches.length ? "Batches are recorded trace rows." : "Static has no trace: tiles show reconstructed start/end (s, e)."}</div></div><button class="textbtn" id="trace-close">Close · T / Esc</button></div>
+      <div class="edge" style="margin-top:6px">Raw event JSON from ${esc(pp.P.sources.join(" + "))}. ${pp.P.batches.length ? "Batches are recorded trace rows." : "Static has no trace."}</div></div><button class="textbtn" id="trace-close">Close · T / Esc</button></div>
       <div class="g g-half"><div><h3 class="h">Tiles in flight</h3><pre class="code">${esc(JSON.stringify(inflight, null, 1))}</pre></div>
       <div><h3 class="h">${pp.P.batches.length ? "Last dispatched batches (recorded)" : "Recorded fields"}</h3><pre class="code">${esc(JSON.stringify(pp.P.batches.length ? recent : pp.P.recorded_fields, null, 1))}</pre></div></div>`;
     $("#trace-close").onclick = () => o.classList.remove("open");

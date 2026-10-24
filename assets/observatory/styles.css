@@ -59,7 +59,7 @@ p { margin: 0 0 0.9em; }
 .cls { display: inline-block; font: 700 0.64rem/1 var(--f-text); letter-spacing: 0.1em; text-transform: uppercase; color: var(--c, var(--ink-2));
   padding-bottom: 3px; border-bottom: 1px var(--ls, solid) currentColor; vertical-align: 0.2em; white-space: nowrap; }
 .cls-formal { --c: var(--teal); } .cls-diagnostic { --c: var(--steel); } .cls-historical { --c: var(--stone-ink); }
-.cls-presentation { --c: var(--ink-2); } .cls-reconstructed { --c: var(--ink); --ls: dashed; } .cls-illustrative { --c: var(--ink-3); --ls: dotted; }
+.cls-presentation { --c: var(--ink-2); } .cls-illustrative { --c: var(--ink-3); --ls: dotted; }
 .path { font: 500 0.78rem/1.4 var(--f-mono); color: var(--ink-2); word-break: break-all; cursor: copy; border-bottom: 1px dotted var(--rule-2); }
 .path.copied { color: var(--teal); border-bottom-color: var(--teal); }
 .pass { color: var(--pass); } .fail { color: var(--fail); }

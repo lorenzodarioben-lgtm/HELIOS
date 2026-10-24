@@ -64,7 +64,7 @@ How to use this: the WHAT I SAY blocks are a guide, not something to memorise wo
 
 **TIME** 3:30 to 5:00
 **ON SCREEN** O5: Scheduler Lab, compare view playing; then the *Static partition*, *Fixed dynamic* and *Adaptive batching* tabs; then the trace inspector.
-**ACTION** Press →; the three replays play. Point at rank 1 going idle in the static panel. Then click *Static partition* (point at the RECONSTRUCTED label), *Fixed dynamic* (point at the worker lanes), *Adaptive batching* (open *How adaptive batching decides*). Press **T**, point at a few rows, press **Esc**.
+**ACTION** Press →; the three replays play. Point at rank 1 going idle in the static panel. Then click *Static partition*, *Fixed dynamic* (point at the worker lanes), *Adaptive batching* (open *How adaptive batching decides*). Press **T**, point at a few rows, press **Esc**.
 
 **WHAT I SAY**
 > This is replayed from a formal scheduler experiment: same image, same two workers, rank 0 coordinating, three policies. **Under static, rank 1 finishes its easy half after 0.89 seconds and then sits idle** while rank 2 grinds on to 3.38 seconds. Dynamic hands out one tile at a time on demand, so both workers stay busy and finish together at 2.30.

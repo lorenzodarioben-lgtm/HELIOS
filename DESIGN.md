@@ -305,7 +305,7 @@ Quiet by default, inverted only when a button is the one lead action.
 Four equal columns between rule-2 hairlines, split by rule verticals. Each holds an uppercase condensed name (wdth 78) over a provenance edge line. The selected mode inverts to an ink slab. Hover tints the column white at 0.6.
 
 ### Evidence classification labels
-- **Style:** small tracked uppercase text-face labels underlined with a 1px current-colour rule. FORMAL is teal, DIAGNOSTIC steel, HISTORICAL stone-ink and PRESENTATION ink-2. RECONSTRUCTED is ink with a **dashed** underline, and ILLUSTRATIVE is ink-3 with a **dotted** underline. On a dark lead the FORMAL label lightens to a pale teal.
+- **Style:** small tracked uppercase text-face labels underlined with a 1px current-colour rule. FORMAL is teal, DIAGNOSTIC steel, HISTORICAL stone-ink, PRESENTATION ink-2 and ILLUSTRATIVE ink-3 with a **dotted** underline. On a dark lead the FORMAL label lightens to a pale teal.
 - **Placement:** inline after the heading or figure it qualifies, or at the start of the edge print beneath it.
 
 ### Cards / Containers
@@ -350,7 +350,7 @@ Code listings sit on the darkroom ground in 0.82rem mono with dim line numbers a
 - **Do** mount every render, canvas and thumbnail as a backlit frame on white, using the Backlight shadow.
 - **Do** mark panels with corner crop marks on paper and separate rows with 1px hairlines.
 - **Do** give each view exactly one inverted ink lead, such as the hero figure, the selected mode or the lead action.
-- **Do** attach an underlined evidence class label wherever a visual's provenance could be ambiguous. Use a dashed underline for RECONSTRUCTED and a dotted one for ILLUSTRATIVE.
+- **Do** attach an underlined evidence class label wherever a visual's provenance could be ambiguous. Use a dotted underline for ILLUSTRATIVE.
 - **Do** pair every worker colour with a text label.
 - **Do** open every section with numeral, condensed uppercase title, one-line statement and top-right edge-print ID.
 - **Do** animate on the shared ease (cubic-bezier(0.2, 0.7, 0.2, 1)) at 160 / 280 / 460ms, and zero all durations and delays under reduced motion.

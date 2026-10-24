@@ -31,7 +31,7 @@ FINAL_IDS = ["20260928T102644Z-100e1393", "20260928T103116Z-c00a63fc", "20260928
              "20260928T104502Z-5e829d04", "20260928T104823Z-8e1c1ed4", "20260928T105023Z-1dd576e1"]
 HISTORICAL_IDS = ["20260928T063038Z-301480e3", "20260928T064015Z-fd6ca303", "20260928T062641Z-d865a73c",
                   "20260928T063756Z-d01e8d9f", "20260928T075743Z-cf62886e", "20260928T080938Z-fe56f15c"]
-CLASSES = {"FORMAL", "DIAGNOSTIC", "HISTORICAL", "PRESENTATION", "RECONSTRUCTED", "ILLUSTRATIVE"}
+CLASSES = {"FORMAL", "DIAGNOSTIC", "HISTORICAL", "PRESENTATION", "ILLUSTRATIVE"}
 DATA_FILES = ["about", "overview", "scenes", "convergence", "workload", "scheduler", "hardware", "performance",
               "correctness", "stress", "provenance", "experiments", "defence", "snippets", "experiment_capsule"]
 SCREENSHOTS = ["overview", "render-lab", "workload-microscope", "scheduler-lab", "hardware-hybrid", "performance-lab",
@@ -208,7 +208,6 @@ def main():
             sch_bad.append(f"{k}: validation flags")
     C.add("scheduler events and tile ownership match raw trace.csv/tiles.csv", not sch_bad,
           "; ".join(sch_bad) or ", ".join(f"{k} {len(P['batches'])} events" for k, P in sch["policies"].items()))
-    C.add("static timeline labelled RECONSTRUCTED", "RECONSTRUCTED" in sch["policies"]["static"]["provenance"])
 
     # ------------------------------------------------------------------ workload
     W = D["workload"]

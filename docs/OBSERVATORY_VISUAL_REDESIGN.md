@@ -77,7 +77,6 @@ Evidence classes become small tracked uppercase labels in the text face, underli
 | DIAGNOSTIC | steel |
 | HISTORICAL | stone-ink `#6F6252` |
 | PRESENTATION | ink-2 |
-| RECONSTRUCTED | ink, dashed underline |
 | ILLUSTRATIVE | ink-3, dotted underline |
 
 Dark ground is used in only two places: the trace inspector and code excerpts, where a dark "viewer" is a purposeful contrast.

@@ -43,7 +43,7 @@ The build turns the extraction into one JSON file per page under `assets/observa
 
 - **Composition, not invention.** The overview cards and the 15 Technical Q&A answers are sentences whose numbers are filled in from the extracted values at build time. Changing an evidence file changes the text; no number is written into a template by hand.
 - **Guards.** The build stops if `src/`, `include/` or `tests/` differ from `e2c13e2` or if any value is NaN or Infinity.
-- **Classification.** Every data block carries one of FORMAL, DIAGNOSTIC, HISTORICAL, PRESENTATION, RECONSTRUCTED or ILLUSTRATIVE, and the interface shows it as a label beside the value.
+- **Classification.** Data blocks carry FORMAL, DIAGNOSTIC, HISTORICAL, PRESENTATION or ILLUSTRATIVE labels where appropriate.
 
 ## 3. Static web interface (`assets/observatory/`)
 
@@ -56,7 +56,7 @@ The build turns the extraction into one JSON file per page under `assets/observa
 | Component | Technique | Data |
 |---|---|---|
 | Tile grids (Workload Microscope, Scheduler Lab) | `<canvas>` 1280×720, 80 px per tile, optional render underlay | `workload.tiles`, `scheduler.policies.*.tiles` |
-| Scheduler timelines and the progress chart | `<canvas>` bars per worker; SVG line chart | recorded or reconstructed tile start and end times |
+| Scheduler timelines and the progress chart | `<canvas>` bars per worker; SVG line chart | recorded dispatch and tile timing data |
 | Worker lanes | HTML, recomputed per frame from the current time | batches, busy time, recorded rate estimate at dispatch |
 | Trace inspector | HTML overlay of raw event JSON | `scheduler.policies.*.batches` / `tiles` |
 | Bar and forest charts | inline SVG built by `hbars()` and `forest()` | medians, intervals, paired changes |

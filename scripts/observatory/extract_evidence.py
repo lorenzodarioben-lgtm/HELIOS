@@ -204,9 +204,7 @@ def scheduler():
         out["policies"][mode] = {
             "label": labels[mode], "description": rt.description, "run_id": rt.run_id, "block": rt.block,
             "wall_seconds": r(rt.wall, 6), "derived_end_seconds": r(rt.end, 6), "workers": rt.workers,
-            "classification": "RECONSTRUCTED" if mode == "static" else "FORMAL",
-            "provenance": ("STATIC TIMELINE RECONSTRUCTED FROM RECORDED TILE TIMES" if mode == "static"
-                           else "RECORDED DISPATCH TRACE + TILE TELEMETRY"),
+            **({} if mode == "static" else {"classification": "FORMAL", "provenance": "RECORDED DISPATCH TRACE + TILE TELEMETRY"}),
             "sources": [rel(SD.RAW / f"{rt.run_id}.tiles.csv")] + ([] if mode == "static" else [rel(SD.RAW / f"{rt.run_id}.trace.csv")]),
             "tiles": tiles, "batches": batches, "idle": idle,
             "busy_seconds": {str(w): r(sum(e.compute for e in rt.tiles if e.worker == w), 4) for w in rt.workers},

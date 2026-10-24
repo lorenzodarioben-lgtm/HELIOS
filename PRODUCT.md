@@ -37,7 +37,7 @@ Driven locally in Edge or Chrome from `python scripts/observatory/serve.py` (or 
 - Name: **HELIOS**, subtitle "Adaptive Hybrid Distributed Rendering Engine". Public wording uses ray tracing and Monte Carlo light transport; "Monte Carlo path tracing" names the algorithm only where that precision matters. No GPU, real-time, hardware ray-tracing or multi-node claims.
 - Credit: "Lorenzo Dario Ben · SIT315 Concurrent Programming", shown quietly (hero and closing screen).
 - Fonts: Windows-installed faces first; an open-licence face already installed on the author's machine is bundled in the repository as the portable fallback. No downloaded or remote fonts.
-- Evidence classes are part of the identity and always visible where ambiguity matters: FORMAL, DIAGNOSTIC, HISTORICAL, PRESENTATION, RECONSTRUCTED, ILLUSTRATIVE.
+- Evidence classes are part of the identity and always visible where ambiguity matters: FORMAL, DIAGNOSTIC, HISTORICAL, PRESENTATION, ILLUSTRATIVE.
 
 ## Evidence on Hand
 
@@ -49,7 +49,7 @@ Driven locally in Edge or Chrome from `python scripts/observatory/serve.py` (or 
 ## Product Principles
 
 1. Evidence before decoration: a visual either shows recorded data, a real render, or is labelled illustrative.
-2. Honesty is visible: caveats, reconstruction and historical status stay on screen, never hidden for polish.
+2. Honesty is visible: caveats and historical status stay on screen, never hidden for polish.
 3. The engine is the subject: C++20, MPI, OpenMP and the scheduler lead; the Observatory is supporting tooling.
 4. Built to be presented: every state reachable by key or deep link, legible on a 1080p recording.
 

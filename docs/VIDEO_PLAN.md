@@ -43,7 +43,7 @@ Segments 6 and 7 (code and terminal) happen between O5 and O6: Alt+Tab away from
 | 2 | 0:40 to 1:30 | Why Monte Carlo ray tracing is expensive (2) | O2 | Convergence autoplay (9 real renders, only SPP changes); click the image to move the 2× loupe; scroll to the ILLUSTRATIVE pipeline, click *BVH traversal* |
 | 3 | 1:30 to 2:30 | Architecture and hybrid layers (3) | O3 | Parallelism layers; then tabs *OpenMP 4*, *MPI 4×1*, *Hybrid 2×2* (processes and threads on 4 cores / 8 logical processors) |
 | 4 | 2:30 to 3:30 | Irregular workload and the static cap (2, 12) | O4 | Tile 74 = 80.4 ms vs tile 0 = 2.4 ms (33.7×); the four static ranges; histogram; *Why static partitions cap the speedup* (1.23× and 2.34×) |
-| 5 | 3:30 to 5:00 | Static, dynamic and adaptive scheduling (7, 8, 10, 13, 14) | O5 | Compare replay; then *Static partition* (RECONSTRUCTED label), *Fixed dynamic* worker lanes, *Adaptive batching* (batch sizes, "How adaptive batching decides"); press **T** for the raw trace rows |
+| 5 | 3:30 to 5:00 | Static, dynamic and adaptive scheduling (7, 8, 10, 13, 14) | O5 | Compare replay; then *Static partition*, *Fixed dynamic* worker lanes, *Adaptive batching* (batch sizes, "How adaptive batching decides"); press **T** for the raw trace rows |
 | 6 | 5:00 to 6:00 | Source-code proof (4 to 10) | VS Code | `core.cpp` 340, 241, 248; `main.cpp` 127, 212 to 213, 273, 190, 173 to 175 |
 | 7 | 6:00 to 7:15 | **Live end-to-end demo and correctness (11, 19)** | Terminal | `scripts/helios_demo.ps1 -NoOpen`, then open the PNG |
 | 8 | 7:15 to 8:20 | Strong scaling and scheduler results (12, 13, 14) | O6 | Speedup bars and the 2.34× cap line; click *OpenMP 8* (CI, efficiency 0.37); *Scheduler* tab (dynamic vs static, adaptive vs fixed) |
@@ -123,7 +123,7 @@ The same excerpts are in the Observatory Source Inspector (Provenance → Source
 | 2 | `convergence.json`, `scenes.json` | 9 presentation renders (PRESENTATION), hashes recomputed |
 | 3 | `hardware.json` | Windows CPU Set table from the stress environment record; configurations are ILLUSTRATIVE mappings |
 | 4 | `workload.json` | tile CSVs of the 7 sequential runs in `20260928T102644Z-100e1393` (FORMAL) |
-| 5 | `scheduler.json` | median-time runs of `20260928T103934Z-edc10839`: dynamic and adaptive from `trace.csv` + `tiles.csv` (FORMAL); static RECONSTRUCTED from recorded tile times |
+| 5 | `scheduler.json` | median-time runs of `20260928T103934Z-edc10839`: dynamic and adaptive from `trace.csv` + `tiles.csv` (FORMAL); static from recorded tile times |
 | 8 | `performance.json` | strong, weak and scheduler aggregates of the final six experiments |
 | 9 | `performance.json` (`case`, `ab`) | historical `20260928T063038Z-301480e3`, diagnostic A/B `20260928T101701Z-0de80589`, false-sharing probe and placement runs (DIAGNOSTIC) |
 | 10 | `correctness.json` | 7 presentation renders, one hash, recomputed; validators re-run at build |

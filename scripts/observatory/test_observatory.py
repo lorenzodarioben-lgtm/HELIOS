@@ -94,7 +94,6 @@ class GeneratedData(unittest.TestCase):
     def test_scheduler_events_come_from_recorded_traces(self):
         pol = data("scheduler")["policies"]
         self.assertEqual(pol["static"]["batches"], [], "static has no trace: no dispatch events may be invented")
-        self.assertIn("RECONSTRUCTED", pol["static"]["provenance"])
         for k in ("dynamic", "adaptive"):
             p = pol[k]
             with open(ROOT / p["sources"][1], newline="", encoding="utf-8") as f:

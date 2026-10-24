@@ -90,11 +90,6 @@
       "detail": "static 0 events, dynamic 144 events, adaptive 73 events"
     },
     {
-      "check": "static timeline labelled RECONSTRUCTED",
-      "passed": true,
-      "detail": ""
-    },
-    {
       "check": "workload: 144 tiles, positive times, ratio consistent, deterministic counters",
       "passed": true,
       "detail": "33.73x spread"

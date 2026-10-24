@@ -33,7 +33,7 @@ powershell -ExecutionPolicy Bypass -File scripts/helios_demo.ps1 [-NoOpen]
 4. The 12 formal experiment IDs exist on disk with the right classification (final = FORMAL, historical = HISTORICAL and superseded). Each was rehashed with 0 failures, and the browser's values match each manifest.
 5. Every file path referenced by the data or the application exists, and the application references no internet URL.
 6. The convergence frames exist in ascending SPP order, and the gallery hashes were recomputed.
-7. For the scheduler, every tile ID from 0 to 143 appears once. Ownership matches `tiles.csv`. The dynamic and adaptive events match `trace.csv` row by row (worker, first tile, count, dispatch time). Static has no invented events and is labelled RECONSTRUCTED.
+7. For the scheduler, every tile ID from 0 to 143 appears once. Ownership matches `tiles.csv`. The dynamic and adaptive events match `trace.csv` row by row (worker, first tile, count, dispatch time). Static has no dispatch events.
 8. The workload has 144 tiles with positive times, a consistent spread ratio and deterministic counters.
 9. For correctness, there are 7 backends with one hash, recomputed, 0 differing pixels, matching the recorded end-to-end run (report Figure 13). Every layer of the validation stack passed.
 10. The stress values match the stress manifest.

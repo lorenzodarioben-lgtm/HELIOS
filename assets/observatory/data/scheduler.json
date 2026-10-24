@@ -14,8 +14,6 @@
     1,
     2
    ],
-   "classification": "RECONSTRUCTED",
-   "provenance": "STATIC TIMELINE RECONSTRUCTED FROM RECORDED TILE TIMES",
    "sources": [
     "results/protocol-v2/20260928T103934Z-edc10839/raw/imbalanced-medium-mpi-static-r3-t1-co-b1.tiles.csv"
    ],

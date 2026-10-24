@@ -12,7 +12,7 @@
    and Correctness renders, the film strip, the loupe) show the same geometry, drawn from the same state, as clear water
    with normal compositing: a convex surface (each part of the liquid curved at its own thickness) with a Fresnel edge,
    a faint depth and two highlights, refracting what lies beneath it: a marked render's own image, and in the hero a
-   reconstruction of the hero (its montage frames as drawn this frame, under a snapshot of everything laid over them,
+   composite of the hero (its montage frames as drawn this frame, under a snapshot of everything laid over them,
    taken only when that overlay changes). The performance summary inside the hero stays glass; the Overview index and
    other interface regions retain difference blending, and precision controls remain native. The two presentations crossfade in
    about 100 ms and never touch the motion.
@@ -654,7 +654,7 @@ uniform vec4 uMapB;
 uniform float uOpB;
 uniform sampler2D uOverTex; // the hero's overlay (scrim, title, copy, evidence, top bar), premultiplied
 uniform vec4 uOverMap;    // its box, CSS px
-// Each channel samples the same reconstructed source, with its own bounded position. Alpha is composited before channels
+// Each channel samples the same derived source, with its own bounded position. Alpha is composited before channels
 // are separated, so transparent text edges cannot introduce black or leak colour beyond the liquid mask.
 vec3 sourceAt(vec2 f) {
   vec2 co = uOrg + vec2(f.x, uSize.y - f.y) / uEff;
