@@ -4,7 +4,7 @@
 
 ![The Helios Observatory, with its liquid cursor over the hero render](docs/images/observatory-overview.png)
 
-**[Live Observatory](https://lorenzodarioben-lgtm.github.io/HELIOS/)** · **[Video walkthrough (15 min)](https://youtu.be/HrEtUrKpa7U)** · **[Final report (PDF)](report/Helios_Submitted_Report.pdf)**
+**[Live Observatory](https://lorenzodarioben-lgtm.github.io/helios/)** · **[Video walkthrough (15 min)](https://youtu.be/HrEtUrKpa7U)** · **[Final report (PDF)](report/Helios_Submitted_Report.pdf)**
 
 Built by Lorenzo Dario Ben as the final project for SIT315 Concurrent Programming at Deakin University.
 
@@ -41,7 +41,7 @@ The Observatory is an interactive, offline web page that explores the recorded e
 
 Every number it shows is read from the saved experiment files. It also features a custom **liquid cursor**: a WebGL inversion lens that stretches with motion and sheds small goo droplets on fast gestures. It was developed in its own lab ([`labs/liquid-cursor/`](labs/liquid-cursor/README.md)).
 
-Open it online at **[lorenzodarioben-lgtm.github.io/HELIOS](https://lorenzodarioben-lgtm.github.io/HELIOS/)**, or locally by opening `assets/observatory/index.html` in Edge or Chrome.
+Open it online at **[lorenzodarioben-lgtm.github.io/helios](https://lorenzodarioben-lgtm.github.io/helios/)**, or locally by opening `assets/observatory/index.html` in Edge or Chrome.
 
 ![Scheduler Lab: static, fixed dynamic and adaptive scheduling replayed from recorded runs](assets/showcase/scheduler/scheduler-comparison-preview.gif)
 
